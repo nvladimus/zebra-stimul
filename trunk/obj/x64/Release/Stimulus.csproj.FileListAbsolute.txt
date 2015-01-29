@@ -1,0 +1,11 @@
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\bin\x64\Release\ZebraPhys.exe.config
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\bin\x64\Release\ZebraPhys.exe
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\bin\x64\Release\ZebraPhys.pdb
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\obj\x64\Release\ResolveAssemblyReference.cache
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\obj\x64\Release\Stimulus.Form1.resources
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\obj\x64\Release\Stimulus.FullScreenForm.resources
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\obj\x64\Release\Stimulus.Properties.Resources.resources
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\obj\x64\Release\GenerateResource.read.1.tlog
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\obj\x64\Release\GenerateResource.write.1.tlog
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\obj\x64\Release\ZebraPhys.exe
+C:\Users\Nikita\Desktop\Janelia\C#projects\Stim\Stimulus\obj\x64\Release\ZebraPhys.pdb

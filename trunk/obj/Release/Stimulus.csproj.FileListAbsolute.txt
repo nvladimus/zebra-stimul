@@ -1,0 +1,11 @@
+C:\Home\Janelia\C#projects\Stim\Stimulus\bin\Release\Stimulus.exe
+C:\Home\Janelia\C#projects\Stim\Stimulus\bin\Release\Stimulus.pdb
+C:\Home\Janelia\C#projects\Stim\Stimulus\obj\Release\ResolveAssemblyReference.cache
+C:\Home\Janelia\C#projects\Stim\Stimulus\obj\Release\Stimulus.Form1.resources
+C:\Home\Janelia\C#projects\Stim\Stimulus\obj\Release\Stimulus.FullScreenForm.resources
+C:\Home\Janelia\C#projects\Stim\Stimulus\obj\Release\Stimulus.Properties.Resources.resources
+C:\Home\Janelia\C#projects\Stim\Stimulus\obj\Release\GenerateResource.read.1.tlog
+C:\Home\Janelia\C#projects\Stim\Stimulus\obj\Release\GenerateResource.write.1.tlog
+C:\Home\Janelia\C#projects\Stim\Stimulus\obj\Release\Stimulus.exe
+C:\Home\Janelia\C#projects\Stim\Stimulus\obj\Release\Stimulus.pdb
+C:\Home\Janelia\C#projects\Stim\Stimulus\bin\Release\Stimulus.exe.config
