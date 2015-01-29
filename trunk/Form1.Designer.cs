@@ -163,6 +163,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.textBoxFileStream = new System.Windows.Forms.TextBox();
             this.checkBoxSaveFileAfterStack = new System.Windows.Forms.CheckBox();
+            this.physicalChannelComboBox2 = new System.Windows.Forms.ComboBox();
+            this.label48 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).BeginInit();
@@ -1775,6 +1777,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Silver;
+            this.tabPage2.Controls.Add(this.label48);
+            this.tabPage2.Controls.Add(this.physicalChannelComboBox2);
             this.tabPage2.Controls.Add(this.label38);
             this.tabPage2.Controls.Add(this.ComboBoxLEDcontrol);
             this.tabPage2.Controls.Add(this.label9);
@@ -1802,7 +1806,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(15, 241);
+            this.label38.Location = new System.Drawing.Point(15, 250);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(104, 13);
             this.label38.TabIndex = 33;
@@ -1811,7 +1815,7 @@
             // ComboBoxLEDcontrol
             // 
             this.ComboBoxLEDcontrol.FormattingEnabled = true;
-            this.ComboBoxLEDcontrol.Location = new System.Drawing.Point(18, 257);
+            this.ComboBoxLEDcontrol.Location = new System.Drawing.Point(18, 266);
             this.ComboBoxLEDcontrol.Name = "ComboBoxLEDcontrol";
             this.ComboBoxLEDcontrol.Size = new System.Drawing.Size(121, 21);
             this.ComboBoxLEDcontrol.TabIndex = 32;
@@ -1899,7 +1903,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Trigger AI channel";
+            this.label4.Text = "Camera trigger (AI)";
             // 
             // physicalChannelComboBox4
             // 
@@ -2285,6 +2289,25 @@
             this.checkBoxSaveFileAfterStack.Text = "Save file after each stack to folder:";
             this.checkBoxSaveFileAfterStack.UseVisualStyleBackColor = true;
             // 
+            // physicalChannelComboBox2
+            // 
+            this.physicalChannelComboBox2.FormattingEnabled = true;
+            this.physicalChannelComboBox2.Location = new System.Drawing.Point(17, 218);
+            this.physicalChannelComboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.physicalChannelComboBox2.Name = "physicalChannelComboBox2";
+            this.physicalChannelComboBox2.Size = new System.Drawing.Size(92, 21);
+            this.physicalChannelComboBox2.TabIndex = 34;
+            this.physicalChannelComboBox2.Text = "Dev1/ai1";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(15, 203);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(98, 13);
+            this.label48.TabIndex = 35;
+            this.label48.Text = "2Photon trigger (AI)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2512,6 +2535,8 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.NumericUpDown numericUpDownDrift4Interval;
         private System.Windows.Forms.NumericUpDown numericUpDownDrift4;
+        private System.Windows.Forms.Label label48;
+        public System.Windows.Forms.ComboBox physicalChannelComboBox2;
     }
 }
 

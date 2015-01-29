@@ -191,7 +191,10 @@ namespace Stimulus
             physicalChannelComboBox1.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External));
             if (physicalChannelComboBox1.Items.Count > 0)
                 physicalChannelComboBox1.SelectedIndex = 1;
-            physicalChannelComboBox4.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External)); // External trigger AI channel (laser, camera, etc.)
+            physicalChannelComboBox2.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External)); // 2Photon trigger AI
+            if (physicalChannelComboBox2.Items.Count > 0)
+                physicalChannelComboBox2.SelectedIndex = 3;
+            physicalChannelComboBox4.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External)); // Camera trigger AI channel 
             if (physicalChannelComboBox4.Items.Count > 0)
                 physicalChannelComboBox4.SelectedIndex = 2;
             ComboBoxLEDcontrol.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AO, PhysicalChannelAccess.External));
@@ -407,7 +410,8 @@ namespace Stimulus
                     int subDataL = readDataL / subSampleWin; // x10 subsampled data length
                     double[] data_arrayCh0 = new double[readDataL];
                     double[] data_arrayCh1 = new double[readDataL];
-                    double[] trigger_channel = new double[readDataL];// external trigger (laser, camera, etc)
+                    double[] trigger_channel = new double[readDataL];// external trigger (camera)
+                    double[] trigger_channel2Photon = new double[readDataL];// external trigger (2Photon)
                     double[] subData_arrayCh0 = new double[subDataL];
                     double[] subData_arrayCh1 = new double[subDataL];
                     double[,] hist_tempCh0 = new double[2, readDataL];
@@ -418,6 +422,7 @@ namespace Stimulus
                         data_arrayCh0[i] = readData[0, i];
                         data_arrayCh1[i] = readData[1, i];
                         trigger_channel[i] = readData[2, i];
+                        trigger_channel2Photon[i] = readData[3, i];
                     }
                     //                        lock (thisLock)
                     //                        {
@@ -724,9 +729,9 @@ namespace Stimulus
                                     else writeFileStream.Write(0F);
                                     writeFileStream.Write(drift); //6
                                     writeFileStream.Write(swimVel); //7
-                                    writeFileStream.Write((float)trigger_channel[i]); //8
-                                    writeFileStream.Write(threshCh0); //9
-                                    writeFileStream.Write(threshCh1); //10
+                                    writeFileStream.Write((float)trigger_channel[i]); //8, camera trigger
+                                    writeFileStream.Write((float)trigger_channel2Photon[i]); //9, 2Photon trigger
+                                    writeFileStream.Write(threshCh0); //10
                                 }
                             }
                         }

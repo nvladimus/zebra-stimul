@@ -29,8 +29,12 @@ namespace Stimulus
                 myTask.AIChannels.CreateVoltageChannel(sender.physicalChannelComboBox1.Text, "",
                         (AITerminalConfiguration)(-1), Convert.ToDouble(sender.numericUpDownVmin.Value), Convert.ToDouble(sender.numericUpDownVmax.Value), AIVoltageUnits.Volts);
 
-                // external trigger (laser, camera, etc)
+                // external trigger (camera)
                 myTask.AIChannels.CreateVoltageChannel(sender.physicalChannelComboBox4.Text, "",
+                        (AITerminalConfiguration)(-1), Convert.ToDouble(sender.numericUpDownPhysCh4Vmin.Value), Convert.ToDouble(sender.numericUpDownPhysCh4Vmax.Value), AIVoltageUnits.Volts);
+                
+                // external trigger (2Photon)
+                myTask.AIChannels.CreateVoltageChannel(sender.physicalChannelComboBox2.Text, "",
                         (AITerminalConfiguration)(-1), Convert.ToDouble(sender.numericUpDownPhysCh4Vmin.Value), Convert.ToDouble(sender.numericUpDownPhysCh4Vmax.Value), AIVoltageUnits.Volts);
 
                 // hardware-timed data acquisition, internal clock. Last arg is the number of samples used for buffer size

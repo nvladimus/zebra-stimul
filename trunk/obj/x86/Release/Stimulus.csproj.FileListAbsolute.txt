@@ -19,3 +19,13 @@ C:\Nikita-Janelia\C#projects\Stim\Stimulus\obj\x86\Release\Stimulus.Form1.resour
 C:\Nikita-Janelia\C#projects\Stim\Stimulus\obj\x86\Release\Stimulus.FullScreenForm.resources
 C:\Nikita-Janelia\C#projects\Stim\Stimulus\obj\x86\Release\Stimulus.Properties.Resources.resources
 C:\Nikita-Janelia\C#projects\Stim\Stimulus\obj\x86\Release\Stimulus.csproj.GenerateResource.Cache
+C:\Nikita-Janelia\C#projects\zebra-stimul\bin\x86\Release\ZebraPhys.exe.config
+C:\Nikita-Janelia\C#projects\zebra-stimul\obj\x86\Release\ZebraPhys.exe
+C:\Nikita-Janelia\C#projects\zebra-stimul\obj\x86\Release\ZebraPhys.pdb
+C:\Nikita-Janelia\C#projects\zebra-stimul\bin\x86\Release\ZebraPhys.exe
+C:\Nikita-Janelia\C#projects\zebra-stimul\bin\x86\Release\ZebraPhys.pdb
+C:\Nikita-Janelia\C#projects\zebra-stimul\obj\x86\Release\Stimulus.csprojResolveAssemblyReference.cache
+C:\Nikita-Janelia\C#projects\zebra-stimul\obj\x86\Release\Stimulus.Form1.resources
+C:\Nikita-Janelia\C#projects\zebra-stimul\obj\x86\Release\Stimulus.FullScreenForm.resources
+C:\Nikita-Janelia\C#projects\zebra-stimul\obj\x86\Release\Stimulus.Properties.Resources.resources
+C:\Nikita-Janelia\C#projects\zebra-stimul\obj\x86\Release\Stimulus.csproj.GenerateResource.Cache
