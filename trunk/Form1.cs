@@ -193,7 +193,7 @@ namespace Stimulus
                 physicalChannelComboBox1.SelectedIndex = 1;
             physicalChannelComboBox2.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External)); // 2Photon trigger AI
             if (physicalChannelComboBox2.Items.Count > 0)
-                physicalChannelComboBox2.SelectedIndex = 3;
+                physicalChannelComboBox2.SelectedIndex = 5;
             physicalChannelComboBox4.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External)); // Camera trigger AI channel 
             if (physicalChannelComboBox4.Items.Count > 0)
                 physicalChannelComboBox4.SelectedIndex = 2;
