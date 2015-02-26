@@ -122,6 +122,8 @@
             this.panelProjector = new System.Windows.Forms.Panel();
             this.oscilloscopeChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label48 = new System.Windows.Forms.Label();
+            this.physicalChannelComboBox2 = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
             this.ComboBoxLEDcontrol = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -163,8 +165,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.textBoxFileStream = new System.Windows.Forms.TextBox();
             this.checkBoxSaveFileAfterStack = new System.Windows.Forms.CheckBox();
-            this.physicalChannelComboBox2 = new System.Windows.Forms.ComboBox();
-            this.label48 = new System.Windows.Forms.Label();
+            this.buttonSetdOMR = new System.Windows.Forms.Button();
+            this.buttonSetGA = new System.Windows.Forms.Button();
+            this.buttonSetOMR = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).BeginInit();
@@ -258,6 +261,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.buttonSetOMR);
+            this.tabPage1.Controls.Add(this.buttonSetGA);
+            this.tabPage1.Controls.Add(this.buttonSetdOMR);
             this.tabPage1.Controls.Add(this.label47);
             this.tabPage1.Controls.Add(this.numericUpDownDrift4Interval);
             this.tabPage1.Controls.Add(this.numericUpDownDrift4);
@@ -1803,6 +1809,25 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Devices";
             // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(15, 203);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(98, 13);
+            this.label48.TabIndex = 35;
+            this.label48.Text = "2Photon trigger (AI)";
+            // 
+            // physicalChannelComboBox2
+            // 
+            this.physicalChannelComboBox2.FormattingEnabled = true;
+            this.physicalChannelComboBox2.Location = new System.Drawing.Point(17, 218);
+            this.physicalChannelComboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.physicalChannelComboBox2.Name = "physicalChannelComboBox2";
+            this.physicalChannelComboBox2.Size = new System.Drawing.Size(92, 21);
+            this.physicalChannelComboBox2.TabIndex = 34;
+            this.physicalChannelComboBox2.Text = "Dev1/ai1";
+            // 
             // label38
             // 
             this.label38.AutoSize = true;
@@ -2289,24 +2314,35 @@
             this.checkBoxSaveFileAfterStack.Text = "Save file after each stack to folder:";
             this.checkBoxSaveFileAfterStack.UseVisualStyleBackColor = true;
             // 
-            // physicalChannelComboBox2
+            // buttonSetdOMR
             // 
-            this.physicalChannelComboBox2.FormattingEnabled = true;
-            this.physicalChannelComboBox2.Location = new System.Drawing.Point(17, 218);
-            this.physicalChannelComboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.physicalChannelComboBox2.Name = "physicalChannelComboBox2";
-            this.physicalChannelComboBox2.Size = new System.Drawing.Size(92, 21);
-            this.physicalChannelComboBox2.TabIndex = 34;
-            this.physicalChannelComboBox2.Text = "Dev1/ai1";
+            this.buttonSetdOMR.Location = new System.Drawing.Point(1027, 174);
+            this.buttonSetdOMR.Name = "buttonSetdOMR";
+            this.buttonSetdOMR.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetdOMR.TabIndex = 119;
+            this.buttonSetdOMR.Text = "Set dOMR";
+            this.buttonSetdOMR.UseVisualStyleBackColor = true;
+            this.buttonSetdOMR.Click += new System.EventHandler(this.buttonSetdOMR_Click);
             // 
-            // label48
+            // buttonSetGA
             // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(15, 203);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(98, 13);
-            this.label48.TabIndex = 35;
-            this.label48.Text = "2Photon trigger (AI)";
+            this.buttonSetGA.Location = new System.Drawing.Point(1138, 174);
+            this.buttonSetGA.Name = "buttonSetGA";
+            this.buttonSetGA.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetGA.TabIndex = 119;
+            this.buttonSetGA.Text = "Set GA";
+            this.buttonSetGA.UseVisualStyleBackColor = true;
+            this.buttonSetGA.Click += new System.EventHandler(this.buttonSetGA_Click);
+            // 
+            // buttonSetOMR
+            // 
+            this.buttonSetOMR.Location = new System.Drawing.Point(920, 174);
+            this.buttonSetOMR.Name = "buttonSetOMR";
+            this.buttonSetOMR.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetOMR.TabIndex = 119;
+            this.buttonSetOMR.Text = "Set OMR";
+            this.buttonSetOMR.UseVisualStyleBackColor = true;
+            this.buttonSetOMR.Click += new System.EventHandler(this.buttonSetOMR_Click);
             // 
             // Form1
             // 
@@ -2537,6 +2573,9 @@
         private System.Windows.Forms.NumericUpDown numericUpDownDrift4;
         private System.Windows.Forms.Label label48;
         public System.Windows.Forms.ComboBox physicalChannelComboBox2;
+        private System.Windows.Forms.Button buttonSetOMR;
+        private System.Windows.Forms.Button buttonSetGA;
+        private System.Windows.Forms.Button buttonSetdOMR;
     }
 }
 
