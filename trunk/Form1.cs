@@ -1678,6 +1678,9 @@ namespace Stimulus
             numericUpDownDrift3_3.Value = 0.5M;
             numericUpDownDrift3_4.Value = 0.5M;
 
+            numericUpDownDrift2.Value = 0M;
+            numericUpDownDrift4.Value = 0M;
+
             checkBoxOpenLoop.Checked = true;
             numericUpDownGain0.Value = 0M;
             numericUpDownGain1.Value = 0M;
@@ -1696,6 +1699,9 @@ namespace Stimulus
             numericUpDownDrift3_3.Value = 1M;
             numericUpDownDrift3_4.Value = 2M;
 
+            numericUpDownDrift2.Value = 0M;
+            numericUpDownDrift4.Value = 0M;
+
             checkBoxOpenLoop.Checked = true;
             numericUpDownGain0.Value = 0M;
             numericUpDownGain1.Value = 0M;
@@ -1713,6 +1719,9 @@ namespace Stimulus
             numericUpDownDrift3_2.Value = 0.5M;
             numericUpDownDrift3_3.Value = 0.5M;
             numericUpDownDrift3_4.Value = 0.5M;
+
+            numericUpDownDrift2.Value = 0.5M;
+            numericUpDownDrift4.Value = 0.5M;
 
             checkBoxOpenLoop.Checked = false;
             numericUpDownGain0.Value = 0M;
