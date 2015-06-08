@@ -27,6 +27,8 @@
             this.buttonStop = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBoxTemp = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
             this.buttonSetOMR = new System.Windows.Forms.Button();
             this.buttonSetGA = new System.Windows.Forms.Button();
             this.buttonSetdOMR = new System.Windows.Forms.Button();
@@ -125,6 +127,8 @@
             this.panelProjector = new System.Windows.Forms.Panel();
             this.oscilloscopeChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.numericUpDownSyncTriggerTresh = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
             this.physicalChannelComboBox2 = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -165,10 +169,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.textBoxFileStream = new System.Windows.Forms.TextBox();
             this.checkBoxSaveFileAfterStack = new System.Windows.Forms.CheckBox();
-            this.numericUpDownSyncTriggerTresh = new System.Windows.Forms.NumericUpDown();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.textBoxTemp = new System.Windows.Forms.TextBox();
+            this.checkBoxSync2pTrigger = new System.Windows.Forms.CheckBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.numericUpDownTriggerThresh2p = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).BeginInit();
@@ -211,6 +214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmax)).BeginInit();
@@ -219,7 +223,7 @@
             this.panelScreens.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -366,6 +370,25 @@
             this.tabPage1.Size = new System.Drawing.Size(1271, 531);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Oscilloscope and Projector";
+            // 
+            // textBoxTemp
+            // 
+            this.textBoxTemp.Location = new System.Drawing.Point(72, 501);
+            this.textBoxTemp.Name = "textBoxTemp";
+            this.textBoxTemp.ReadOnly = true;
+            this.textBoxTemp.Size = new System.Drawing.Size(49, 20);
+            this.textBoxTemp.TabIndex = 121;
+            this.textBoxTemp.Text = "NA";
+            this.textBoxTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(16, 504);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(50, 13);
+            this.label49.TabIndex = 120;
+            this.label49.Text = "Temp., C";
             // 
             // buttonSetOMR
             // 
@@ -1814,7 +1837,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Silver;
+            this.tabPage2.Controls.Add(this.label50);
             this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.numericUpDownTriggerThresh2p);
             this.tabPage2.Controls.Add(this.numericUpDownSyncTriggerTresh);
             this.tabPage2.Controls.Add(this.label48);
             this.tabPage2.Controls.Add(this.physicalChannelComboBox2);
@@ -1842,6 +1867,33 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Devices";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(15, 198);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(85, 13);
+            this.label22.TabIndex = 37;
+            this.label22.Text = "Trigger thresh, V";
+            // 
+            // numericUpDownSyncTriggerTresh
+            // 
+            this.numericUpDownSyncTriggerTresh.DecimalPlaces = 2;
+            this.numericUpDownSyncTriggerTresh.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownSyncTriggerTresh.Location = new System.Drawing.Point(19, 214);
+            this.numericUpDownSyncTriggerTresh.Name = "numericUpDownSyncTriggerTresh";
+            this.numericUpDownSyncTriggerTresh.Size = new System.Drawing.Size(61, 20);
+            this.numericUpDownSyncTriggerTresh.TabIndex = 36;
+            this.numericUpDownSyncTriggerTresh.Value = new decimal(new int[] {
+            38,
+            0,
+            0,
+            65536});
+            // 
             // label48
             // 
             this.label48.AutoSize = true;
@@ -1864,7 +1916,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(12, 342);
+            this.label38.Location = new System.Drawing.Point(12, 417);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(104, 13);
             this.label38.TabIndex = 33;
@@ -1873,7 +1925,7 @@
             // ComboBoxLEDcontrol
             // 
             this.ComboBoxLEDcontrol.FormattingEnabled = true;
-            this.ComboBoxLEDcontrol.Location = new System.Drawing.Point(15, 358);
+            this.ComboBoxLEDcontrol.Location = new System.Drawing.Point(15, 433);
             this.ComboBoxLEDcontrol.Name = "ComboBoxLEDcontrol";
             this.ComboBoxLEDcontrol.Size = new System.Drawing.Size(121, 21);
             this.ComboBoxLEDcontrol.TabIndex = 32;
@@ -2298,51 +2350,42 @@
             this.checkBoxSaveFileAfterStack.Text = "Save file after each stack to folder:";
             this.checkBoxSaveFileAfterStack.UseVisualStyleBackColor = true;
             // 
-            // numericUpDownSyncTriggerTresh
+            // checkBoxSync2pTrigger
             // 
-            this.numericUpDownSyncTriggerTresh.DecimalPlaces = 2;
-            this.numericUpDownSyncTriggerTresh.Increment = new decimal(new int[] {
+            this.checkBoxSync2pTrigger.AutoSize = true;
+            this.checkBoxSync2pTrigger.Location = new System.Drawing.Point(404, 594);
+            this.checkBoxSync2pTrigger.Name = "checkBoxSync2pTrigger";
+            this.checkBoxSync2pTrigger.Size = new System.Drawing.Size(172, 17);
+            this.checkBoxSync2pTrigger.TabIndex = 80;
+            this.checkBoxSync2pTrigger.Text = "Sync OMR onset to 2p trigger?";
+            this.checkBoxSync2pTrigger.UseVisualStyleBackColor = true;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(12, 333);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(85, 13);
+            this.label50.TabIndex = 37;
+            this.label50.Text = "Trigger thresh, V";
+            // 
+            // numericUpDownTriggerThresh2p
+            // 
+            this.numericUpDownTriggerThresh2p.DecimalPlaces = 2;
+            this.numericUpDownTriggerThresh2p.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            this.numericUpDownSyncTriggerTresh.Location = new System.Drawing.Point(19, 231);
-            this.numericUpDownSyncTriggerTresh.Name = "numericUpDownSyncTriggerTresh";
-            this.numericUpDownSyncTriggerTresh.Size = new System.Drawing.Size(61, 20);
-            this.numericUpDownSyncTriggerTresh.TabIndex = 36;
-            this.numericUpDownSyncTriggerTresh.Value = new decimal(new int[] {
-            38,
+            this.numericUpDownTriggerThresh2p.Location = new System.Drawing.Point(14, 349);
+            this.numericUpDownTriggerThresh2p.Name = "numericUpDownTriggerThresh2p";
+            this.numericUpDownTriggerThresh2p.Size = new System.Drawing.Size(61, 20);
+            this.numericUpDownTriggerThresh2p.TabIndex = 36;
+            this.numericUpDownTriggerThresh2p.Value = new decimal(new int[] {
+            1,
             0,
             0,
             65536});
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(16, 215);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(85, 13);
-            this.label22.TabIndex = 37;
-            this.label22.Text = "Trigger thresh, V";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(16, 504);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(50, 13);
-            this.label49.TabIndex = 120;
-            this.label49.Text = "Temp., C";
-            // 
-            // textBoxTemp
-            // 
-            this.textBoxTemp.Location = new System.Drawing.Point(72, 501);
-            this.textBoxTemp.Name = "textBoxTemp";
-            this.textBoxTemp.ReadOnly = true;
-            this.textBoxTemp.Size = new System.Drawing.Size(49, 20);
-            this.textBoxTemp.TabIndex = 121;
-            this.textBoxTemp.Text = "NA";
-            this.textBoxTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -2350,6 +2393,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1291, 704);
+            this.Controls.Add(this.checkBoxSync2pTrigger);
             this.Controls.Add(this.checkBoxSaveFileAfterStack);
             this.Controls.Add(this.textBoxFileStream);
             this.Controls.Add(this.buttonExit);
@@ -2410,6 +2454,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmax)).EndInit();
@@ -2421,7 +2466,7 @@
             this.tabPage3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2575,6 +2620,9 @@
         private System.Windows.Forms.NumericUpDown numericUpDownSyncTriggerTresh;
         private System.Windows.Forms.TextBox textBoxTemp;
         private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.CheckBox checkBoxSync2pTrigger;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.NumericUpDown numericUpDownTriggerThresh2p;
     }
 }
 

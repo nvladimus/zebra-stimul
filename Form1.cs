@@ -90,13 +90,15 @@ namespace Stimulus
         short drift1Index, drift3Index;
         float gain0Interval, gain1Interval, gain2Interval, drift1Interval, drift2Interval, drift3Interval, drift4Interval;
         float turningGain1, turningGain2;
-        int gainNum, driftNum = 1;
+        int gainNum, driftNum;
         long gainTimeOld, gainTimeNew, driftTimeOld, driftTimeNew;
         float decayVel;
         bool rotationMode;
         long triggerCount;
         double triggerThresh;
         double trigger_previous_last;
+        bool new_trigger2p;
+        double triggerThresh2p, trigger2p_previous_last;
         double tempVin, currentTemp;
         //short nPlanes, planeOffset;
 
@@ -501,6 +503,16 @@ namespace Stimulus
                         max_data_Ch1 = 0d;
                         lastTriggerCount = triggerCount;
                     }
+                    // start new OMR trial if 2pTrigger switched to low
+                    if (checkBoxSync2pTrigger.Checked && new_trigger2p == false)
+                    {
+                        if (trigger2p_previous_last >= triggerThresh2p && trigger_channel2Photon[0] < triggerThresh2p) new_trigger2p = true;
+                        for (int i = 0; i < trigger_channel2Photon.Length - 1; i++)
+                        {
+                            if (trigger_channel2Photon[i] >= triggerThresh2p && trigger_channel2Photon[i + 1] < triggerThresh2p) new_trigger2p = true;
+                        }
+                        trigger2p_previous_last = trigger_channel2Photon[trigger_channel2Photon.Length - 1];
+                    }
                     // update gain:
                     if (started)
                     {
@@ -849,6 +861,12 @@ namespace Stimulus
             triggerCount = 0;
             trigger_previous_last = 0;
             triggerThresh = Convert.ToDouble(numericUpDownSyncTriggerTresh.Value);
+
+            if (checkBoxSync2pTrigger.Checked) new_trigger2p = false;
+            else new_trigger2p = true;
+            triggerThresh2p = Convert.ToDouble(numericUpDownTriggerThresh2p.Value);
+            trigger2p_previous_last = 0;
+            if (checkBoxSync2pTrigger.Checked) driftNum = 4;
 
             VelMax = Convert.ToSingle(numericUpDownVelMax.Value);// max swimming velocity
             decayVel = Convert.ToSingle(numericUpDownDecay.Value);
@@ -1304,7 +1322,7 @@ namespace Stimulus
             if (!checkBoxTimeInStacks.Checked)
             {
                 driftTimeNew = stopWatch.ElapsedMilliseconds;
-                if ((driftNum == 1) && (driftTimeNew - driftTimeOld) >= (long)(drift1Interval * 1000F - 10F))
+                if ((driftNum == 1) && (driftTimeNew - driftTimeOld) >= (long)(drift1Interval * 1000F - 10F) )
                 {
                     drift = drift2; // switch drift2
                     driftNum = 2;
@@ -1324,13 +1342,13 @@ namespace Stimulus
                 }
                 else if ((driftNum == 3) && (driftTimeNew - driftTimeOld) >= (long)(drift3Interval * 1000F - 10F))
                 {
-                    drift = drift4; // switch drift4
+                    drift = drift4; // switch to drift4
                     driftNum = 4;
                     driftTimeOld = driftTimeNew;
                 }
-                else if ((driftNum == 4) && (driftTimeNew - driftTimeOld) >= (long)(drift4Interval * 1000F - 10F))
+                else if ((driftNum == 4) && (driftTimeNew - driftTimeOld) >= (long)(drift4Interval * 1000F - 10F) && new_trigger2p)
                 {
-                    drift = drift1Array[drift1Index]; // switch drift1 again
+                    drift = drift1Array[drift1Index]; // switch to drift1 again
                     drift1Index++;
                     if (drift1Index == drift1Array.Count())
                     {
@@ -1339,6 +1357,7 @@ namespace Stimulus
                     }
                     driftNum = 1;
                     driftTimeOld = driftTimeNew;
+                    if (checkBoxSync2pTrigger.Checked) new_trigger2p = false; //reset the trigger if checkbox is on.
                 }
             }
             else // if time is in stacks
@@ -1678,10 +1697,10 @@ namespace Stimulus
             numericUpDownDrift1_3.Value = 0M;
             numericUpDownDrift1_4.Value = 0M;
 
-            numericUpDownDrift3.Value = 0.5M;
-            numericUpDownDrift3_2.Value = 0.5M;
-            numericUpDownDrift3_3.Value = 0.5M;
-            numericUpDownDrift3_4.Value = 0.5M;
+            numericUpDownDrift3.Value = 1M;
+            numericUpDownDrift3_2.Value = 1M;
+            numericUpDownDrift3_3.Value = 1M;
+            numericUpDownDrift3_4.Value = 1M;
 
             numericUpDownDrift2.Value = 0M;
             numericUpDownDrift4.Value = 0M;
@@ -1690,6 +1709,11 @@ namespace Stimulus
             numericUpDownGain0.Value = 0M;
             numericUpDownGain1.Value = 0M;
             numericUpDownGain2.Value = 0M;
+
+            numericUpDownDrift1Interval.Value = 10M;
+            numericUpDownDrift2Interval.Value = 0M;
+            numericUpDownDrift3Interval.Value = 10M;
+            numericUpDownDrift4Interval.Value = 0M;
         }
 
         private void buttonSetdOMR_Click(object sender, EventArgs e)
@@ -1713,7 +1737,9 @@ namespace Stimulus
             numericUpDownGain2.Value = 0M;
 
             numericUpDownDrift1Interval.Value = 10M;
+            numericUpDownDrift2Interval.Value = 2M;
             numericUpDownDrift3Interval.Value = 26M;
+            numericUpDownDrift4Interval.Value = 2M;
         }
 
         private void buttonSetGA_Click(object sender, EventArgs e)
