@@ -97,7 +97,7 @@ namespace Stimulus
         long triggerCount;
         double triggerThresh;
         double trigger_previous_last;
-        bool new_trigger2p;
+        volatile bool new_trigger2p;
         double triggerThresh2p, trigger2p_previous_last;
         double tempVin, currentTemp;
         //short nPlanes, planeOffset;
@@ -866,7 +866,6 @@ namespace Stimulus
             else new_trigger2p = true;
             triggerThresh2p = Convert.ToDouble(numericUpDownTriggerThresh2p.Value);
             trigger2p_previous_last = 0;
-            if (checkBoxSync2pTrigger.Checked) driftNum = 4;
 
             VelMax = Convert.ToSingle(numericUpDownVelMax.Value);// max swimming velocity
             decayVel = Convert.ToSingle(numericUpDownDecay.Value);
@@ -1763,6 +1762,12 @@ namespace Stimulus
             numericUpDownGain2.Value = 300M;
             numericUpDownGain1Interval.Value = 20M;
             numericUpDownGain2Interval.Value = 20M;
+        }
+
+        private void checkBoxSync2pTrigger_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSync2pTrigger.Checked) new_trigger2p = false; //reset the trigger state
+            else new_trigger2p = true;
         }
     }
 }

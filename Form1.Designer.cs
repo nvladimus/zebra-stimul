@@ -2359,6 +2359,7 @@
             this.checkBoxSync2pTrigger.TabIndex = 80;
             this.checkBoxSync2pTrigger.Text = "Sync OMR onset to 2p trigger?";
             this.checkBoxSync2pTrigger.UseVisualStyleBackColor = true;
+            this.checkBoxSync2pTrigger.CheckedChanged += new System.EventHandler(this.checkBoxSync2pTrigger_CheckedChanged);
             // 
             // label50
             // 
