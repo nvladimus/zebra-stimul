@@ -54,31 +54,19 @@ namespace Stimulus
         volatile List<float> filtCh1Display;
         volatile List<float> timeDisplay;
         long lastTriggerCount;
-        //float[] data_arrayCh0Save; //store the whole recording at 6000 Hz for 4 hrs
-        //float[] data_arrayCh0AuxSave; //store the whole recording at 6000 Hz for 4 hrs
-        //float[] data_arrayCh1Save; //store the whole recording at 6000 Hz for 4 hrs
-        //float[] data_arrayCh1AuxSave; //store the whole recording at 6000 Hz for 4 hrs
-        //int idata_arrayChSave = 0;
-        //        static int dataL = 120; //intended data length read each time from device
         static int subSampleWin = 10;
         //double dtAcquisition = 1.0d / 6000; // 1.0/DAQdev0.sampleRate, dt of sampling
         double dtSub = 1.0d / 6000 * subSampleWin; //dt of subsampling
         private double dtSubSample;
         //
-        volatile float swimVel, currentVel;
+        volatile float swimVel;
         float VelMax;
-        bool startDecay;
-        bool doBinarySwims, doBinarySwimsNow;
-        volatile float surprizeSwimVel;
         long surprizeTimeOld, surprizeTimeNew, gainOutTimeOld, gainOutTimeNew;
-        bool addSurprize;
-        volatile bool swimmingNow, swimSurpNow, gainBout;
-        volatile float surprizeInterval, gainOutInterval;
 
         volatile float deltaAngle = 0f;
         double Voffset0 = 0d, Voffset1 = 0d;
         System.Diagnostics.Stopwatch stopWatch;
-        long newTimeRendering = 0, oldTimeRendering = 0, dTimeRendering = 0, newTimeReading = 0, oldTimeReading = 0, dTimeReading = 0, newTimeGUIupdating = 0, oldTimeGUIupdating = 0;
+        long newTimeRendering = 0, oldTimeRendering = 0, dTimeRendering = 0, newTimeReading = 0, oldTimeReading = 0, dTimeReading = 0, newTimeGUIupdating = 0;
         List<long> dTimeListRendering = new List<long>();
         List<long> dTimeListReading = new List<long>();
         List<long> dTimeListGraphUpdating = new List<long>();
@@ -93,31 +81,19 @@ namespace Stimulus
         int gainNum, driftNum;
         long gainTimeOld, gainTimeNew, driftTimeOld, driftTimeNew;
         float decayVel;
-        bool rotationMode;
         long triggerCount;
         double triggerThresh;
         double trigger_previous_last;
-        volatile bool new_trigger2p;
         double triggerThresh2p, trigger2p_previous_last;
         double tempVin, currentTemp;
-        //short nPlanes, planeOffset;
 
-        bool doReplay = false;
-        bool replayNow = false;
-        int playTimeMinutes, playNtimes;
-        int swimVelReplayCount;
-        int swimBanTimePoints = (int)(6000 * 0.7), swimInt; // minimum interval between consecutive swims, only for binary swims
-
-        bool dirSelectivityTest;
         long dirSelTimeOld, dirSelTimeNew;
 
         volatile bool started;
         volatile float LEDpower;
         volatile bool buttonFlashPressed;
 
-        double max_data_Ch0, max_data_Ch1, max_data_drift; //values calculated for current stack duration
-
-        FileStream fs, fs2, fs3;
+        FileStream fs, fs2;
         BinaryWriter writeFileStream;
         BinaryReader readFileStream;
         //StreamWriter logWrite;
@@ -248,31 +224,9 @@ namespace Stimulus
                         float dtSpeedUpdate = Convert.ToSingle(dTimeRendering * 0.001f);
                         Object thisLock = new Object();
                         float vel;
-                        //                        lock (thisLock)
-                        //                        {
-                        //vel = buffSwimVel.Last();
                         vel = swimVel - drift;
-                        //                        }
-                        if (!dirSelectivityTest)
-                        {
-                            DXdev0.RenderDirectX(vel * 0.1f, dtSpeedUpdate, deltaAngle, rotationMode, dirSelectivityTest);
-                            DXdev1.RenderDirectX(vel * 0.1f, dtSpeedUpdate, deltaAngle, rotationMode, dirSelectivityTest);
-                        }
-                        else
-                        {
-                            dirSelTimeNew = stopWatch.ElapsedMilliseconds;
-                            if ((dirSelTimeNew - dirSelTimeOld) / 1000F <= 10F)
-                            {
-                                DXdev0.RenderDirectX(-vel * 0.1f, dtSpeedUpdate, 0F, rotationMode, dirSelectivityTest);
-                                DXdev1.RenderDirectX(-vel * 0.1f, dtSpeedUpdate, 0F, rotationMode, dirSelectivityTest);
-                            }
-                            else
-                            {
-                                dirSelTimeOld = dirSelTimeNew;
-                                DXdev0.RenderDirectX(-vel * 0.1f, dtSpeedUpdate, -(float)Math.PI / 4, rotationMode, dirSelectivityTest);
-                                DXdev1.RenderDirectX(-vel * 0.1f, dtSpeedUpdate, -(float)Math.PI / 4, rotationMode, dirSelectivityTest);
-                            }
-                        }
+                        DXdev0.RenderDirectX(vel * 0.1f, dtSpeedUpdate, deltaAngle, false, false);
+                        DXdev1.RenderDirectX(vel * 0.1f, dtSpeedUpdate, deltaAngle, false, false);
                     }
                     // Thread is inactive for AT LEAST 10 ms. Windows timing is inaccurate, innately. 
                     //Actual interval is variable 9 to 50 ms
@@ -291,11 +245,6 @@ namespace Stimulus
             {
                 while (true)
                 {
-                    // Invoke method must be used to interact with the chart
-                    // control on the form!
-                    // oldTimeGUIupdating = newTimeGUIupdating;
-                    // newTimeGUIupdating = stopWatch.ElapsedMilliseconds;
-                    // dTimeListGraphUpdating.Add(newTimeGUIupdating - oldTimeGUIupdating);
                     if (!bStopped) oscilloscopeChart1.Invoke(drawDataDel);
                     Thread.Sleep(980);
                 }
@@ -323,17 +272,12 @@ namespace Stimulus
             oSeries1.Points.Clear();
             filtSeries0.Points.Clear();
             filtSeries1.Points.Clear();
-            //                   Object thisLock = new Object();
-            //                   lock (thisLock)
-            //                 {
             if (timeDisplay.Count == ch0Display.Count && ch0Display.Count > 0)
             {
                 for (int i = 0; i < ch0Display.Count - 1; i++)
                 {
                     oSeries0.Points.AddXY((double)timeDisplay[i], (double)ch0Display[i] + Voffset0);
                     oSeries1.Points.AddXY((double)timeDisplay[i], (double)ch1Display[i] + Voffset1);
-                    //oSeries1.Points.AddXY((double)timeDisplay[i], (double)ch1Display[i] + Voffset1);
-                    //logFileStream.Write("{0}\t{1}\t{2}\n", timeDisplay[i], ch0Display[i], ch1Display[i]);
                 }
             }
             if (filtCh0Display.Count > 0)
@@ -366,7 +310,6 @@ namespace Stimulus
             int dataL = 120;
             int readDataL; // actual data length read from device, may be 0 occasionally
             dtSubSample = 1.0d / DAQdev0.sampleRate * subSampleWin;
-            //double dataPoint = 0;
             if (!bStopped)
             {
                 readDataL = 0;
@@ -384,7 +327,6 @@ namespace Stimulus
                     }
                 if(boolEmulation) // emulation mode, read data from file
                 {
-                    //readDataFromFile = new float[3, dataL];
                     float dump = 0;
                     try
                     {
@@ -433,19 +375,14 @@ namespace Stimulus
                         temp_channel[i] = (readData[4, i] - 0.805858 * tempVin) / (-0.0056846 * tempVin);
                         currentTemp = mean(temp_channel);
                     }
-                    //                        lock (thisLock)
-                    //                        {
                     subData_arrayCh0 = subSample(data_arrayCh0, subSampleWin); //these subsampled data are used only for display.
                     subData_arrayCh1 = subSample(data_arrayCh1, subSampleWin);  //these subsampled data are used only for display.
-                    //                        }
                     int lengthWin = (int)(0.010 * DAQdev0.sampleRate); // 10 ms window at full samplingRate, 6 KHz
                     double[] filtData0, filtData1;
                     filtData0 = get_powerVAR(data_arrayCh0, lengthWin);
                     filtData1 = get_powerVAR(data_arrayCh1, lengthWin);
                     hist_tempCh0 = histogramMinMax(filtData0, nHistBins, 0.0d, 0.1d);
                     hist_tempCh1 = histogramMinMax(filtData1, nHistBins, 0.0d, 0.1d);
-                    //                        lock (thisLock)
-                    //                        {
                     for (int i = 0; i < nHistBins; i++)
                     {
                         cumHistCh0[i] += hist_tempCh0[1, i];
@@ -483,10 +420,6 @@ namespace Stimulus
                     // get the threshold
                     threshCh0 = (float)(xbins[iHistMaxCh0] + (float)threshScaling * (xbins[iHistMaxCh0] - xbins[iHistMinCh0]));
                     threshCh1 = (float)(xbins[iHistMaxCh1] + (float)threshScaling * (xbins[iHistMaxCh1] - xbins[iHistMinCh1]));
-                    // save max stimulus and behavior value for current stack
-                    max_data_Ch0 = Math.Max(max(filtData0), max_data_Ch0);
-                    max_data_Ch1 = Math.Max(max(filtData1), max_data_Ch1);
-                    max_data_drift = (double)drift;
                     //count camera triggers, only first trigger of the stack, thresh 3.8 V
                     lastTriggerCount = triggerCount;
                     if (trigger_previous_last < triggerThresh && trigger_channel[0] >= triggerThresh) triggerCount++;
@@ -495,24 +428,6 @@ namespace Stimulus
                         if (trigger_channel[i] < triggerThresh && trigger_channel[i + 1] >= triggerThresh) triggerCount++;
                     }
                     trigger_previous_last = trigger_channel[trigger_channel.Length - 1];
-                    if (checkBoxSaveFileAfterStack.Checked && triggerCount > lastTriggerCount) // trigger occured, write ephys file
-                    {
-                        writeFileAfterEachStack(lastTriggerCount, max_data_drift, max_data_Ch0, max_data_Ch1);
-                        max_data_drift = 0d;
-                        max_data_Ch0 = 0d;
-                        max_data_Ch1 = 0d;
-                        lastTriggerCount = triggerCount;
-                    }
-                    // start new OMR trial if 2pTrigger switched to low
-                    if (checkBoxSync2pTrigger.Checked && new_trigger2p == false)
-                    {
-                        if (trigger2p_previous_last >= triggerThresh2p && trigger_channel2Photon[0] < triggerThresh2p) new_trigger2p = true;
-                        for (int i = 0; i < trigger_channel2Photon.Length - 1; i++)
-                        {
-                            if (trigger_channel2Photon[i] >= triggerThresh2p && trigger_channel2Photon[i + 1] < triggerThresh2p) new_trigger2p = true;
-                        }
-                        trigger2p_previous_last = trigger_channel2Photon[trigger_channel2Photon.Length - 1];
-                    }
                     // update gain:
                     if (started)
                     {
@@ -521,47 +436,11 @@ namespace Stimulus
                         {
                             updateDrift(triggerCount);
                         }
-                        //if (checkBoxSaveFileAfterStack.Checked) writeFileAfterEachStack(triggerCount);
-                        if (doBinarySwims && oldTimeReading <= 1000F * gain0Interval && newTimeReading > 1000F * gain0Interval)
-                        {
-                            doBinarySwimsNow = true;
-                        }
-
-                        updateSwim(doBinarySwimsNow); // only when doBinarySwimsNow = true
-                        surprizeTimeNew = stopWatch.ElapsedMilliseconds;
-                        if (doBinarySwimsNow && addSurprize && (surprizeTimeNew - surprizeTimeOld) >= surprizeInterval * 1000F && !swimmingNow)
-                        {
-                            swimSurpNow = true;
-                            surprizeTimeOld = surprizeTimeNew;
-                            surprizeInterval = Convert.ToSingle(numericUpDownSurprizeInterval.Value) + (float)rand.Next(-5, 5);
-                        }
 
                         oldTimeReading = newTimeReading;
                         newTimeReading = stopWatch.ElapsedMilliseconds;
                         dTimeReading = newTimeReading - oldTimeReading;
                         dTimeListReading.Add(dTimeReading);
-                        // handle open-loop replay
-                        if (doReplay && oldTimeReading < 1000F * (60F * playTimeMinutes + gain0Interval) && newTimeReading >= 1000F * (60F * playTimeMinutes + gain0Interval))
-                        {
-                            replayNow = true;
-                            swimVelReplayCount = 0;
-                            SetText("Replaying");
-                        }
-                        for (int i = 1; i <= playNtimes; i++)
-                        {
-                            if (doReplay && oldTimeReading < 1000F * (60F * playTimeMinutes * (i + 1) + gain0Interval) && newTimeReading >= 1000F * (60F * playTimeMinutes * (i + 1) + gain0Interval))
-                            {
-                                swimVelReplayCount = 0;
-                            }
-                        }
-                        if (doReplay && newTimeReading > 1000F * (60F * playTimeMinutes * (playNtimes + 1) + gain0Interval))
-                        {
-                            bStopped = true;
-                            doReplay = false;
-                            replayNow = false;
-                            doBinarySwims = false;
-                            doBinarySwimsNow = false;
-                        }
                     }
 
                     // start when first trigger comes
@@ -596,8 +475,6 @@ namespace Stimulus
                     }
                     if (started)
                     {
-                        if (!replayNow)
-                        {
                             float swimPow0 = 0, swimPow1 = 0;
                             for (int i = 0; i < filtData0.Length; i++)
                             {
@@ -607,21 +484,9 @@ namespace Stimulus
                                     lock (thisLock)
                                     {
                                         if (boolEmulation) gain = 0;
-                                        else if (!doBinarySwimsNow)
+                                        else 
                                         {
-                                            //gain blackout for 1 s, at the onset of a swim
                                             gainOutTimeNew = stopWatch.ElapsedMilliseconds;
-                                            if(((swimPow0 + swimPow1) / 2.0 > 0) && checkBoxGainBlackout.Checked)
-                                            {
-                                                makeGainBlackout(); // only in the start of a swim, but randomized in time.
-                                            }
-                                            if (checkBoxGainBlackout.Checked && gain == 0f && (gainOutTimeNew - gainOutTimeOld) >= 1000F) // return gain to normal value after 1000 ms
-                                            {
-                                                gain = lastGain;
-                                                gainOutTimeOld = gainOutTimeNew;
-                                                gainOutInterval = Convert.ToSingle(numericUpDownGainOutInt.Value) + (float)rand.Next(-5, 5);
-                                            }
-
                                             if (((swimPow0 + swimPow1) / 2.0 > 0) && (gain > 0))
                                             {
                                                 swimVel = 0.75F * swimVel + 0.25F * gain * (swimPow0 + swimPow1) / 2.0F;
@@ -635,56 +500,6 @@ namespace Stimulus
                                                 deltaAngle = 0f;
                                             }
                                         }
-                                        else if (doBinarySwimsNow) // all-or-none (binary) swims
-                                        {
-                                            if ((((swimPow0 + swimPow1) / 2.0 > 0) || swimSurpNow) && swimVel <= 0F && (swimInt >= swimBanTimePoints) && !startDecay)
-                                            {
-                                                    swimVel = swimVel + currentVel / 10F; //gradually increase swim vel, so that velocity grows naturally
-                                                    swimmingNow = true;
-                                                    if (swimSurpNow)
-                                                    {
-                                                        surprizeSwimVel = swimVel;
-                                                    }
-                                                swimInt = 0; //start new interval in any case
-                                            }
-                                            else if (swimVel > 0F && swimVel < currentVel && !startDecay)
-                                            {
-                                                swimVel = swimVel + currentVel / 10F;
-                                                swimmingNow = true;
-                                                if (swimSurpNow)
-                                                {
-                                                    surprizeSwimVel = swimVel;
-                                                }
-                                            }
-                                            if (swimVel >= currentVel)
-                                            {
-                                                swimVel = currentVel;
-                                                swimmingNow = true;
-                                                startDecay = true;
-                                                if (swimSurpNow)
-                                                {
-                                                    surprizeSwimVel = swimVel;
-                                                }
-                                            }
-                                            if (startDecay) // no bout, linear decay
-                                            {
-                                                swimVel = swimVel - decayVel;
-                                                swimmingNow = true;
-                                                if (swimSurpNow) { surprizeSwimVel = swimVel; } //only for surprize swims
-                                                if (swimVel < 0F)
-                                                {
-                                                    swimVel = 0F;
-                                                    startDecay = false;
-                                                    swimmingNow = false;
-                                                    if (swimSurpNow)
-                                                    {
-                                                        surprizeSwimVel = swimVel;
-                                                        swimSurpNow = false;//only for surprize swims
-                                                    }
-                                                }
-                                            }
-                                            swimInt += dataL; //120 time points, 20 ms
-                                        }
                                         long currentStopWatch = stopWatch.ElapsedMilliseconds;
                                         if (currentStopWatch > gain0Interval * 1000)
                                         {
@@ -694,16 +509,6 @@ namespace Stimulus
                                         swimPow1 = 0;
                                     }
                             }
-                        }
-                        else //if replay now
-                        {
-                            if (swimVelReplayCount < buffSwimVel.Count)
-                            {
-                                swimVelReplayCount++;
-                                swimVel = buffSwimVel[swimVelReplayCount];
-                                buffSwimVel.Add(swimVel);
-                            }
-                        }
                         // write cumulative data for display by GUI thread
                         lock (thisLock)
                         {
@@ -719,7 +524,6 @@ namespace Stimulus
                                     timeDisplay.RemoveAt(0);
                                 }
                             }
-                            //logFileStream.Write("{0}\n", prevMaxTimepoint);
                             for (int i = 0; i < filtData0.Length; i++)
                             {
                                 filtCh0Display.Add((float)filtData0[i]);
@@ -741,11 +545,9 @@ namespace Stimulus
                                 {
                                     writeFileStream.Write((float)data_arrayCh0[i]); //1
                                     writeFileStream.Write((float)data_arrayCh1[i]); //2
-                                    //writeFileStream.Write(LEDpower); //3
-                                    writeFileStream.Write(surprizeSwimVel); //3
+                                    writeFileStream.Write(LEDpower); //3
                                     writeFileStream.Write(deltaAngle); //4
-                                    if (!gainBout) writeFileStream.Write(gain); //5
-                                    else writeFileStream.Write(0F);
+                                    writeFileStream.Write(gain); //5
                                     writeFileStream.Write(drift); //6
                                     writeFileStream.Write(swimVel); //7
                                     writeFileStream.Write((float)trigger_channel[i]); //8, camera trigger
@@ -795,8 +597,6 @@ namespace Stimulus
                 newTimeGUIupdating = gainTimeNew;
             }
             else { started = false; }
-            startDecay = false;
-            swimInt = 6001;
             gain0 = Convert.ToSingle(numericUpDownGain0.Value);
             gain1 = Convert.ToSingle(numericUpDownGain1.Value);
             gain2 = Convert.ToSingle(numericUpDownGain2.Value);
@@ -846,7 +646,6 @@ namespace Stimulus
             threshScaling = Convert.ToSingle(numericUpDownThreshScale.Value);
             buttonStart.Enabled = false;
             buttonStop.Enabled = true;
-            rotationMode = checkBoxRotation.Checked;
             prevMaxTimepoint = 0d;
 
             ch0Display = new List<float>();
@@ -862,41 +661,12 @@ namespace Stimulus
             trigger_previous_last = 0;
             triggerThresh = Convert.ToDouble(numericUpDownSyncTriggerTresh.Value);
 
-            if (checkBoxSync2pTrigger.Checked) new_trigger2p = false;
-            else new_trigger2p = true;
-            triggerThresh2p = Convert.ToDouble(numericUpDownTriggerThresh2p.Value);
-            trigger2p_previous_last = 0;
-
             VelMax = Convert.ToSingle(numericUpDownVelMax.Value);// max swimming velocity
             decayVel = Convert.ToSingle(numericUpDownDecay.Value);
-
-            surprizeSwimVel = 0F;
-            addSurprize = checkBoxAddSurprize.Checked;
-            swimSurpNow = false;
-
-            surprizeInterval = Convert.ToSingle(numericUpDownSurprizeInterval.Value) + (float)rand.Next(-5, 5);
-            gainOutInterval = Convert.ToSingle(numericUpDownGainOutInt.Value) + (float)rand.Next(-5, 5);
-
-            dirSelectivityTest = checkBoxDirSelectivity.Checked;
 
             LEDpower = 0;
             buttonFlashPressed = false;
 
-            playTimeMinutes = Convert.ToInt32(numericUpDownPlayTmin.Value);
-            if (checkBoxReplay.Checked)
-            {
-                doReplay = true;
-                playNtimes = Convert.ToInt32(numericUpDownReplayN.Value);
-            }
-            else
-            {
-                doReplay = false;
-            }
-            if (checkBoxCloopBinarySwims.Checked)
-            {
-                doBinarySwims = true;
-                doBinarySwimsNow = false;
-            }
             if (!boolEmulation) SetText("Normal mode");
             else SetText("Emulation mode");
             // start worker threads.
@@ -922,10 +692,6 @@ namespace Stimulus
             {
                 MessageBox.Show("Line 747:" + ex.Message);
             }
-            max_data_Ch0 = 0d; 
-            max_data_Ch1 = 0d;
-            max_data_drift = 0d;
-
             tempVin = Convert.ToDouble(textBoxVin.Text);
             System.Threading.Thread.Sleep(500);// allows time to create DAQms task, before reading from it
             bStopped = false;
@@ -992,35 +758,6 @@ namespace Stimulus
                     gain = gain1; // switch the gain 
                     gainNum = 1;
                     gainTimeOld = gainTimeNew;
-                }
-            }
-            if (replayNow) gain = 0;
-        }
-
-        private void makeGainBlackout()
-        {
-            // insert randomized gain blackouts
-            if ( (gainOutTimeNew - gainOutTimeOld) >= gainOutInterval * 1000F)
-            {
-                gain = 0f;
-                gainOutTimeOld = gainOutTimeNew;
-                gainOutInterval = Convert.ToSingle(numericUpDownGainOutInt.Value) + (float)rand.Next(-5, 5);
-            }
-        }
-
-        private void updateSwim(bool doBinarySwimsNow0)
-        {
-            if (doBinarySwimsNow0)
-            {
-                if (gainNum == 1)
-                {
-                    currentVel = Convert.ToSingle(numericUpDownSpeed1.Value);
-                    gain = gain1 / 10F; // fake gain value
-                }
-                if (gainNum == 2)
-                {
-                    currentVel = Convert.ToSingle(numericUpDownSpeed2.Value);
-                    gain = gain2 / 10F; // fake gain value
                 }
             }
         }
@@ -1198,26 +935,6 @@ namespace Stimulus
             return result;
         }
 
-        /*   public void Dispose()
-           {
-               Dispose(true);
-           }
-           /// <summary>
-           /// Clean up any resources being used.
-           /// </summary>
-           /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-           protected override void Dispose(bool disposing)
-           {
-               if (disposing && (components != null))
-               {
-                   components.Dispose();
-                   DXdev0.Dispose();
-                   DXdev1.Dispose();
-               }
-               base.Dispose(disposing);
-           }
-
-   */
         private void loadStimulusImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -1345,7 +1062,7 @@ namespace Stimulus
                     driftNum = 4;
                     driftTimeOld = driftTimeNew;
                 }
-                else if ((driftNum == 4) && (driftTimeNew - driftTimeOld) >= (long)(drift4Interval * 1000F - 10F) && new_trigger2p)
+                else if ((driftNum == 4) && (driftTimeNew - driftTimeOld) >= (long)(drift4Interval * 1000F - 10F))
                 {
                     drift = drift1Array[drift1Index]; // switch to drift1 again
                     drift1Index++;
@@ -1356,7 +1073,6 @@ namespace Stimulus
                     }
                     driftNum = 1;
                     driftTimeOld = driftTimeNew;
-                    if (checkBoxSync2pTrigger.Checked) new_trigger2p = false; //reset the trigger if checkbox is on.
                 }
             }
             else // if time is in stacks
@@ -1446,43 +1162,6 @@ namespace Stimulus
             DAQdev0.writeAOvalue((double)LEDpower);
         }
 
-        private void checkBoxCloopBinarySwims_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxCloopBinarySwims.Checked == true)
-            {
-                numericUpDownGain1.Enabled = false;
-                numericUpDownGain2.Enabled = false;
-                numericUpDownSpeed1.Enabled = true;
-                numericUpDownSpeed2.Enabled = true;
-            }
-            else
-            {
-                numericUpDownGain1.Enabled = true;
-                numericUpDownGain2.Enabled = true;
-                numericUpDownSpeed1.Enabled = false;
-                numericUpDownSpeed2.Enabled = false;
-            }
-        }
-
-        private void checkBoxAddSurprize_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxAddSurprize.Checked)
-            {
-                checkBoxCloopBinarySwims.Checked = true;
-                numericUpDownGain1.Enabled = false;
-                numericUpDownGain2.Enabled = false;
-                numericUpDownSpeed1.Enabled = true;
-                numericUpDownSpeed2.Enabled = true;
-            }
-            else
-            {
-                checkBoxCloopBinarySwims.Checked = false;
-                numericUpDownGain1.Enabled = true;
-                numericUpDownGain2.Enabled = true;
-                numericUpDownSpeed1.Enabled = false;
-                numericUpDownSpeed2.Enabled = false;
-            }
-        }
         /// <summary>
         /// Shuffle the array.
         /// </summary>
@@ -1636,10 +1315,6 @@ namespace Stimulus
                 string value = mySettings["[duration gain2]"];
                 numericUpDownGain2Interval.Value = Convert.ToDecimal(value);
             }
-            if (mySettings.ContainsKey("[output directory for stack-by-stack writing]"))
-            {
-                textBoxFileStream.Text = mySettings["[output directory for stack-by-stack writing]"];
-            }
         }
 
         private void editDefaultParamsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1648,45 +1323,6 @@ namespace Stimulus
             startInfo.FileName = "notepad.EXE";
             startInfo.Arguments = "param.log";
             System.Diagnostics.Process.Start(startInfo);
-        }
-        private void writeFileAfterEachStack(long lastTriggerCount_local, double stim0, double behavior0, double behavior1)
-        {
-            string numStr = lastTriggerCount_local.ToString("D5");
-            string fileName = System.IO.Path.Combine(textBoxFileStream.Text, "TM" + numStr + ".10ch");
-            using (BinaryWriter writer = new BinaryWriter(File.Open(fileName, FileMode.Create)))
-            {
-                //forward drift, baseline 30,000
-                double val1;
-                if (stim0 >= 0d)
-                {
-                    val1 = (3d + stim0) * 10000d; //drift > 0 is written in val1
-                }
-                else
-                {
-                    val1 = 30000d;
-                }
-                if(val1 < UInt16.MinValue) val1 = UInt16.MinValue;
-                if(val1 > UInt16.MaxValue) val1 = UInt16.MaxValue;
-                //backward drift, baseline 30,000
-                double val2;
-                if (stim0 <= 0d)
-                {
-                    val2 = (3d - stim0) * 10000d; // drift < 0 is inverted and written in val2
-                }
-                else
-                {
-                    val2 = 30000d;
-                }
-                if (val2 < UInt16.MinValue) val2 = UInt16.MinValue;
-                if (val2 > UInt16.MaxValue) val2 = UInt16.MaxValue;
-                // summed behavior from both channels
-                double val3 = (1d + behavior0 + behavior1) * 10000d;
-                if(val3 < UInt16.MinValue) val3 = UInt16.MinValue;
-                if(val3 > UInt16.MaxValue) val3 = UInt16.MaxValue;
-                writer.Write(Convert.ToUInt16(val1)); //forward drift
-                writer.Write(Convert.ToUInt16(val2)); //backward drift
-                writer.Write(Convert.ToUInt16(val3)); //behavior
-            }
         }
 
         private void buttonSetOMR_Click(object sender, EventArgs e)
@@ -1715,32 +1351,6 @@ namespace Stimulus
             numericUpDownDrift4Interval.Value = 0M;
         }
 
-        private void buttonSetdOMR_Click(object sender, EventArgs e)
-        {
-            numericUpDownDrift1.Value = 0M;
-            numericUpDownDrift1_2.Value = -0.5M;
-            numericUpDownDrift1_3.Value = -1M;
-            numericUpDownDrift1_4.Value = -2M;
-
-            numericUpDownDrift3.Value = 0M;
-            numericUpDownDrift3_2.Value = 0.5M;
-            numericUpDownDrift3_3.Value = 1M;
-            numericUpDownDrift3_4.Value = 2M;
-
-            numericUpDownDrift2.Value = 0M;
-            numericUpDownDrift4.Value = 0M;
-
-            checkBoxOpenLoop.Checked = true;
-            numericUpDownGain0.Value = 0M;
-            numericUpDownGain1.Value = 0M;
-            numericUpDownGain2.Value = 0M;
-
-            numericUpDownDrift1Interval.Value = 10M;
-            numericUpDownDrift2Interval.Value = 2M;
-            numericUpDownDrift3Interval.Value = 26M;
-            numericUpDownDrift4Interval.Value = 2M;
-        }
-
         private void buttonSetGA_Click(object sender, EventArgs e)
         {
             numericUpDownDrift1.Value = 1M;
@@ -1764,10 +1374,5 @@ namespace Stimulus
             numericUpDownGain2Interval.Value = 20M;
         }
 
-        private void checkBoxSync2pTrigger_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxSync2pTrigger.Checked) new_trigger2p = false; //reset the trigger state
-            else new_trigger2p = true;
-        }
     }
 }
