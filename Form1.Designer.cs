@@ -31,7 +31,6 @@
             this.label49 = new System.Windows.Forms.Label();
             this.buttonSetOMR = new System.Windows.Forms.Button();
             this.buttonSetGA = new System.Windows.Forms.Button();
-            this.buttonSetdOMR = new System.Windows.Forms.Button();
             this.label47 = new System.Windows.Forms.Label();
             this.numericUpDownDrift4Interval = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownDrift4 = new System.Windows.Forms.NumericUpDown();
@@ -50,15 +49,6 @@
             this.numericUpDownDrift1_2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownDrift3Interval = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownDrift3 = new System.Windows.Forms.NumericUpDown();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.numericUpDownGainOutInt = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxGainBlackout = new System.Windows.Forms.CheckBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.numericUpDownSpeed2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownSpeed1 = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxCloopBinarySwims = new System.Windows.Forms.CheckBox();
             this.label41 = new System.Windows.Forms.Label();
             this.numericUpDownGain0Interval = new System.Windows.Forms.NumericUpDown();
             this.label40 = new System.Windows.Forms.Label();
@@ -67,13 +57,8 @@
             this.label39 = new System.Windows.Forms.Label();
             this.buttonFlash = new System.Windows.Forms.Button();
             this.label37 = new System.Windows.Forms.Label();
-            this.checkBoxDirSelectivity = new System.Windows.Forms.CheckBox();
             this.label36 = new System.Windows.Forms.Label();
             this.numericUpDownGain2Interval = new System.Windows.Forms.NumericUpDown();
-            this.label35 = new System.Windows.Forms.Label();
-            this.numericUpDownSurprizeInterval = new System.Windows.Forms.NumericUpDown();
-            this.label34 = new System.Windows.Forms.Label();
-            this.checkBoxAddSurprize = new System.Windows.Forms.CheckBox();
             this.label33 = new System.Windows.Forms.Label();
             this.numericUpDownDecay = new System.Windows.Forms.NumericUpDown();
             this.label32 = new System.Windows.Forms.Label();
@@ -88,11 +73,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.numericUpDownZoom = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxReplay = new System.Windows.Forms.CheckBox();
-            this.numericUpDownPlayTmin = new System.Windows.Forms.NumericUpDown();
-            this.label24 = new System.Windows.Forms.Label();
-            this.numericUpDownReplayN = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
             this.labelCurrentGain = new System.Windows.Forms.Label();
             this.checkBoxUseCh2 = new System.Windows.Forms.CheckBox();
             this.checkBoxUseCh1 = new System.Windows.Forms.CheckBox();
@@ -117,7 +97,6 @@
             this.numericUpDownVmaxi = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownVmini = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBoxRotation = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDownVoffset1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownVoffset0 = new System.Windows.Forms.NumericUpDown();
@@ -127,7 +106,9 @@
             this.panelProjector = new System.Windows.Forms.Panel();
             this.oscilloscopeChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label50 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.numericUpDownTriggerThresh2p = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownSyncTriggerTresh = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
             this.physicalChannelComboBox2 = new System.Windows.Forms.ComboBox();
@@ -167,11 +148,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.textBoxFileStream = new System.Windows.Forms.TextBox();
-            this.checkBoxSaveFileAfterStack = new System.Windows.Forms.CheckBox();
-            this.checkBoxSync2pTrigger = new System.Windows.Forms.CheckBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.numericUpDownTriggerThresh2p = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).BeginInit();
@@ -184,21 +160,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3Interval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGainOutInt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0Interval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLEDinput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain2Interval)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSurprizeInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDecay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVelMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPlayTmin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReplayN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThreshScale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFiltMaxY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift2Interval)).BeginInit();
@@ -214,6 +184,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmin)).BeginInit();
@@ -223,7 +194,6 @@
             this.panelScreens.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -268,7 +238,6 @@
             this.tabPage1.Controls.Add(this.label49);
             this.tabPage1.Controls.Add(this.buttonSetOMR);
             this.tabPage1.Controls.Add(this.buttonSetGA);
-            this.tabPage1.Controls.Add(this.buttonSetdOMR);
             this.tabPage1.Controls.Add(this.label47);
             this.tabPage1.Controls.Add(this.numericUpDownDrift4Interval);
             this.tabPage1.Controls.Add(this.numericUpDownDrift4);
@@ -287,15 +256,6 @@
             this.tabPage1.Controls.Add(this.numericUpDownDrift1_2);
             this.tabPage1.Controls.Add(this.numericUpDownDrift3Interval);
             this.tabPage1.Controls.Add(this.numericUpDownDrift3);
-            this.tabPage1.Controls.Add(this.label42);
-            this.tabPage1.Controls.Add(this.label45);
-            this.tabPage1.Controls.Add(this.numericUpDownGainOutInt);
-            this.tabPage1.Controls.Add(this.checkBoxGainBlackout);
-            this.tabPage1.Controls.Add(this.label44);
-            this.tabPage1.Controls.Add(this.label43);
-            this.tabPage1.Controls.Add(this.numericUpDownSpeed2);
-            this.tabPage1.Controls.Add(this.numericUpDownSpeed1);
-            this.tabPage1.Controls.Add(this.checkBoxCloopBinarySwims);
             this.tabPage1.Controls.Add(this.label41);
             this.tabPage1.Controls.Add(this.numericUpDownGain0Interval);
             this.tabPage1.Controls.Add(this.label40);
@@ -304,13 +264,8 @@
             this.tabPage1.Controls.Add(this.label39);
             this.tabPage1.Controls.Add(this.buttonFlash);
             this.tabPage1.Controls.Add(this.label37);
-            this.tabPage1.Controls.Add(this.checkBoxDirSelectivity);
             this.tabPage1.Controls.Add(this.label36);
             this.tabPage1.Controls.Add(this.numericUpDownGain2Interval);
-            this.tabPage1.Controls.Add(this.label35);
-            this.tabPage1.Controls.Add(this.numericUpDownSurprizeInterval);
-            this.tabPage1.Controls.Add(this.label34);
-            this.tabPage1.Controls.Add(this.checkBoxAddSurprize);
             this.tabPage1.Controls.Add(this.label33);
             this.tabPage1.Controls.Add(this.numericUpDownDecay);
             this.tabPage1.Controls.Add(this.label32);
@@ -325,11 +280,6 @@
             this.tabPage1.Controls.Add(this.label26);
             this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.numericUpDownZoom);
-            this.tabPage1.Controls.Add(this.checkBoxReplay);
-            this.tabPage1.Controls.Add(this.numericUpDownPlayTmin);
-            this.tabPage1.Controls.Add(this.label24);
-            this.tabPage1.Controls.Add(this.numericUpDownReplayN);
-            this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.labelCurrentGain);
             this.tabPage1.Controls.Add(this.checkBoxUseCh2);
             this.tabPage1.Controls.Add(this.checkBoxUseCh1);
@@ -354,7 +304,6 @@
             this.tabPage1.Controls.Add(this.numericUpDownVmaxi);
             this.tabPage1.Controls.Add(this.numericUpDownVmini);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.checkBoxRotation);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.numericUpDownVoffset1);
             this.tabPage1.Controls.Add(this.numericUpDownVoffset0);
@@ -409,16 +358,6 @@
             this.buttonSetGA.Text = "Set GA";
             this.buttonSetGA.UseVisualStyleBackColor = true;
             this.buttonSetGA.Click += new System.EventHandler(this.buttonSetGA_Click);
-            // 
-            // buttonSetdOMR
-            // 
-            this.buttonSetdOMR.Location = new System.Drawing.Point(1027, 174);
-            this.buttonSetdOMR.Name = "buttonSetdOMR";
-            this.buttonSetdOMR.Size = new System.Drawing.Size(75, 23);
-            this.buttonSetdOMR.TabIndex = 119;
-            this.buttonSetdOMR.Text = "Set dOMR";
-            this.buttonSetdOMR.UseVisualStyleBackColor = true;
-            this.buttonSetdOMR.Click += new System.EventHandler(this.buttonSetdOMR_Click);
             // 
             // label47
             // 
@@ -722,134 +661,6 @@
             this.numericUpDownDrift3.TabIndex = 101;
             this.numericUpDownDrift3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(1165, 370);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(101, 13);
-            this.label42.TabIndex = 99;
-            this.label42.Text = "+/- 5 s (randomized)";
-            this.label42.Visible = false;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(1080, 370);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(33, 13);
-            this.label45.TabIndex = 98;
-            this.label45.Text = "every";
-            this.label45.Visible = false;
-            // 
-            // numericUpDownGainOutInt
-            // 
-            this.numericUpDownGainOutInt.Location = new System.Drawing.Point(1118, 368);
-            this.numericUpDownGainOutInt.Name = "numericUpDownGainOutInt";
-            this.numericUpDownGainOutInt.Size = new System.Drawing.Size(41, 20);
-            this.numericUpDownGainOutInt.TabIndex = 96;
-            this.numericUpDownGainOutInt.Value = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.numericUpDownGainOutInt.Visible = false;
-            // 
-            // checkBoxGainBlackout
-            // 
-            this.checkBoxGainBlackout.AutoSize = true;
-            this.checkBoxGainBlackout.Location = new System.Drawing.Point(1068, 343);
-            this.checkBoxGainBlackout.Name = "checkBoxGainBlackout";
-            this.checkBoxGainBlackout.Size = new System.Drawing.Size(135, 17);
-            this.checkBoxGainBlackout.TabIndex = 95;
-            this.checkBoxGainBlackout.Text = "Gain blackouts for 1 s?";
-            this.checkBoxGainBlackout.UseVisualStyleBackColor = true;
-            this.checkBoxGainBlackout.Visible = false;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(1068, 266);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(47, 13);
-            this.label44.TabIndex = 94;
-            this.label44.Text = "Speed 2";
-            this.label44.Visible = false;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(1068, 243);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(47, 13);
-            this.label43.TabIndex = 93;
-            this.label43.Text = "Speed 1";
-            this.label43.Visible = false;
-            // 
-            // numericUpDownSpeed2
-            // 
-            this.numericUpDownSpeed2.DecimalPlaces = 1;
-            this.numericUpDownSpeed2.Enabled = false;
-            this.numericUpDownSpeed2.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownSpeed2.Location = new System.Drawing.Point(1121, 262);
-            this.numericUpDownSpeed2.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownSpeed2.Name = "numericUpDownSpeed2";
-            this.numericUpDownSpeed2.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDownSpeed2.TabIndex = 92;
-            this.numericUpDownSpeed2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownSpeed2.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            this.numericUpDownSpeed2.Visible = false;
-            // 
-            // numericUpDownSpeed1
-            // 
-            this.numericUpDownSpeed1.DecimalPlaces = 1;
-            this.numericUpDownSpeed1.Enabled = false;
-            this.numericUpDownSpeed1.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownSpeed1.Location = new System.Drawing.Point(1121, 241);
-            this.numericUpDownSpeed1.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownSpeed1.Name = "numericUpDownSpeed1";
-            this.numericUpDownSpeed1.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDownSpeed1.TabIndex = 91;
-            this.numericUpDownSpeed1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownSpeed1.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDownSpeed1.Visible = false;
-            // 
-            // checkBoxCloopBinarySwims
-            // 
-            this.checkBoxCloopBinarySwims.AutoSize = true;
-            this.checkBoxCloopBinarySwims.Location = new System.Drawing.Point(1071, 217);
-            this.checkBoxCloopBinarySwims.Name = "checkBoxCloopBinarySwims";
-            this.checkBoxCloopBinarySwims.Size = new System.Drawing.Size(124, 17);
-            this.checkBoxCloopBinarySwims.TabIndex = 88;
-            this.checkBoxCloopBinarySwims.Text = "C-loop binary swims?";
-            this.checkBoxCloopBinarySwims.UseVisualStyleBackColor = true;
-            this.checkBoxCloopBinarySwims.Visible = false;
-            this.checkBoxCloopBinarySwims.CheckedChanged += new System.EventHandler(this.checkBoxCloopBinarySwims_CheckedChanged);
-            // 
             // label41
             // 
             this.label41.AutoSize = true;
@@ -919,7 +730,7 @@
             0,
             0,
             65536});
-            this.numericUpDownLEDinput.Location = new System.Drawing.Point(1148, 497);
+            this.numericUpDownLEDinput.Location = new System.Drawing.Point(1143, 265);
             this.numericUpDownLEDinput.Maximum = new decimal(new int[] {
             5,
             0,
@@ -934,28 +745,25 @@
             0,
             0,
             65536});
-            this.numericUpDownLEDinput.Visible = false;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(1194, 499);
+            this.label39.Location = new System.Drawing.Point(1189, 267);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(38, 13);
             this.label39.TabIndex = 82;
             this.label39.Text = "(0-5 V)";
-            this.label39.Visible = false;
             // 
             // buttonFlash
             // 
             this.buttonFlash.BackColor = System.Drawing.Color.Silver;
-            this.buttonFlash.Location = new System.Drawing.Point(1147, 473);
+            this.buttonFlash.Location = new System.Drawing.Point(1142, 241);
             this.buttonFlash.Name = "buttonFlash";
             this.buttonFlash.Size = new System.Drawing.Size(75, 23);
             this.buttonFlash.TabIndex = 81;
             this.buttonFlash.Text = "Flash LED";
             this.buttonFlash.UseVisualStyleBackColor = false;
-            this.buttonFlash.Visible = false;
             this.buttonFlash.Click += new System.EventHandler(this.buttonFlash_Click);
             // 
             // label37
@@ -966,17 +774,6 @@
             this.label37.Size = new System.Drawing.Size(71, 13);
             this.label37.TabIndex = 80;
             this.label37.Text = "Gain intervals";
-            // 
-            // checkBoxDirSelectivity
-            // 
-            this.checkBoxDirSelectivity.AutoSize = true;
-            this.checkBoxDirSelectivity.Location = new System.Drawing.Point(1147, 422);
-            this.checkBoxDirSelectivity.Name = "checkBoxDirSelectivity";
-            this.checkBoxDirSelectivity.Size = new System.Drawing.Size(111, 17);
-            this.checkBoxDirSelectivity.TabIndex = 77;
-            this.checkBoxDirSelectivity.Text = "Dir. selectivity test";
-            this.checkBoxDirSelectivity.UseVisualStyleBackColor = true;
-            this.checkBoxDirSelectivity.Visible = false;
             // 
             // label36
             // 
@@ -1008,55 +805,10 @@
             0,
             0});
             // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(1165, 315);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(101, 13);
-            this.label35.TabIndex = 74;
-            this.label35.Text = "+/- 5 s (randomized)";
-            this.label35.Visible = false;
-            // 
-            // numericUpDownSurprizeInterval
-            // 
-            this.numericUpDownSurprizeInterval.Location = new System.Drawing.Point(1118, 310);
-            this.numericUpDownSurprizeInterval.Name = "numericUpDownSurprizeInterval";
-            this.numericUpDownSurprizeInterval.Size = new System.Drawing.Size(41, 20);
-            this.numericUpDownSurprizeInterval.TabIndex = 73;
-            this.numericUpDownSurprizeInterval.Value = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.numericUpDownSurprizeInterval.Visible = false;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(1081, 312);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(33, 13);
-            this.label34.TabIndex = 72;
-            this.label34.Text = "every";
-            this.label34.Visible = false;
-            // 
-            // checkBoxAddSurprize
-            // 
-            this.checkBoxAddSurprize.AutoSize = true;
-            this.checkBoxAddSurprize.Location = new System.Drawing.Point(1069, 292);
-            this.checkBoxAddSurprize.Name = "checkBoxAddSurprize";
-            this.checkBoxAddSurprize.Size = new System.Drawing.Size(121, 17);
-            this.checkBoxAddSurprize.TabIndex = 71;
-            this.checkBoxAddSurprize.Text = "Add surprize swims?";
-            this.checkBoxAddSurprize.UseVisualStyleBackColor = true;
-            this.checkBoxAddSurprize.Visible = false;
-            this.checkBoxAddSurprize.CheckedChanged += new System.EventHandler(this.checkBoxAddSurprize_CheckedChanged);
-            // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(909, 394);
+            this.label33.Location = new System.Drawing.Point(908, 291);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(56, 13);
             this.label33.TabIndex = 70;
@@ -1065,7 +817,7 @@
             // numericUpDownDecay
             // 
             this.numericUpDownDecay.DecimalPlaces = 2;
-            this.numericUpDownDecay.Location = new System.Drawing.Point(966, 392);
+            this.numericUpDownDecay.Location = new System.Drawing.Point(965, 289);
             this.numericUpDownDecay.Name = "numericUpDownDecay";
             this.numericUpDownDecay.Size = new System.Drawing.Size(52, 20);
             this.numericUpDownDecay.TabIndex = 69;
@@ -1078,7 +830,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(909, 345);
+            this.label32.Location = new System.Drawing.Point(908, 242);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(86, 13);
             this.label32.TabIndex = 67;
@@ -1096,7 +848,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(929, 367);
+            this.label30.Location = new System.Drawing.Point(928, 264);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(27, 13);
             this.label30.TabIndex = 65;
@@ -1105,7 +857,7 @@
             // numericUpDownVelMax
             // 
             this.numericUpDownVelMax.DecimalPlaces = 1;
-            this.numericUpDownVelMax.Location = new System.Drawing.Point(966, 365);
+            this.numericUpDownVelMax.Location = new System.Drawing.Point(965, 262);
             this.numericUpDownVelMax.Name = "numericUpDownVelMax";
             this.numericUpDownVelMax.Size = new System.Drawing.Size(52, 20);
             this.numericUpDownVelMax.TabIndex = 64;
@@ -1199,63 +951,6 @@
             0,
             0});
             this.numericUpDownZoom.ValueChanged += new System.EventHandler(this.numericUpDownZoom_ValueChanged);
-            // 
-            // checkBoxReplay
-            // 
-            this.checkBoxReplay.AutoSize = true;
-            this.checkBoxReplay.Location = new System.Drawing.Point(875, 220);
-            this.checkBoxReplay.Name = "checkBoxReplay";
-            this.checkBoxReplay.Size = new System.Drawing.Size(94, 17);
-            this.checkBoxReplay.TabIndex = 54;
-            this.checkBoxReplay.Text = "O-loop replay?";
-            this.checkBoxReplay.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDownPlayTmin
-            // 
-            this.numericUpDownPlayTmin.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.numericUpDownPlayTmin.Location = new System.Drawing.Point(978, 242);
-            this.numericUpDownPlayTmin.Name = "numericUpDownPlayTmin";
-            this.numericUpDownPlayTmin.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDownPlayTmin.TabIndex = 53;
-            this.numericUpDownPlayTmin.Value = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(872, 247);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(101, 13);
-            this.label24.TabIndex = 52;
-            this.label24.Text = "Gain1 / Gain2, mins";
-            // 
-            // numericUpDownReplayN
-            // 
-            this.numericUpDownReplayN.Location = new System.Drawing.Point(978, 270);
-            this.numericUpDownReplayN.Name = "numericUpDownReplayN";
-            this.numericUpDownReplayN.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDownReplayN.TabIndex = 51;
-            this.numericUpDownReplayN.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(872, 270);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(78, 13);
-            this.label23.TabIndex = 50;
-            this.label23.Text = "Replay N times";
             // 
             // labelCurrentGain
             // 
@@ -1611,17 +1306,6 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Max";
             // 
-            // checkBoxRotation
-            // 
-            this.checkBoxRotation.AutoSize = true;
-            this.checkBoxRotation.Location = new System.Drawing.Point(1147, 446);
-            this.checkBoxRotation.Name = "checkBoxRotation";
-            this.checkBoxRotation.Size = new System.Drawing.Size(99, 17);
-            this.checkBoxRotation.TabIndex = 13;
-            this.checkBoxRotation.Text = "Rotation of stim";
-            this.checkBoxRotation.UseVisualStyleBackColor = true;
-            this.checkBoxRotation.Visible = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -1867,6 +1551,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Devices";
             // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(12, 333);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(85, 13);
+            this.label50.TabIndex = 37;
+            this.label50.Text = "Trigger thresh, V";
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -1875,6 +1568,24 @@
             this.label22.Size = new System.Drawing.Size(85, 13);
             this.label22.TabIndex = 37;
             this.label22.Text = "Trigger thresh, V";
+            // 
+            // numericUpDownTriggerThresh2p
+            // 
+            this.numericUpDownTriggerThresh2p.DecimalPlaces = 2;
+            this.numericUpDownTriggerThresh2p.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownTriggerThresh2p.Location = new System.Drawing.Point(14, 349);
+            this.numericUpDownTriggerThresh2p.Name = "numericUpDownTriggerThresh2p";
+            this.numericUpDownTriggerThresh2p.Size = new System.Drawing.Size(61, 20);
+            this.numericUpDownTriggerThresh2p.TabIndex = 36;
+            this.numericUpDownTriggerThresh2p.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             // 
             // numericUpDownSyncTriggerTresh
             // 
@@ -2332,71 +2043,12 @@
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // textBoxFileStream
-            // 
-            this.textBoxFileStream.Location = new System.Drawing.Point(829, 672);
-            this.textBoxFileStream.Name = "textBoxFileStream";
-            this.textBoxFileStream.Size = new System.Drawing.Size(451, 20);
-            this.textBoxFileStream.TabIndex = 61;
-            this.textBoxFileStream.Text = "Z:\\Data\\FileStream";
-            // 
-            // checkBoxSaveFileAfterStack
-            // 
-            this.checkBoxSaveFileAfterStack.AutoSize = true;
-            this.checkBoxSaveFileAfterStack.Location = new System.Drawing.Point(555, 672);
-            this.checkBoxSaveFileAfterStack.Name = "checkBoxSaveFileAfterStack";
-            this.checkBoxSaveFileAfterStack.Size = new System.Drawing.Size(191, 17);
-            this.checkBoxSaveFileAfterStack.TabIndex = 62;
-            this.checkBoxSaveFileAfterStack.Text = "Save file after each stack to folder:";
-            this.checkBoxSaveFileAfterStack.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSync2pTrigger
-            // 
-            this.checkBoxSync2pTrigger.AutoSize = true;
-            this.checkBoxSync2pTrigger.Location = new System.Drawing.Point(404, 594);
-            this.checkBoxSync2pTrigger.Name = "checkBoxSync2pTrigger";
-            this.checkBoxSync2pTrigger.Size = new System.Drawing.Size(172, 17);
-            this.checkBoxSync2pTrigger.TabIndex = 80;
-            this.checkBoxSync2pTrigger.Text = "Sync OMR onset to 2p trigger?";
-            this.checkBoxSync2pTrigger.UseVisualStyleBackColor = true;
-            this.checkBoxSync2pTrigger.CheckedChanged += new System.EventHandler(this.checkBoxSync2pTrigger_CheckedChanged);
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(12, 333);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(85, 13);
-            this.label50.TabIndex = 37;
-            this.label50.Text = "Trigger thresh, V";
-            // 
-            // numericUpDownTriggerThresh2p
-            // 
-            this.numericUpDownTriggerThresh2p.DecimalPlaces = 2;
-            this.numericUpDownTriggerThresh2p.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDownTriggerThresh2p.Location = new System.Drawing.Point(14, 349);
-            this.numericUpDownTriggerThresh2p.Name = "numericUpDownTriggerThresh2p";
-            this.numericUpDownTriggerThresh2p.Size = new System.Drawing.Size(61, 20);
-            this.numericUpDownTriggerThresh2p.TabIndex = 36;
-            this.numericUpDownTriggerThresh2p.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1291, 704);
-            this.Controls.Add(this.checkBoxSync2pTrigger);
-            this.Controls.Add(this.checkBoxSaveFileAfterStack);
-            this.Controls.Add(this.textBoxFileStream);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonStop);
@@ -2424,21 +2076,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3Interval)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGainOutInt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0Interval)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLEDinput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain2Interval)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSurprizeInterval)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDecay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVelMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPlayTmin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReplayN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThreshScale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFiltMaxY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift2Interval)).EndInit();
@@ -2455,6 +2101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmin)).EndInit();
@@ -2467,7 +2114,6 @@
             this.tabPage3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2500,7 +2146,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDownVoffset1;
         private System.Windows.Forms.NumericUpDown numericUpDownVoffset0;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBoxRotation;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericUpDownVmini;
         private System.Windows.Forms.NumericUpDown numericUpDownVmaxi;
@@ -2533,11 +2178,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label labelCurrentGain;
-        private System.Windows.Forms.NumericUpDown numericUpDownReplayN;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.NumericUpDown numericUpDownPlayTmin;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.CheckBox checkBoxReplay;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.NumericUpDown numericUpDownZoom;
         private System.Windows.Forms.Label label26;
@@ -2553,13 +2193,8 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.NumericUpDown numericUpDownDecay;
-        private System.Windows.Forms.CheckBox checkBoxAddSurprize;
-        private System.Windows.Forms.NumericUpDown numericUpDownSurprizeInterval;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.NumericUpDown numericUpDownGain2Interval;
-        private System.Windows.Forms.CheckBox checkBoxDirSelectivity;
         private System.Windows.Forms.CheckBox checkBoxSynchStim;
         private System.Windows.Forms.CheckBox checkBoxTimeInStacks;
         private System.Windows.Forms.Label label37;
@@ -2572,15 +2207,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDownGain0Interval;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.NumericUpDown numericUpDownGain0;
-        private System.Windows.Forms.CheckBox checkBoxCloopBinarySwims;
-        private System.Windows.Forms.NumericUpDown numericUpDownSpeed2;
-        private System.Windows.Forms.NumericUpDown numericUpDownSpeed1;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.NumericUpDown numericUpDownGainOutInt;
-        private System.Windows.Forms.CheckBox checkBoxGainBlackout;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.NumericUpDown numericUpDownDrift3Interval;
         private System.Windows.Forms.NumericUpDown numericUpDownDrift3;
         private System.Windows.Forms.NumericUpDown numericUpDownDrift1_4;
@@ -2600,8 +2226,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.TextBox textBoxFileStream;
-        private System.Windows.Forms.CheckBox checkBoxSaveFileAfterStack;
         private System.Windows.Forms.NumericUpDown numericUpDownDrift3_4;
         private System.Windows.Forms.NumericUpDown numericUpDownDrift3_3;
         private System.Windows.Forms.NumericUpDown numericUpDownDrift3_2;
@@ -2612,7 +2236,6 @@
         public System.Windows.Forms.ComboBox physicalChannelComboBox2;
         private System.Windows.Forms.Button buttonSetOMR;
         private System.Windows.Forms.Button buttonSetGA;
-        private System.Windows.Forms.Button buttonSetdOMR;
         private System.Windows.Forms.Label label20;
         public System.Windows.Forms.ComboBox comboBoxTempSensor;
         private System.Windows.Forms.Label label21;
@@ -2621,7 +2244,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDownSyncTriggerTresh;
         private System.Windows.Forms.TextBox textBoxTemp;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.CheckBox checkBoxSync2pTrigger;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.NumericUpDown numericUpDownTriggerThresh2p;
     }
