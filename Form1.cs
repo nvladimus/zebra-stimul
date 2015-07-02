@@ -1691,10 +1691,10 @@ namespace Stimulus
 
         private void buttonSetOMR_Click(object sender, EventArgs e)
         {
-            numericUpDownDrift1.Value = 0M;
-            numericUpDownDrift1_2.Value = 0M;
-            numericUpDownDrift1_3.Value = 0M;
-            numericUpDownDrift1_4.Value = 0M;
+            numericUpDownDrift1.Value = -1M;
+            numericUpDownDrift1_2.Value = -1M;
+            numericUpDownDrift1_3.Value = -1M;
+            numericUpDownDrift1_4.Value = -1M;
 
             numericUpDownDrift3.Value = 1M;
             numericUpDownDrift3_2.Value = 1M;
@@ -1709,10 +1709,10 @@ namespace Stimulus
             numericUpDownGain1.Value = 0M;
             numericUpDownGain2.Value = 0M;
 
-            numericUpDownDrift1Interval.Value = 10M;
-            numericUpDownDrift2Interval.Value = 0M;
-            numericUpDownDrift3Interval.Value = 10M;
-            numericUpDownDrift4Interval.Value = 0M;
+            numericUpDownDrift1Interval.Value = 9M;
+            numericUpDownDrift2Interval.Value = 1M;
+            numericUpDownDrift3Interval.Value = 9M;
+            numericUpDownDrift4Interval.Value = 1M;
         }
 
         private void buttonSetdOMR_Click(object sender, EventArgs e)

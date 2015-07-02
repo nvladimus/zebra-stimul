@@ -127,7 +127,9 @@
             this.panelProjector = new System.Windows.Forms.Panel();
             this.oscilloscopeChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label50 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.numericUpDownTriggerThresh2p = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownSyncTriggerTresh = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
             this.physicalChannelComboBox2 = new System.Windows.Forms.ComboBox();
@@ -170,8 +172,6 @@
             this.textBoxFileStream = new System.Windows.Forms.TextBox();
             this.checkBoxSaveFileAfterStack = new System.Windows.Forms.CheckBox();
             this.checkBoxSync2pTrigger = new System.Windows.Forms.CheckBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.numericUpDownTriggerThresh2p = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).BeginInit();
@@ -214,6 +214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmin)).BeginInit();
@@ -223,7 +224,6 @@
             this.panelScreens.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -1867,6 +1867,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Devices";
             // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(12, 333);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(85, 13);
+            this.label50.TabIndex = 37;
+            this.label50.Text = "Trigger thresh, V";
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -1875,6 +1884,24 @@
             this.label22.Size = new System.Drawing.Size(85, 13);
             this.label22.TabIndex = 37;
             this.label22.Text = "Trigger thresh, V";
+            // 
+            // numericUpDownTriggerThresh2p
+            // 
+            this.numericUpDownTriggerThresh2p.DecimalPlaces = 2;
+            this.numericUpDownTriggerThresh2p.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownTriggerThresh2p.Location = new System.Drawing.Point(14, 349);
+            this.numericUpDownTriggerThresh2p.Name = "numericUpDownTriggerThresh2p";
+            this.numericUpDownTriggerThresh2p.Size = new System.Drawing.Size(61, 20);
+            this.numericUpDownTriggerThresh2p.TabIndex = 36;
+            this.numericUpDownTriggerThresh2p.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             // 
             // numericUpDownSyncTriggerTresh
             // 
@@ -2359,34 +2386,8 @@
             this.checkBoxSync2pTrigger.TabIndex = 80;
             this.checkBoxSync2pTrigger.Text = "Sync OMR onset to 2p trigger?";
             this.checkBoxSync2pTrigger.UseVisualStyleBackColor = true;
+            this.checkBoxSync2pTrigger.Visible = false;
             this.checkBoxSync2pTrigger.CheckedChanged += new System.EventHandler(this.checkBoxSync2pTrigger_CheckedChanged);
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(12, 333);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(85, 13);
-            this.label50.TabIndex = 37;
-            this.label50.Text = "Trigger thresh, V";
-            // 
-            // numericUpDownTriggerThresh2p
-            // 
-            this.numericUpDownTriggerThresh2p.DecimalPlaces = 2;
-            this.numericUpDownTriggerThresh2p.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDownTriggerThresh2p.Location = new System.Drawing.Point(14, 349);
-            this.numericUpDownTriggerThresh2p.Name = "numericUpDownTriggerThresh2p";
-            this.numericUpDownTriggerThresh2p.Size = new System.Drawing.Size(61, 20);
-            this.numericUpDownTriggerThresh2p.TabIndex = 36;
-            this.numericUpDownTriggerThresh2p.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
             // 
             // Form1
             // 
@@ -2455,6 +2456,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmin)).EndInit();
@@ -2467,7 +2469,6 @@
             this.tabPage3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
