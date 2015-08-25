@@ -1769,5 +1769,31 @@ namespace Stimulus
             if (checkBoxSync2pTrigger.Checked) new_trigger2p = false; //reset the trigger state
             else new_trigger2p = true;
         }
+
+        private void buttonSetCustom_Click(object sender, EventArgs e)
+        {
+            numericUpDownDrift1.Value = 0M;
+            numericUpDownDrift1_2.Value = -0.5M;
+            numericUpDownDrift1_3.Value = -1M;
+            numericUpDownDrift1_4.Value = -2M;
+
+            numericUpDownDrift3.Value = 0M;
+            numericUpDownDrift3_2.Value = 0.5M;
+            numericUpDownDrift3_3.Value = 1M;
+            numericUpDownDrift3_4.Value = 2M;
+
+            numericUpDownDrift2.Value = 0M;
+            numericUpDownDrift4.Value = 0M;
+
+            checkBoxOpenLoop.Checked = true;
+            numericUpDownGain0.Value = 0M;
+            numericUpDownGain1.Value = 0M;
+            numericUpDownGain2.Value = 0M;
+
+            numericUpDownDrift1Interval.Value = 5M;
+            numericUpDownDrift2Interval.Value = 0.5M;
+            numericUpDownDrift3Interval.Value = 10M;
+            numericUpDownDrift4Interval.Value = 0.5M;
+        }
     }
 }

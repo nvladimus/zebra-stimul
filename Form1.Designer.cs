@@ -172,6 +172,7 @@
             this.textBoxFileStream = new System.Windows.Forms.TextBox();
             this.checkBoxSaveFileAfterStack = new System.Windows.Forms.CheckBox();
             this.checkBoxSync2pTrigger = new System.Windows.Forms.CheckBox();
+            this.buttonSetCustom = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).BeginInit();
@@ -264,6 +265,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.buttonSetCustom);
             this.tabPage1.Controls.Add(this.textBoxTemp);
             this.tabPage1.Controls.Add(this.label49);
             this.tabPage1.Controls.Add(this.buttonSetOMR);
@@ -402,7 +404,7 @@
             // 
             // buttonSetGA
             // 
-            this.buttonSetGA.Location = new System.Drawing.Point(1138, 174);
+            this.buttonSetGA.Location = new System.Drawing.Point(1086, 174);
             this.buttonSetGA.Name = "buttonSetGA";
             this.buttonSetGA.Size = new System.Drawing.Size(75, 23);
             this.buttonSetGA.TabIndex = 119;
@@ -412,7 +414,7 @@
             // 
             // buttonSetdOMR
             // 
-            this.buttonSetdOMR.Location = new System.Drawing.Point(1027, 174);
+            this.buttonSetdOMR.Location = new System.Drawing.Point(1003, 174);
             this.buttonSetdOMR.Name = "buttonSetdOMR";
             this.buttonSetdOMR.Size = new System.Drawing.Size(75, 23);
             this.buttonSetdOMR.TabIndex = 119;
@@ -432,6 +434,12 @@
             // numericUpDownDrift4Interval
             // 
             this.numericUpDownDrift4Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownDrift4Interval.DecimalPlaces = 1;
+            this.numericUpDownDrift4Interval.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.numericUpDownDrift4Interval.Location = new System.Drawing.Point(1192, 123);
             this.numericUpDownDrift4Interval.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownDrift4Interval.Maximum = new decimal(new int[] {
@@ -686,6 +694,12 @@
             // numericUpDownDrift3Interval
             // 
             this.numericUpDownDrift3Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownDrift3Interval.DecimalPlaces = 1;
+            this.numericUpDownDrift3Interval.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.numericUpDownDrift3Interval.Location = new System.Drawing.Point(1192, 97);
             this.numericUpDownDrift3Interval.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownDrift3Interval.Maximum = new decimal(new int[] {
@@ -1390,6 +1404,12 @@
             // numericUpDownDrift2Interval
             // 
             this.numericUpDownDrift2Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownDrift2Interval.DecimalPlaces = 1;
+            this.numericUpDownDrift2Interval.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.numericUpDownDrift2Interval.Location = new System.Drawing.Point(1192, 71);
             this.numericUpDownDrift2Interval.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownDrift2Interval.Maximum = new decimal(new int[] {
@@ -1420,6 +1440,12 @@
             // numericUpDownDrift1Interval
             // 
             this.numericUpDownDrift1Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownDrift1Interval.DecimalPlaces = 1;
+            this.numericUpDownDrift1Interval.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.numericUpDownDrift1Interval.Location = new System.Drawing.Point(1192, 47);
             this.numericUpDownDrift1Interval.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownDrift1Interval.Maximum = new decimal(new int[] {
@@ -2389,6 +2415,16 @@
             this.checkBoxSync2pTrigger.Visible = false;
             this.checkBoxSync2pTrigger.CheckedChanged += new System.EventHandler(this.checkBoxSync2pTrigger_CheckedChanged);
             // 
+            // buttonSetCustom
+            // 
+            this.buttonSetCustom.Location = new System.Drawing.Point(1171, 174);
+            this.buttonSetCustom.Name = "buttonSetCustom";
+            this.buttonSetCustom.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetCustom.TabIndex = 122;
+            this.buttonSetCustom.Text = "Custom";
+            this.buttonSetCustom.UseVisualStyleBackColor = true;
+            this.buttonSetCustom.Click += new System.EventHandler(this.buttonSetCustom_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2625,6 +2661,7 @@
         private System.Windows.Forms.CheckBox checkBoxSync2pTrigger;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.NumericUpDown numericUpDownTriggerThresh2p;
+        private System.Windows.Forms.Button buttonSetCustom;
     }
 }
 
