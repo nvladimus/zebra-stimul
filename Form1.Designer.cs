@@ -27,6 +27,7 @@
             this.buttonStop = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonSetCustom = new System.Windows.Forms.Button();
             this.textBoxTemp = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.buttonSetOMR = new System.Windows.Forms.Button();
@@ -126,7 +127,22 @@
             this.labelProjector = new System.Windows.Forms.Label();
             this.panelProjector = new System.Windows.Forms.Panel();
             this.oscilloscopeChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.textBox2pPixelRate = new System.Windows.Forms.TextBox();
+            this.textBox2pFrameRate = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.numericUpDownSwipeTimeX = new System.Windows.Forms.NumericUpDown();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.numericUpDownImageDimY = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownImageDimX = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBoxVin = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.comboBoxTempSensor = new System.Windows.Forms.ComboBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.numericUpDownTriggerThresh2p = new System.Windows.Forms.NumericUpDown();
@@ -153,11 +169,6 @@
             this.textBoxScreens = new System.Windows.Forms.TextBox();
             this.labelNscreens = new System.Windows.Forms.Label();
             this.label_N_screens = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBoxVin = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.comboBoxTempSensor = new System.Windows.Forms.ComboBox();
             this.checkBoxSynchStim = new System.Windows.Forms.CheckBox();
             this.checkBoxTimeInStacks = new System.Windows.Forms.CheckBox();
             this.labelReplay = new System.Windows.Forms.Label();
@@ -171,8 +182,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.textBoxFileStream = new System.Windows.Forms.TextBox();
             this.checkBoxSaveFileAfterStack = new System.Windows.Forms.CheckBox();
-            this.checkBoxSync2pTrigger = new System.Windows.Forms.CheckBox();
-            this.buttonSetCustom = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).BeginInit();
@@ -214,6 +223,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSwipeTimeX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownImageDimY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownImageDimX)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).BeginInit();
@@ -223,7 +236,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmin)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panelScreens.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -253,8 +265,8 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(1, 32);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -372,6 +384,16 @@
             this.tabPage1.Size = new System.Drawing.Size(1271, 531);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Oscilloscope and Projector";
+            // 
+            // buttonSetCustom
+            // 
+            this.buttonSetCustom.Location = new System.Drawing.Point(1171, 174);
+            this.buttonSetCustom.Name = "buttonSetCustom";
+            this.buttonSetCustom.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetCustom.TabIndex = 122;
+            this.buttonSetCustom.Text = "Custom";
+            this.buttonSetCustom.UseVisualStyleBackColor = true;
+            this.buttonSetCustom.Click += new System.EventHandler(this.buttonSetCustom_Click);
             // 
             // textBoxTemp
             // 
@@ -1860,9 +1882,158 @@
             this.oscilloscopeChart1.Titles.Add(title1);
             this.oscilloscopeChart1.Titles.Add(title2);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Silver;
+            this.tabPage3.Controls.Add(this.label55);
+            this.tabPage3.Controls.Add(this.label54);
+            this.tabPage3.Controls.Add(this.textBox2pPixelRate);
+            this.tabPage3.Controls.Add(this.textBox2pFrameRate);
+            this.tabPage3.Controls.Add(this.label53);
+            this.tabPage3.Controls.Add(this.numericUpDownSwipeTimeX);
+            this.tabPage3.Controls.Add(this.label52);
+            this.tabPage3.Controls.Add(this.label51);
+            this.tabPage3.Controls.Add(this.numericUpDownImageDimY);
+            this.tabPage3.Controls.Add(this.numericUpDownImageDimX);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1271, 531);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "2P imaging";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(25, 184);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(76, 13);
+            this.label55.TabIndex = 5;
+            this.label55.Text = "Pixel rate, KHz";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(25, 158);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(76, 13);
+            this.label54.TabIndex = 5;
+            this.label54.Text = "Frame rate, Hz";
+            // 
+            // textBox2pPixelRate
+            // 
+            this.textBox2pPixelRate.Location = new System.Drawing.Point(112, 181);
+            this.textBox2pPixelRate.Name = "textBox2pPixelRate";
+            this.textBox2pPixelRate.Size = new System.Drawing.Size(56, 20);
+            this.textBox2pPixelRate.TabIndex = 4;
+            // 
+            // textBox2pFrameRate
+            // 
+            this.textBox2pFrameRate.Location = new System.Drawing.Point(112, 155);
+            this.textBox2pFrameRate.Name = "textBox2pFrameRate";
+            this.textBox2pFrameRate.Size = new System.Drawing.Size(56, 20);
+            this.textBox2pFrameRate.TabIndex = 4;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(25, 115);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(85, 13);
+            this.label53.TabIndex = 3;
+            this.label53.Text = "X swipe time, ms";
+            // 
+            // numericUpDownSwipeTimeX
+            // 
+            this.numericUpDownSwipeTimeX.DecimalPlaces = 2;
+            this.numericUpDownSwipeTimeX.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.numericUpDownSwipeTimeX.Location = new System.Drawing.Point(113, 113);
+            this.numericUpDownSwipeTimeX.Name = "numericUpDownSwipeTimeX";
+            this.numericUpDownSwipeTimeX.Size = new System.Drawing.Size(50, 20);
+            this.numericUpDownSwipeTimeX.TabIndex = 2;
+            this.numericUpDownSwipeTimeX.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownSwipeTimeX.ValueChanged += new System.EventHandler(this.numericUpDownSwipeTimeX_ValueChanged);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(25, 72);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(82, 13);
+            this.label52.TabIndex = 1;
+            this.label52.Text = "Image Y dim, px";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(25, 46);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(82, 13);
+            this.label51.TabIndex = 1;
+            this.label51.Text = "Image X dim, px";
+            // 
+            // numericUpDownImageDimY
+            // 
+            this.numericUpDownImageDimY.Location = new System.Drawing.Point(113, 70);
+            this.numericUpDownImageDimY.Maximum = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+            this.numericUpDownImageDimY.Minimum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.numericUpDownImageDimY.Name = "numericUpDownImageDimY";
+            this.numericUpDownImageDimY.Size = new System.Drawing.Size(50, 20);
+            this.numericUpDownImageDimY.TabIndex = 0;
+            this.numericUpDownImageDimY.Value = new decimal(new int[] {
+            512,
+            0,
+            0,
+            0});
+            this.numericUpDownImageDimY.ValueChanged += new System.EventHandler(this.numericUpDownImageDimY_ValueChanged);
+            // 
+            // numericUpDownImageDimX
+            // 
+            this.numericUpDownImageDimX.Location = new System.Drawing.Point(113, 44);
+            this.numericUpDownImageDimX.Maximum = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+            this.numericUpDownImageDimX.Minimum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.numericUpDownImageDimX.Name = "numericUpDownImageDimX";
+            this.numericUpDownImageDimX.Size = new System.Drawing.Size(50, 20);
+            this.numericUpDownImageDimX.TabIndex = 0;
+            this.numericUpDownImageDimX.Tag = "";
+            this.numericUpDownImageDimX.Value = new decimal(new int[] {
+            512,
+            0,
+            0,
+            0});
+            this.numericUpDownImageDimX.ValueChanged += new System.EventHandler(this.numericUpDownImageDimX_ValueChanged);
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Silver;
+            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.textBoxVin);
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.comboBoxTempSensor);
             this.tabPage2.Controls.Add(this.label50);
             this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.numericUpDownTriggerThresh2p);
@@ -1892,6 +2063,44 @@
             this.tabPage2.Size = new System.Drawing.Size(1271, 531);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Devices";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(175, 492);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(38, 13);
+            this.label21.TabIndex = 41;
+            this.label21.Text = "Vin (V)";
+            // 
+            // textBoxVin
+            // 
+            this.textBoxVin.Location = new System.Drawing.Point(219, 489);
+            this.textBoxVin.Name = "textBoxVin";
+            this.textBoxVin.Size = new System.Drawing.Size(46, 20);
+            this.textBoxVin.TabIndex = 40;
+            this.textBoxVin.Text = "3.276";
+            this.textBoxVin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(171, 417);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(68, 13);
+            this.label20.TabIndex = 39;
+            this.label20.Text = "Temp sensor";
+            // 
+            // comboBoxTempSensor
+            // 
+            this.comboBoxTempSensor.FormattingEnabled = true;
+            this.comboBoxTempSensor.Location = new System.Drawing.Point(173, 433);
+            this.comboBoxTempSensor.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxTempSensor.Name = "comboBoxTempSensor";
+            this.comboBoxTempSensor.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxTempSensor.TabIndex = 38;
+            this.comboBoxTempSensor.Text = "Dev1/ai7";
             // 
             // label50
             // 
@@ -2230,57 +2439,6 @@
             this.label_N_screens.TabIndex = 0;
             this.label_N_screens.Text = "N screens";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.Silver;
-            this.tabPage3.Controls.Add(this.label21);
-            this.tabPage3.Controls.Add(this.textBoxVin);
-            this.tabPage3.Controls.Add(this.label20);
-            this.tabPage3.Controls.Add(this.comboBoxTempSensor);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1271, 531);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Temperature";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(44, 108);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(38, 13);
-            this.label21.TabIndex = 13;
-            this.label21.Text = "Vin (V)";
-            // 
-            // textBoxVin
-            // 
-            this.textBoxVin.Location = new System.Drawing.Point(88, 105);
-            this.textBoxVin.Name = "textBoxVin";
-            this.textBoxVin.Size = new System.Drawing.Size(46, 20);
-            this.textBoxVin.TabIndex = 12;
-            this.textBoxVin.Text = "3.276";
-            this.textBoxVin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(40, 33);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 13);
-            this.label20.TabIndex = 11;
-            this.label20.Text = "Temp sensor";
-            // 
-            // comboBoxTempSensor
-            // 
-            this.comboBoxTempSensor.FormattingEnabled = true;
-            this.comboBoxTempSensor.Location = new System.Drawing.Point(42, 49);
-            this.comboBoxTempSensor.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxTempSensor.Name = "comboBoxTempSensor";
-            this.comboBoxTempSensor.Size = new System.Drawing.Size(92, 21);
-            this.comboBoxTempSensor.TabIndex = 10;
-            this.comboBoxTempSensor.Text = "Dev1/ai7";
-            // 
             // checkBoxSynchStim
             // 
             this.checkBoxSynchStim.AutoSize = true;
@@ -2403,35 +2561,12 @@
             this.checkBoxSaveFileAfterStack.Text = "Save file after each stack to folder:";
             this.checkBoxSaveFileAfterStack.UseVisualStyleBackColor = true;
             // 
-            // checkBoxSync2pTrigger
-            // 
-            this.checkBoxSync2pTrigger.AutoSize = true;
-            this.checkBoxSync2pTrigger.Location = new System.Drawing.Point(404, 594);
-            this.checkBoxSync2pTrigger.Name = "checkBoxSync2pTrigger";
-            this.checkBoxSync2pTrigger.Size = new System.Drawing.Size(172, 17);
-            this.checkBoxSync2pTrigger.TabIndex = 80;
-            this.checkBoxSync2pTrigger.Text = "Sync OMR onset to 2p trigger?";
-            this.checkBoxSync2pTrigger.UseVisualStyleBackColor = true;
-            this.checkBoxSync2pTrigger.Visible = false;
-            this.checkBoxSync2pTrigger.CheckedChanged += new System.EventHandler(this.checkBoxSync2pTrigger_CheckedChanged);
-            // 
-            // buttonSetCustom
-            // 
-            this.buttonSetCustom.Location = new System.Drawing.Point(1171, 174);
-            this.buttonSetCustom.Name = "buttonSetCustom";
-            this.buttonSetCustom.Size = new System.Drawing.Size(75, 23);
-            this.buttonSetCustom.TabIndex = 122;
-            this.buttonSetCustom.Text = "Custom";
-            this.buttonSetCustom.UseVisualStyleBackColor = true;
-            this.buttonSetCustom.Click += new System.EventHandler(this.buttonSetCustom_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1291, 704);
-            this.Controls.Add(this.checkBoxSync2pTrigger);
             this.Controls.Add(this.checkBoxSaveFileAfterStack);
             this.Controls.Add(this.textBoxFileStream);
             this.Controls.Add(this.buttonExit);
@@ -2490,6 +2625,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSwipeTimeX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownImageDimY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownImageDimX)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).EndInit();
@@ -2501,8 +2641,6 @@
             this.groupBox1.ResumeLayout(false);
             this.panelScreens.ResumeLayout(false);
             this.panelScreens.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -2568,7 +2706,6 @@
         private System.Windows.Forms.CheckBox checkBoxUseCh2;
         private System.Windows.Forms.CheckBox checkBoxUseCh1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label labelCurrentGain;
         private System.Windows.Forms.NumericUpDown numericUpDownReplayN;
         private System.Windows.Forms.Label label23;
@@ -2650,18 +2787,28 @@
         private System.Windows.Forms.Button buttonSetOMR;
         private System.Windows.Forms.Button buttonSetGA;
         private System.Windows.Forms.Button buttonSetdOMR;
-        private System.Windows.Forms.Label label20;
-        public System.Windows.Forms.ComboBox comboBoxTempSensor;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBoxVin;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.NumericUpDown numericUpDownSyncTriggerTresh;
         private System.Windows.Forms.TextBox textBoxTemp;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.CheckBox checkBoxSync2pTrigger;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.NumericUpDown numericUpDownTriggerThresh2p;
         private System.Windows.Forms.Button buttonSetCustom;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBoxVin;
+        private System.Windows.Forms.Label label20;
+        public System.Windows.Forms.ComboBox comboBoxTempSensor;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.NumericUpDown numericUpDownImageDimY;
+        private System.Windows.Forms.NumericUpDown numericUpDownImageDimX;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.NumericUpDown numericUpDownSwipeTimeX;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox textBox2pFrameRate;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TextBox textBox2pPixelRate;
     }
 }
 

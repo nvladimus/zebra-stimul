@@ -72,7 +72,7 @@ namespace Stimulus
         volatile float surprizeSwimVel;
         long surprizeTimeOld, surprizeTimeNew, gainOutTimeOld, gainOutTimeNew;
         bool addSurprize;
-        volatile bool swimmingNow, swimSurpNow, gainBout;
+        volatile bool swimmingNow, swimSurpNow;
         volatile float surprizeInterval, gainOutInterval;
 
         volatile float deltaAngle = 0f;
@@ -97,8 +97,6 @@ namespace Stimulus
         long triggerCount;
         double triggerThresh;
         double trigger_previous_last;
-        volatile bool new_trigger2p;
-        double triggerThresh2p, trigger2p_previous_last;
         double tempVin, currentTemp;
         //short nPlanes, planeOffset;
 
@@ -116,6 +114,10 @@ namespace Stimulus
         volatile bool buttonFlashPressed;
 
         double max_data_Ch0, max_data_Ch1, max_data_drift; //values calculated for current stack duration
+
+// 2p parameters
+        int imageDimX, imageDimY;
+        double swimeTimeX;
 
         FileStream fs, fs2, fs3;
         BinaryWriter writeFileStream;
@@ -207,6 +209,7 @@ namespace Stimulus
                 comboBoxTempSensor.SelectedIndex = 7;
             DAQdev0 = new DAQdevice();
             readParam("param.log");
+            update2pParams();
             //data_arrayCh0Save = new float[6000 * 3600 * 4]; //store the whole recording at 6000 Hz for 4 hrs
             //data_arrayCh1Save = new float[6000 * 3600 * 4]; //store the whole recording at 6000 Hz for 4 hrs
             stopWatch = new System.Diagnostics.Stopwatch();
@@ -503,16 +506,6 @@ namespace Stimulus
                         max_data_Ch1 = 0d;
                         lastTriggerCount = triggerCount;
                     }
-                    // start new OMR trial if 2pTrigger switched to low
-                    if (checkBoxSync2pTrigger.Checked && new_trigger2p == false)
-                    {
-                        if (trigger2p_previous_last >= triggerThresh2p && trigger_channel2Photon[0] < triggerThresh2p) new_trigger2p = true;
-                        for (int i = 0; i < trigger_channel2Photon.Length - 1; i++)
-                        {
-                            if (trigger_channel2Photon[i] >= triggerThresh2p && trigger_channel2Photon[i + 1] < triggerThresh2p) new_trigger2p = true;
-                        }
-                        trigger2p_previous_last = trigger_channel2Photon[trigger_channel2Photon.Length - 1];
-                    }
                     // update gain:
                     if (started)
                     {
@@ -744,8 +737,7 @@ namespace Stimulus
                                     //writeFileStream.Write(LEDpower); //3
                                     writeFileStream.Write(surprizeSwimVel); //3
                                     writeFileStream.Write(deltaAngle); //4
-                                    if (!gainBout) writeFileStream.Write(gain); //5
-                                    else writeFileStream.Write(0F);
+                                    writeFileStream.Write(gain); //5
                                     writeFileStream.Write(drift); //6
                                     writeFileStream.Write(swimVel); //7
                                     writeFileStream.Write((float)trigger_channel[i]); //8, camera trigger
@@ -861,11 +853,6 @@ namespace Stimulus
             triggerCount = 0;
             trigger_previous_last = 0;
             triggerThresh = Convert.ToDouble(numericUpDownSyncTriggerTresh.Value);
-
-            if (checkBoxSync2pTrigger.Checked) new_trigger2p = false;
-            else new_trigger2p = true;
-            triggerThresh2p = Convert.ToDouble(numericUpDownTriggerThresh2p.Value);
-            trigger2p_previous_last = 0;
 
             VelMax = Convert.ToSingle(numericUpDownVelMax.Value);// max swimming velocity
             decayVel = Convert.ToSingle(numericUpDownDecay.Value);
@@ -1345,7 +1332,7 @@ namespace Stimulus
                     driftNum = 4;
                     driftTimeOld = driftTimeNew;
                 }
-                else if ((driftNum == 4) && (driftTimeNew - driftTimeOld) >= (long)(drift4Interval * 1000F - 10F) && new_trigger2p)
+                else if ((driftNum == 4) && (driftTimeNew - driftTimeOld) >= (long)(drift4Interval * 1000F - 10F))
                 {
                     drift = drift1Array[drift1Index]; // switch to drift1 again
                     drift1Index++;
@@ -1356,7 +1343,6 @@ namespace Stimulus
                     }
                     driftNum = 1;
                     driftTimeOld = driftTimeNew;
-                    if (checkBoxSync2pTrigger.Checked) new_trigger2p = false; //reset the trigger if checkbox is on.
                 }
             }
             else // if time is in stacks
@@ -1764,11 +1750,6 @@ namespace Stimulus
             numericUpDownGain2Interval.Value = 20M;
         }
 
-        private void checkBoxSync2pTrigger_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxSync2pTrigger.Checked) new_trigger2p = false; //reset the trigger state
-            else new_trigger2p = true;
-        }
 
         private void buttonSetCustom_Click(object sender, EventArgs e)
         {
@@ -1794,6 +1775,29 @@ namespace Stimulus
             numericUpDownDrift2Interval.Value = 0.5M;
             numericUpDownDrift3Interval.Value = 10M;
             numericUpDownDrift4Interval.Value = 0.5M;
+        }
+        private void update2pParams()
+        {
+            imageDimX = Convert.ToInt16(numericUpDownImageDimX.Value);
+            imageDimY = Convert.ToInt16(numericUpDownImageDimY.Value);
+            swimeTimeX = Convert.ToDouble(numericUpDownSwipeTimeX.Value);
+            textBox2pFrameRate.Text = string.Format("{0:N2}",1.0/(imageDimY * swimeTimeX / 1000.0));
+            textBox2pPixelRate.Text = string.Format("{0:N1}", imageDimX / swimeTimeX );
+        }
+
+        private void numericUpDownImageDimX_ValueChanged(object sender, EventArgs e)
+        {
+            update2pParams();
+        }
+
+        private void numericUpDownImageDimY_ValueChanged(object sender, EventArgs e)
+        {
+            update2pParams();
+        }
+
+        private void numericUpDownSwipeTimeX_ValueChanged(object sender, EventArgs e)
+        {
+            update2pParams();
         }
     }
 }
