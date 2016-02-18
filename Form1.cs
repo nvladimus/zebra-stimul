@@ -115,11 +115,7 @@ namespace Stimulus
 
         double max_data_Ch0, max_data_Ch1, max_data_drift; //values calculated for current stack duration
 
-// 2p parameters
-        int imageDimX, imageDimY;
-        double swimeTimeX;
-
-        FileStream fs, fs2, fs3;
+        FileStream fs, fs2;
         BinaryWriter writeFileStream;
         BinaryReader readFileStream;
         //StreamWriter logWrite;
@@ -209,7 +205,6 @@ namespace Stimulus
                 comboBoxTempSensor.SelectedIndex = 7;
             DAQdev0 = new DAQdevice();
             readParam("param.log");
-            update2pParams();
             //data_arrayCh0Save = new float[6000 * 3600 * 4]; //store the whole recording at 6000 Hz for 4 hrs
             //data_arrayCh1Save = new float[6000 * 3600 * 4]; //store the whole recording at 6000 Hz for 4 hrs
             stopWatch = new System.Diagnostics.Stopwatch();
@@ -1775,29 +1770,6 @@ namespace Stimulus
             numericUpDownDrift2Interval.Value = 0.5M;
             numericUpDownDrift3Interval.Value = 10M;
             numericUpDownDrift4Interval.Value = 0.5M;
-        }
-        private void update2pParams()
-        {
-            imageDimX = Convert.ToInt16(numericUpDownImageDimX.Value);
-            imageDimY = Convert.ToInt16(numericUpDownImageDimY.Value);
-            swimeTimeX = Convert.ToDouble(numericUpDownSwipeTimeX.Value);
-            textBox2pFrameRate.Text = string.Format("{0:N2}",1.0/(imageDimY * swimeTimeX / 1000.0));
-            textBox2pPixelRate.Text = string.Format("{0:N1}", imageDimX / swimeTimeX );
-        }
-
-        private void numericUpDownImageDimX_ValueChanged(object sender, EventArgs e)
-        {
-            update2pParams();
-        }
-
-        private void numericUpDownImageDimY_ValueChanged(object sender, EventArgs e)
-        {
-            update2pParams();
-        }
-
-        private void numericUpDownSwipeTimeX_ValueChanged(object sender, EventArgs e)
-        {
-            update2pParams();
         }
     }
 }
