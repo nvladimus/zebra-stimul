@@ -26,6 +26,84 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonStop = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonSetCustom = new System.Windows.Forms.Button();
+            this.textBoxTemp = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.buttonSetOMR = new System.Windows.Forms.Button();
+            this.buttonSetGA = new System.Windows.Forms.Button();
+            this.buttonSetdOMR = new System.Windows.Forms.Button();
+            this.label47 = new System.Windows.Forms.Label();
+            this.numericUpDownDrift4Interval = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrift4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrift3_4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrift3_3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrift3_2 = new System.Windows.Forms.NumericUpDown();
+            this.labelCurrentDrift = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.checkBoxOpenLoop = new System.Windows.Forms.CheckBox();
+            this.checkBoxShuffle = new System.Windows.Forms.CheckBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDownDrift1_4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrift1_3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrift1_2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrift3Interval = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrift3 = new System.Windows.Forms.NumericUpDown();
+            this.label41 = new System.Windows.Forms.Label();
+            this.numericUpDownGain0Interval = new System.Windows.Forms.NumericUpDown();
+            this.label40 = new System.Windows.Forms.Label();
+            this.numericUpDownGain0 = new System.Windows.Forms.NumericUpDown();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.numericUpDownGain2Interval = new System.Windows.Forms.NumericUpDown();
+            this.label33 = new System.Windows.Forms.Label();
+            this.numericUpDownDecay = new System.Windows.Forms.NumericUpDown();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.numericUpDownVelMax = new System.Windows.Forms.NumericUpDown();
+            this.label29 = new System.Windows.Forms.Label();
+            this.numericUpDownTurningGain2 = new System.Windows.Forms.NumericUpDown();
+            this.label28 = new System.Windows.Forms.Label();
+            this.numericUpDownTurningGain1 = new System.Windows.Forms.NumericUpDown();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.numericUpDownZoom = new System.Windows.Forms.NumericUpDown();
+            this.labelCurrentGain = new System.Windows.Forms.Label();
+            this.checkBoxUseCh2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxUseCh1 = new System.Windows.Forms.CheckBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.numericUpDownThreshScale = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.numericUpDownFiltMaxY = new System.Windows.Forms.NumericUpDown();
+            this.buttonThreshNumber = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDownDrift2Interval = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numericUpDownDrift1Interval = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrift2 = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numericUpDownGain1Interval = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numericUpDownGain2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDrift1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownVmaxi = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownVmini = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDownVoffset1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownVoffset0 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDownGain1 = new System.Windows.Forms.NumericUpDown();
+            this.labelProjector = new System.Windows.Forms.Label();
+            this.panelProjector = new System.Windows.Forms.Panel();
+            this.oscilloscopeChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
             this.textBoxVin = new System.Windows.Forms.TextBox();
@@ -57,98 +135,7 @@
             this.textBoxScreens = new System.Windows.Forms.TextBox();
             this.labelNscreens = new System.Windows.Forms.Label();
             this.label_N_screens = new System.Windows.Forms.Label();
-            this.checkBoxSynchStim = new System.Windows.Forms.CheckBox();
-            this.checkBoxTimeInStacks = new System.Windows.Forms.CheckBox();
-            this.labelReplay = new System.Windows.Forms.Label();
-            this.buttonExit = new System.Windows.Forms.Button();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadStimulusImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.load10chDataFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editDefaultParamsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.textBoxFileStream = new System.Windows.Forms.TextBox();
-            this.checkBoxSaveFileAfterStack = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.oscilloscopeChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panelProjector = new System.Windows.Forms.Panel();
-            this.labelProjector = new System.Windows.Forms.Label();
-            this.numericUpDownGain1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDownVoffset0 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownVoffset1 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDownVmini = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownVmaxi = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDrift1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownGain2 = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDownGain1Interval = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.numericUpDownDrift2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDrift1Interval = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            this.numericUpDownDrift2Interval = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.buttonThreshNumber = new System.Windows.Forms.Button();
-            this.numericUpDownFiltMaxY = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.numericUpDownThreshScale = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
-            this.checkBoxUseCh1 = new System.Windows.Forms.CheckBox();
-            this.checkBoxUseCh2 = new System.Windows.Forms.CheckBox();
-            this.labelCurrentGain = new System.Windows.Forms.Label();
-            this.numericUpDownZoom = new System.Windows.Forms.NumericUpDown();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.numericUpDownTurningGain1 = new System.Windows.Forms.NumericUpDown();
-            this.label28 = new System.Windows.Forms.Label();
-            this.numericUpDownTurningGain2 = new System.Windows.Forms.NumericUpDown();
-            this.label29 = new System.Windows.Forms.Label();
-            this.numericUpDownVelMax = new System.Windows.Forms.NumericUpDown();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.numericUpDownDecay = new System.Windows.Forms.NumericUpDown();
-            this.label33 = new System.Windows.Forms.Label();
-            this.numericUpDownGain2Interval = new System.Windows.Forms.NumericUpDown();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.numericUpDownGain0 = new System.Windows.Forms.NumericUpDown();
-            this.label40 = new System.Windows.Forms.Label();
-            this.numericUpDownGain0Interval = new System.Windows.Forms.NumericUpDown();
-            this.label41 = new System.Windows.Forms.Label();
-            this.numericUpDownDrift3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDrift3Interval = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDrift1_2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDrift1_3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDrift1_4 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.checkBoxShuffle = new System.Windows.Forms.CheckBox();
-            this.checkBoxOpenLoop = new System.Windows.Forms.CheckBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.labelCurrentDrift = new System.Windows.Forms.Label();
-            this.numericUpDownDrift3_2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDrift3_3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDrift3_4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDrift4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownDrift4Interval = new System.Windows.Forms.NumericUpDown();
-            this.label47 = new System.Windows.Forms.Label();
-            this.buttonSetdOMR = new System.Windows.Forms.Button();
-            this.buttonSetGA = new System.Windows.Forms.Button();
-            this.buttonSetOMR = new System.Windows.Forms.Button();
-            this.label49 = new System.Windows.Forms.Label();
-            this.textBoxTemp = new System.Windows.Forms.TextBox();
-            this.buttonSetCustom = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label42 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.numericUpDownGainOutInt = new System.Windows.Forms.NumericUpDown();
@@ -172,7 +159,58 @@
             this.numericUpDownReplayN = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
             this.checkBoxRotation = new System.Windows.Forms.CheckBox();
+            this.checkBoxSynchStim = new System.Windows.Forms.CheckBox();
+            this.checkBoxTimeInStacks = new System.Windows.Forms.CheckBox();
+            this.labelReplay = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadStimulusImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.load10chDataFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editDefaultParamsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.textBoxFileStream = new System.Windows.Forms.TextBox();
+            this.checkBoxSaveFileAfterStack = new System.Windows.Forms.CheckBox();
+            this.buttonAllBlack = new System.Windows.Forms.Button();
+            this.buttonAllWhite = new System.Windows.Forms.Button();
+            this.buttonRed = new System.Windows.Forms.Button();
+            this.buttonBlue = new System.Windows.Forms.Button();
+            this.buttonGreen = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3Interval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0Interval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain2Interval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDecay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVelMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThreshScale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFiltMaxY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift2Interval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1Interval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1Interval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmaxi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmini)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).BeginInit();
@@ -182,41 +220,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmin)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panelScreens.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmini)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmaxi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1Interval)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1Interval)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift2Interval)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFiltMaxY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThreshScale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVelMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDecay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain2Interval)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0Interval)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3Interval)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).BeginInit();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGainOutInt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed1)).BeginInit();
@@ -224,6 +228,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSurprizeInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPlayTmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReplayN)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -260,6 +265,1297 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1279, 557);
             this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.buttonGreen);
+            this.tabPage1.Controls.Add(this.buttonBlue);
+            this.tabPage1.Controls.Add(this.buttonRed);
+            this.tabPage1.Controls.Add(this.buttonAllWhite);
+            this.tabPage1.Controls.Add(this.buttonAllBlack);
+            this.tabPage1.Controls.Add(this.buttonSetCustom);
+            this.tabPage1.Controls.Add(this.textBoxTemp);
+            this.tabPage1.Controls.Add(this.label49);
+            this.tabPage1.Controls.Add(this.buttonSetOMR);
+            this.tabPage1.Controls.Add(this.buttonSetGA);
+            this.tabPage1.Controls.Add(this.buttonSetdOMR);
+            this.tabPage1.Controls.Add(this.label47);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift4Interval);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift4);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift3_4);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift3_3);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift3_2);
+            this.tabPage1.Controls.Add(this.labelCurrentDrift);
+            this.tabPage1.Controls.Add(this.label46);
+            this.tabPage1.Controls.Add(this.checkBoxOpenLoop);
+            this.tabPage1.Controls.Add(this.checkBoxShuffle);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift1_4);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift1_3);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift1_2);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift3Interval);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift3);
+            this.tabPage1.Controls.Add(this.label41);
+            this.tabPage1.Controls.Add(this.numericUpDownGain0Interval);
+            this.tabPage1.Controls.Add(this.label40);
+            this.tabPage1.Controls.Add(this.numericUpDownGain0);
+            this.tabPage1.Controls.Add(this.label37);
+            this.tabPage1.Controls.Add(this.label36);
+            this.tabPage1.Controls.Add(this.numericUpDownGain2Interval);
+            this.tabPage1.Controls.Add(this.label33);
+            this.tabPage1.Controls.Add(this.numericUpDownDecay);
+            this.tabPage1.Controls.Add(this.label32);
+            this.tabPage1.Controls.Add(this.label31);
+            this.tabPage1.Controls.Add(this.label30);
+            this.tabPage1.Controls.Add(this.numericUpDownVelMax);
+            this.tabPage1.Controls.Add(this.label29);
+            this.tabPage1.Controls.Add(this.numericUpDownTurningGain2);
+            this.tabPage1.Controls.Add(this.label28);
+            this.tabPage1.Controls.Add(this.numericUpDownTurningGain1);
+            this.tabPage1.Controls.Add(this.label27);
+            this.tabPage1.Controls.Add(this.label26);
+            this.tabPage1.Controls.Add(this.label25);
+            this.tabPage1.Controls.Add(this.numericUpDownZoom);
+            this.tabPage1.Controls.Add(this.labelCurrentGain);
+            this.tabPage1.Controls.Add(this.checkBoxUseCh2);
+            this.tabPage1.Controls.Add(this.checkBoxUseCh1);
+            this.tabPage1.Controls.Add(this.label19);
+            this.tabPage1.Controls.Add(this.numericUpDownThreshScale);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.numericUpDownFiltMaxY);
+            this.tabPage1.Controls.Add(this.buttonThreshNumber);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift2Interval);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift1Interval);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift2);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.numericUpDownGain1Interval);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.numericUpDownGain2);
+            this.tabPage1.Controls.Add(this.numericUpDownDrift1);
+            this.tabPage1.Controls.Add(this.numericUpDownVmaxi);
+            this.tabPage1.Controls.Add(this.numericUpDownVmini);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.numericUpDownVoffset1);
+            this.tabPage1.Controls.Add(this.numericUpDownVoffset0);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.numericUpDownGain1);
+            this.tabPage1.Controls.Add(this.labelProjector);
+            this.tabPage1.Controls.Add(this.panelProjector);
+            this.tabPage1.Controls.Add(this.oscilloscopeChart1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(1271, 531);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Oscilloscope and Projector";
+            // 
+            // buttonSetCustom
+            // 
+            this.buttonSetCustom.Location = new System.Drawing.Point(1171, 174);
+            this.buttonSetCustom.Name = "buttonSetCustom";
+            this.buttonSetCustom.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetCustom.TabIndex = 122;
+            this.buttonSetCustom.Text = "Custom";
+            this.buttonSetCustom.UseVisualStyleBackColor = true;
+            this.buttonSetCustom.Click += new System.EventHandler(this.buttonSetCustom_Click);
+            // 
+            // textBoxTemp
+            // 
+            this.textBoxTemp.Location = new System.Drawing.Point(72, 501);
+            this.textBoxTemp.Name = "textBoxTemp";
+            this.textBoxTemp.ReadOnly = true;
+            this.textBoxTemp.Size = new System.Drawing.Size(49, 20);
+            this.textBoxTemp.TabIndex = 121;
+            this.textBoxTemp.Text = "NA";
+            this.textBoxTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(16, 504);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(50, 13);
+            this.label49.TabIndex = 120;
+            this.label49.Text = "Temp., C";
+            // 
+            // buttonSetOMR
+            // 
+            this.buttonSetOMR.Location = new System.Drawing.Point(920, 174);
+            this.buttonSetOMR.Name = "buttonSetOMR";
+            this.buttonSetOMR.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetOMR.TabIndex = 119;
+            this.buttonSetOMR.Text = "Set OMR";
+            this.buttonSetOMR.UseVisualStyleBackColor = true;
+            this.buttonSetOMR.Click += new System.EventHandler(this.buttonSetOMR_Click);
+            // 
+            // buttonSetGA
+            // 
+            this.buttonSetGA.Location = new System.Drawing.Point(1086, 174);
+            this.buttonSetGA.Name = "buttonSetGA";
+            this.buttonSetGA.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetGA.TabIndex = 119;
+            this.buttonSetGA.Text = "Set GA";
+            this.buttonSetGA.UseVisualStyleBackColor = true;
+            this.buttonSetGA.Click += new System.EventHandler(this.buttonSetGA_Click);
+            // 
+            // buttonSetdOMR
+            // 
+            this.buttonSetdOMR.Location = new System.Drawing.Point(1003, 174);
+            this.buttonSetdOMR.Name = "buttonSetdOMR";
+            this.buttonSetdOMR.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetdOMR.TabIndex = 119;
+            this.buttonSetdOMR.Text = "Set dOMR";
+            this.buttonSetdOMR.UseVisualStyleBackColor = true;
+            this.buttonSetdOMR.Click += new System.EventHandler(this.buttonSetdOMR_Click);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(867, 125);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(43, 13);
+            this.label47.TabIndex = 118;
+            this.label47.Text = "Vpause";
+            // 
+            // numericUpDownDrift4Interval
+            // 
+            this.numericUpDownDrift4Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownDrift4Interval.DecimalPlaces = 1;
+            this.numericUpDownDrift4Interval.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift4Interval.Location = new System.Drawing.Point(1192, 123);
+            this.numericUpDownDrift4Interval.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownDrift4Interval.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numericUpDownDrift4Interval.Name = "numericUpDownDrift4Interval";
+            this.numericUpDownDrift4Interval.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift4Interval.TabIndex = 117;
+            this.numericUpDownDrift4Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDrift4Interval.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownDrift4
+            // 
+            this.numericUpDownDrift4.DecimalPlaces = 1;
+            this.numericUpDownDrift4.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift4.Location = new System.Drawing.Point(910, 123);
+            this.numericUpDownDrift4.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownDrift4.Name = "numericUpDownDrift4";
+            this.numericUpDownDrift4.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift4.TabIndex = 116;
+            this.numericUpDownDrift4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // numericUpDownDrift3_4
+            // 
+            this.numericUpDownDrift3_4.DecimalPlaces = 1;
+            this.numericUpDownDrift3_4.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift3_4.Location = new System.Drawing.Point(1121, 97);
+            this.numericUpDownDrift3_4.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownDrift3_4.Name = "numericUpDownDrift3_4";
+            this.numericUpDownDrift3_4.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift3_4.TabIndex = 115;
+            this.numericUpDownDrift3_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDrift3_4.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownDrift3_3
+            // 
+            this.numericUpDownDrift3_3.DecimalPlaces = 1;
+            this.numericUpDownDrift3_3.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift3_3.Location = new System.Drawing.Point(1049, 97);
+            this.numericUpDownDrift3_3.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownDrift3_3.Name = "numericUpDownDrift3_3";
+            this.numericUpDownDrift3_3.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift3_3.TabIndex = 114;
+            this.numericUpDownDrift3_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDrift3_3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownDrift3_2
+            // 
+            this.numericUpDownDrift3_2.DecimalPlaces = 1;
+            this.numericUpDownDrift3_2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift3_2.Location = new System.Drawing.Point(980, 97);
+            this.numericUpDownDrift3_2.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownDrift3_2.Name = "numericUpDownDrift3_2";
+            this.numericUpDownDrift3_2.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift3_2.TabIndex = 113;
+            this.numericUpDownDrift3_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDrift3_2.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            // 
+            // labelCurrentDrift
+            // 
+            this.labelCurrentDrift.AutoSize = true;
+            this.labelCurrentDrift.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCurrentDrift.Location = new System.Drawing.Point(548, 463);
+            this.labelCurrentDrift.Name = "labelCurrentDrift";
+            this.labelCurrentDrift.Size = new System.Drawing.Size(16, 16);
+            this.labelCurrentDrift.TabIndex = 112;
+            this.labelCurrentDrift.Text = "0";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(469, 463);
+            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(74, 16);
+            this.label46.TabIndex = 111;
+            this.label46.Text = "Current drift";
+            // 
+            // checkBoxOpenLoop
+            // 
+            this.checkBoxOpenLoop.AutoSize = true;
+            this.checkBoxOpenLoop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxOpenLoop.Location = new System.Drawing.Point(695, 219);
+            this.checkBoxOpenLoop.Name = "checkBoxOpenLoop";
+            this.checkBoxOpenLoop.Size = new System.Drawing.Size(91, 17);
+            this.checkBoxOpenLoop.TabIndex = 110;
+            this.checkBoxOpenLoop.Text = "Open loop?";
+            this.checkBoxOpenLoop.UseVisualStyleBackColor = true;
+            this.checkBoxOpenLoop.CheckedChanged += new System.EventHandler(this.checkBoxOpenLoop_CheckedChanged);
+            // 
+            // checkBoxShuffle
+            // 
+            this.checkBoxShuffle.AutoSize = true;
+            this.checkBoxShuffle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxShuffle.Location = new System.Drawing.Point(1060, 25);
+            this.checkBoxShuffle.Name = "checkBoxShuffle";
+            this.checkBoxShuffle.Size = new System.Drawing.Size(114, 17);
+            this.checkBoxShuffle.TabIndex = 109;
+            this.checkBoxShuffle.Text = "Shuffle values?";
+            this.checkBoxShuffle.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(872, 101);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(34, 13);
+            this.label15.TabIndex = 108;
+            this.label15.Text = "Vforw";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(867, 73);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 13);
+            this.label13.TabIndex = 107;
+            this.label13.Text = "Vpause";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(872, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 106;
+            this.label7.Text = "Vback";
+            // 
+            // numericUpDownDrift1_4
+            // 
+            this.numericUpDownDrift1_4.DecimalPlaces = 1;
+            this.numericUpDownDrift1_4.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift1_4.Location = new System.Drawing.Point(1121, 47);
+            this.numericUpDownDrift1_4.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownDrift1_4.Name = "numericUpDownDrift1_4";
+            this.numericUpDownDrift1_4.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift1_4.TabIndex = 105;
+            this.numericUpDownDrift1_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDrift1_4.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            -2147483648});
+            // 
+            // numericUpDownDrift1_3
+            // 
+            this.numericUpDownDrift1_3.DecimalPlaces = 1;
+            this.numericUpDownDrift1_3.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift1_3.Location = new System.Drawing.Point(1049, 47);
+            this.numericUpDownDrift1_3.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownDrift1_3.Name = "numericUpDownDrift1_3";
+            this.numericUpDownDrift1_3.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift1_3.TabIndex = 104;
+            this.numericUpDownDrift1_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDrift1_3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            // 
+            // numericUpDownDrift1_2
+            // 
+            this.numericUpDownDrift1_2.DecimalPlaces = 1;
+            this.numericUpDownDrift1_2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift1_2.Location = new System.Drawing.Point(980, 47);
+            this.numericUpDownDrift1_2.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownDrift1_2.Name = "numericUpDownDrift1_2";
+            this.numericUpDownDrift1_2.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift1_2.TabIndex = 103;
+            this.numericUpDownDrift1_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDrift1_2.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147418112});
+            // 
+            // numericUpDownDrift3Interval
+            // 
+            this.numericUpDownDrift3Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownDrift3Interval.DecimalPlaces = 1;
+            this.numericUpDownDrift3Interval.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift3Interval.Location = new System.Drawing.Point(1192, 97);
+            this.numericUpDownDrift3Interval.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownDrift3Interval.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numericUpDownDrift3Interval.Name = "numericUpDownDrift3Interval";
+            this.numericUpDownDrift3Interval.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift3Interval.TabIndex = 102;
+            this.numericUpDownDrift3Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDrift3Interval.Value = new decimal(new int[] {
+            28,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownDrift3
+            // 
+            this.numericUpDownDrift3.DecimalPlaces = 1;
+            this.numericUpDownDrift3.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift3.Location = new System.Drawing.Point(910, 97);
+            this.numericUpDownDrift3.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownDrift3.Name = "numericUpDownDrift3";
+            this.numericUpDownDrift3.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift3.TabIndex = 101;
+            this.numericUpDownDrift3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(755, 265);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(32, 13);
+            this.label41.TabIndex = 87;
+            this.label41.Text = "G0, s";
+            // 
+            // numericUpDownGain0Interval
+            // 
+            this.numericUpDownGain0Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownGain0Interval.Location = new System.Drawing.Point(790, 260);
+            this.numericUpDownGain0Interval.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownGain0Interval.Maximum = new decimal(new int[] {
+            3600,
+            0,
+            0,
+            0});
+            this.numericUpDownGain0Interval.Name = "numericUpDownGain0Interval";
+            this.numericUpDownGain0Interval.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownGain0Interval.TabIndex = 86;
+            this.numericUpDownGain0Interval.TabStop = false;
+            this.numericUpDownGain0Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(644, 262);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(35, 13);
+            this.label40.TabIndex = 85;
+            this.label40.Text = "Gain0";
+            // 
+            // numericUpDownGain0
+            // 
+            this.numericUpDownGain0.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownGain0.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownGain0.Location = new System.Drawing.Point(680, 260);
+            this.numericUpDownGain0.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownGain0.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownGain0.Name = "numericUpDownGain0";
+            this.numericUpDownGain0.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownGain0.TabIndex = 84;
+            this.numericUpDownGain0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownGain0.Value = new decimal(new int[] {
+            180,
+            0,
+            0,
+            0});
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(755, 245);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(71, 13);
+            this.label37.TabIndex = 80;
+            this.label37.Text = "Gain intervals";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(755, 313);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(32, 13);
+            this.label36.TabIndex = 76;
+            this.label36.Text = "G2, s";
+            // 
+            // numericUpDownGain2Interval
+            // 
+            this.numericUpDownGain2Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownGain2Interval.Location = new System.Drawing.Point(790, 308);
+            this.numericUpDownGain2Interval.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownGain2Interval.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numericUpDownGain2Interval.Name = "numericUpDownGain2Interval";
+            this.numericUpDownGain2Interval.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownGain2Interval.TabIndex = 75;
+            this.numericUpDownGain2Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownGain2Interval.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(891, 305);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(56, 13);
+            this.label33.TabIndex = 70;
+            this.label33.Text = "Lin. decay";
+            // 
+            // numericUpDownDecay
+            // 
+            this.numericUpDownDecay.DecimalPlaces = 2;
+            this.numericUpDownDecay.Location = new System.Drawing.Point(948, 303);
+            this.numericUpDownDecay.Name = "numericUpDownDecay";
+            this.numericUpDownDecay.Size = new System.Drawing.Size(52, 20);
+            this.numericUpDownDecay.TabIndex = 69;
+            this.numericUpDownDecay.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            65536});
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(891, 256);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(86, 13);
+            this.label32.TabIndex = 67;
+            this.label32.Text = "Swimming speed";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(907, 24);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(66, 13);
+            this.label31.TabIndex = 66;
+            this.label31.Text = "Stimulus drift";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(911, 278);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(27, 13);
+            this.label30.TabIndex = 65;
+            this.label30.Text = "Max";
+            // 
+            // numericUpDownVelMax
+            // 
+            this.numericUpDownVelMax.DecimalPlaces = 1;
+            this.numericUpDownVelMax.Location = new System.Drawing.Point(948, 276);
+            this.numericUpDownVelMax.Name = "numericUpDownVelMax";
+            this.numericUpDownVelMax.Size = new System.Drawing.Size(52, 20);
+            this.numericUpDownVelMax.TabIndex = 64;
+            this.numericUpDownVelMax.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(634, 392);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(39, 13);
+            this.label29.TabIndex = 63;
+            this.label29.Text = "t-gain2";
+            // 
+            // numericUpDownTurningGain2
+            // 
+            this.numericUpDownTurningGain2.DecimalPlaces = 2;
+            this.numericUpDownTurningGain2.Location = new System.Drawing.Point(679, 390);
+            this.numericUpDownTurningGain2.Name = "numericUpDownTurningGain2";
+            this.numericUpDownTurningGain2.Size = new System.Drawing.Size(52, 20);
+            this.numericUpDownTurningGain2.TabIndex = 62;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(634, 366);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(39, 13);
+            this.label28.TabIndex = 61;
+            this.label28.Text = "t-gain1";
+            // 
+            // numericUpDownTurningGain1
+            // 
+            this.numericUpDownTurningGain1.DecimalPlaces = 2;
+            this.numericUpDownTurningGain1.Location = new System.Drawing.Point(679, 364);
+            this.numericUpDownTurningGain1.Name = "numericUpDownTurningGain1";
+            this.numericUpDownTurningGain1.Size = new System.Drawing.Size(52, 20);
+            this.numericUpDownTurningGain1.TabIndex = 59;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(655, 344);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(66, 13);
+            this.label27.TabIndex = 58;
+            this.label27.Text = "Turning gain";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(656, 243);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(77, 13);
+            this.label26.TabIndex = 57;
+            this.label26.Text = "Swimming gain";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(810, 22);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(34, 13);
+            this.label25.TabIndex = 56;
+            this.label25.Text = "Zoom";
+            // 
+            // numericUpDownZoom
+            // 
+            this.numericUpDownZoom.DecimalPlaces = 2;
+            this.numericUpDownZoom.Increment = new decimal(new int[] {
+            25,
+            0,
+            0,
+            131072});
+            this.numericUpDownZoom.Location = new System.Drawing.Point(750, 18);
+            this.numericUpDownZoom.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownZoom.Name = "numericUpDownZoom";
+            this.numericUpDownZoom.Size = new System.Drawing.Size(48, 20);
+            this.numericUpDownZoom.TabIndex = 55;
+            this.numericUpDownZoom.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownZoom.ValueChanged += new System.EventHandler(this.numericUpDownZoom_ValueChanged);
+            // 
+            // labelCurrentGain
+            // 
+            this.labelCurrentGain.AutoSize = true;
+            this.labelCurrentGain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCurrentGain.Location = new System.Drawing.Point(702, 463);
+            this.labelCurrentGain.Name = "labelCurrentGain";
+            this.labelCurrentGain.Size = new System.Drawing.Size(16, 16);
+            this.labelCurrentGain.TabIndex = 49;
+            this.labelCurrentGain.Text = "0";
+            // 
+            // checkBoxUseCh2
+            // 
+            this.checkBoxUseCh2.AutoSize = true;
+            this.checkBoxUseCh2.Checked = true;
+            this.checkBoxUseCh2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxUseCh2.Location = new System.Drawing.Point(540, 219);
+            this.checkBoxUseCh2.Name = "checkBoxUseCh2";
+            this.checkBoxUseCh2.Size = new System.Drawing.Size(45, 17);
+            this.checkBoxUseCh2.TabIndex = 47;
+            this.checkBoxUseCh2.Text = "Ch2";
+            this.checkBoxUseCh2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxUseCh1
+            // 
+            this.checkBoxUseCh1.AutoSize = true;
+            this.checkBoxUseCh1.Checked = true;
+            this.checkBoxUseCh1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxUseCh1.Location = new System.Drawing.Point(489, 219);
+            this.checkBoxUseCh1.Name = "checkBoxUseCh1";
+            this.checkBoxUseCh1.Size = new System.Drawing.Size(45, 17);
+            this.checkBoxUseCh1.TabIndex = 46;
+            this.checkBoxUseCh1.Text = "Ch1";
+            this.checkBoxUseCh1.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(486, 203);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(67, 13);
+            this.label19.TabIndex = 45;
+            this.label19.Text = "Use for swim";
+            // 
+            // numericUpDownThreshScale
+            // 
+            this.numericUpDownThreshScale.DecimalPlaces = 2;
+            this.numericUpDownThreshScale.Location = new System.Drawing.Point(537, 390);
+            this.numericUpDownThreshScale.Name = "numericUpDownThreshScale";
+            this.numericUpDownThreshScale.Size = new System.Drawing.Size(52, 20);
+            this.numericUpDownThreshScale.TabIndex = 44;
+            this.numericUpDownThreshScale.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(470, 392);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(68, 13);
+            this.label18.TabIndex = 43;
+            this.label18.Text = "Thresh scale";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(469, 274);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(27, 13);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "Max";
+            // 
+            // numericUpDownFiltMaxY
+            // 
+            this.numericUpDownFiltMaxY.DecimalPlaces = 3;
+            this.numericUpDownFiltMaxY.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.numericUpDownFiltMaxY.Location = new System.Drawing.Point(502, 272);
+            this.numericUpDownFiltMaxY.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownFiltMaxY.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.numericUpDownFiltMaxY.Name = "numericUpDownFiltMaxY";
+            this.numericUpDownFiltMaxY.Size = new System.Drawing.Size(69, 20);
+            this.numericUpDownFiltMaxY.TabIndex = 41;
+            this.numericUpDownFiltMaxY.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            196608});
+            // 
+            // buttonThreshNumber
+            // 
+            this.buttonThreshNumber.Location = new System.Drawing.Point(473, 416);
+            this.buttonThreshNumber.Name = "buttonThreshNumber";
+            this.buttonThreshNumber.Size = new System.Drawing.Size(116, 21);
+            this.buttonThreshNumber.TabIndex = 40;
+            this.buttonThreshNumber.Text = "Showing Thresh Ch1";
+            this.buttonThreshNumber.UseVisualStyleBackColor = true;
+            this.buttonThreshNumber.Click += new System.EventHandler(this.buttonThreshNumber_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(463, 138);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(24, 13);
+            this.label16.TabIndex = 39;
+            this.label16.Text = "Min";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(460, 71);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Offset 2";
+            // 
+            // numericUpDownDrift2Interval
+            // 
+            this.numericUpDownDrift2Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownDrift2Interval.DecimalPlaces = 1;
+            this.numericUpDownDrift2Interval.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift2Interval.Location = new System.Drawing.Point(1192, 71);
+            this.numericUpDownDrift2Interval.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownDrift2Interval.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numericUpDownDrift2Interval.Name = "numericUpDownDrift2Interval";
+            this.numericUpDownDrift2Interval.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift2Interval.TabIndex = 36;
+            this.numericUpDownDrift2Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDrift2Interval.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(1189, 25);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 13);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Duration";
+            // 
+            // numericUpDownDrift1Interval
+            // 
+            this.numericUpDownDrift1Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownDrift1Interval.DecimalPlaces = 1;
+            this.numericUpDownDrift1Interval.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift1Interval.Location = new System.Drawing.Point(1192, 47);
+            this.numericUpDownDrift1Interval.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownDrift1Interval.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numericUpDownDrift1Interval.Name = "numericUpDownDrift1Interval";
+            this.numericUpDownDrift1Interval.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift1Interval.TabIndex = 34;
+            this.numericUpDownDrift1Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDrift1Interval.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownDrift2
+            // 
+            this.numericUpDownDrift2.DecimalPlaces = 1;
+            this.numericUpDownDrift2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift2.Location = new System.Drawing.Point(910, 71);
+            this.numericUpDownDrift2.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownDrift2.Name = "numericUpDownDrift2";
+            this.numericUpDownDrift2.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift2.TabIndex = 33;
+            this.numericUpDownDrift2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(618, 463);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 16);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Current gain";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(754, 289);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "G1, s";
+            // 
+            // numericUpDownGain1Interval
+            // 
+            this.numericUpDownGain1Interval.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownGain1Interval.Location = new System.Drawing.Point(790, 284);
+            this.numericUpDownGain1Interval.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownGain1Interval.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numericUpDownGain1Interval.Name = "numericUpDownGain1Interval";
+            this.numericUpDownGain1Interval.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownGain1Interval.TabIndex = 28;
+            this.numericUpDownGain1Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownGain1Interval.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(644, 310);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Gain2";
+            // 
+            // numericUpDownGain2
+            // 
+            this.numericUpDownGain2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownGain2.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownGain2.Location = new System.Drawing.Point(680, 308);
+            this.numericUpDownGain2.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownGain2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownGain2.Name = "numericUpDownGain2";
+            this.numericUpDownGain2.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownGain2.TabIndex = 26;
+            this.numericUpDownGain2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownGain2.Value = new decimal(new int[] {
+            270,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownDrift1
+            // 
+            this.numericUpDownDrift1.DecimalPlaces = 1;
+            this.numericUpDownDrift1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownDrift1.Location = new System.Drawing.Point(910, 47);
+            this.numericUpDownDrift1.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownDrift1.Name = "numericUpDownDrift1";
+            this.numericUpDownDrift1.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownDrift1.TabIndex = 19;
+            this.numericUpDownDrift1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // numericUpDownVmaxi
+            // 
+            this.numericUpDownVmaxi.DecimalPlaces = 2;
+            this.numericUpDownVmaxi.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownVmaxi.Location = new System.Drawing.Point(507, 110);
+            this.numericUpDownVmaxi.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownVmaxi.Name = "numericUpDownVmaxi";
+            this.numericUpDownVmaxi.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownVmaxi.TabIndex = 16;
+            this.numericUpDownVmaxi.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            // 
+            // numericUpDownVmini
+            // 
+            this.numericUpDownVmini.DecimalPlaces = 2;
+            this.numericUpDownVmini.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownVmini.Location = new System.Drawing.Point(507, 136);
+            this.numericUpDownVmini.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.numericUpDownVmini.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownVmini.Name = "numericUpDownVmini";
+            this.numericUpDownVmini.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownVmini.TabIndex = 15;
+            this.numericUpDownVmini.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147418112});
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(463, 112);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Max";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(460, 47);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Offset 1";
+            // 
+            // numericUpDownVoffset1
+            // 
+            this.numericUpDownVoffset1.DecimalPlaces = 2;
+            this.numericUpDownVoffset1.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.numericUpDownVoffset1.Location = new System.Drawing.Point(507, 69);
+            this.numericUpDownVoffset1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownVoffset1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownVoffset1.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownVoffset1.Name = "numericUpDownVoffset1";
+            this.numericUpDownVoffset1.Size = new System.Drawing.Size(46, 20);
+            this.numericUpDownVoffset1.TabIndex = 9;
+            // 
+            // numericUpDownVoffset0
+            // 
+            this.numericUpDownVoffset0.DecimalPlaces = 2;
+            this.numericUpDownVoffset0.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.numericUpDownVoffset0.Location = new System.Drawing.Point(507, 45);
+            this.numericUpDownVoffset0.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownVoffset0.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownVoffset0.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownVoffset0.Name = "numericUpDownVoffset0";
+            this.numericUpDownVoffset0.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDownVoffset0.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(644, 286);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Gain1";
+            // 
+            // numericUpDownGain1
+            // 
+            this.numericUpDownGain1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.numericUpDownGain1.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownGain1.Location = new System.Drawing.Point(680, 284);
+            this.numericUpDownGain1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownGain1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownGain1.Name = "numericUpDownGain1";
+            this.numericUpDownGain1.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownGain1.TabIndex = 3;
+            this.numericUpDownGain1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownGain1.Value = new decimal(new int[] {
+            90,
+            0,
+            0,
+            0});
+            // 
+            // labelProjector
+            // 
+            this.labelProjector.AutoSize = true;
+            this.labelProjector.Location = new System.Drawing.Point(629, 19);
+            this.labelProjector.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelProjector.Name = "labelProjector";
+            this.labelProjector.Size = new System.Drawing.Size(49, 13);
+            this.labelProjector.TabIndex = 2;
+            this.labelProjector.Text = "Projector";
+            // 
+            // panelProjector
+            // 
+            this.panelProjector.Location = new System.Drawing.Point(632, 43);
+            this.panelProjector.Margin = new System.Windows.Forms.Padding(2);
+            this.panelProjector.Name = "panelProjector";
+            this.panelProjector.Size = new System.Drawing.Size(214, 161);
+            this.panelProjector.TabIndex = 1;
+            this.panelProjector.Tag = "";
+            // 
+            // oscilloscopeChart1
+            // 
+            this.oscilloscopeChart1.BackColor = System.Drawing.Color.Silver;
+            this.oscilloscopeChart1.BackImageTransparentColor = System.Drawing.Color.White;
+            this.oscilloscopeChart1.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea1.AxisX.Interval = 0.2D;
+            chartArea1.AxisX.IsStartedFromZero = false;
+            chartArea1.AxisX.LabelStyle.Format = "######.#";
+            chartArea1.AxisX.LabelStyle.Interval = 0.2D;
+            chartArea1.AxisX.LabelStyle.IsEndLabelVisible = false;
+            chartArea1.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea1.AxisX.Title = "time, s";
+            chartArea1.AxisY.Interval = 0.05D;
+            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisY.LabelStyle.Format = "0.000";
+            chartArea1.AxisY.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisY.Maximum = 0.01D;
+            chartArea1.AxisY.Minimum = -0.01D;
+            chartArea1.AxisY.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisY.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisY.ScaleView.SmallScrollMinSize = 0.001D;
+            chartArea1.AxisY.ScaleView.SmallScrollMinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisY.ScaleView.SmallScrollSize = 0.002D;
+            chartArea1.AxisY.ScaleView.SmallScrollSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisY.ScrollBar.BackColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisY.ScrollBar.ButtonColor = System.Drawing.Color.White;
+            chartArea1.AxisY.ScrollBar.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated270;
+            chartArea1.AxisY.Title = "Voltage, V";
+            chartArea1.BackColor = System.Drawing.Color.Black;
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.CursorY.Interval = 0.002D;
+            chartArea1.CursorY.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.CursorY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.CursorY.IsUserSelectionEnabled = true;
+            chartArea1.CursorY.Position = 0D;
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 80F;
+            chartArea1.InnerPlotPosition.Width = 70F;
+            chartArea1.InnerPlotPosition.X = 5F;
+            chartArea1.InnerPlotPosition.Y = 5F;
+            chartArea1.Name = "ChartArea1";
+            chartArea1.Position.Auto = false;
+            chartArea1.Position.Height = 50F;
+            chartArea1.Position.Width = 90F;
+            chartArea1.Position.X = 5F;
+            chartArea1.Position.Y = 7F;
+            chartArea2.AxisX.LabelStyle.Enabled = false;
+            chartArea2.AxisY.Interval = 0.001D;
+            chartArea2.AxisY.LabelStyle.Format = "#.#####";
+            chartArea2.AxisY.LabelStyle.Interval = 0.001D;
+            chartArea2.AxisY.Maximum = 0.01D;
+            chartArea2.AxisY.Minimum = 0D;
+            chartArea2.BackColor = System.Drawing.Color.Black;
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.CursorY.Interval = 1E-05D;
+            chartArea2.CursorY.Position = 0D;
+            chartArea2.InnerPlotPosition.Auto = false;
+            chartArea2.InnerPlotPosition.Height = 80F;
+            chartArea2.InnerPlotPosition.Width = 70F;
+            chartArea2.InnerPlotPosition.X = 5F;
+            chartArea2.Name = "ChartArea2";
+            chartArea2.Position.Auto = false;
+            chartArea2.Position.Height = 45F;
+            chartArea2.Position.Width = 90F;
+            chartArea2.Position.X = 5F;
+            chartArea2.Position.Y = 55F;
+            this.oscilloscopeChart1.ChartAreas.Add(chartArea1);
+            this.oscilloscopeChart1.ChartAreas.Add(chartArea2);
+            this.oscilloscopeChart1.Cursor = System.Windows.Forms.Cursors.Default;
+            legend1.BackColor = System.Drawing.Color.Silver;
+            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
+            legend1.Name = "Legend1";
+            legend1.Position.Auto = false;
+            legend1.Position.Height = 6F;
+            legend1.Position.Width = 50F;
+            legend1.Position.X = 20F;
+            legend1.Position.Y = 3F;
+            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            this.oscilloscopeChart1.Legends.Add(legend1);
+            this.oscilloscopeChart1.Location = new System.Drawing.Point(0, 0);
+            this.oscilloscopeChart1.Margin = new System.Windows.Forms.Padding(2);
+            this.oscilloscopeChart1.Name = "oscilloscopeChart1";
+            this.oscilloscopeChart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.oscilloscopeChart1.Size = new System.Drawing.Size(628, 482);
+            this.oscilloscopeChart1.TabIndex = 0;
+            this.oscilloscopeChart1.Text = "chart1";
+            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title1.Name = "Title1";
+            title1.Text = "Original signal";
+            title2.Alignment = System.Drawing.ContentAlignment.BottomLeft;
+            title2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title2.Name = "Title2";
+            title2.Text = "Filtered signal";
+            this.oscilloscopeChart1.Titles.Add(title1);
+            this.oscilloscopeChart1.Titles.Add(title2);
             // 
             // tabPage2
             // 
@@ -673,130 +1969,6 @@
             this.label_N_screens.TabIndex = 0;
             this.label_N_screens.Text = "N screens";
             // 
-            // checkBoxSynchStim
-            // 
-            this.checkBoxSynchStim.AutoSize = true;
-            this.checkBoxSynchStim.Checked = true;
-            this.checkBoxSynchStim.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxSynchStim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxSynchStim.Location = new System.Drawing.Point(161, 594);
-            this.checkBoxSynchStim.Name = "checkBoxSynchStim";
-            this.checkBoxSynchStim.Size = new System.Drawing.Size(212, 17);
-            this.checkBoxSynchStim.TabIndex = 78;
-            this.checkBoxSynchStim.Text = "Synch stimulus to camera onset?";
-            this.checkBoxSynchStim.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxTimeInStacks
-            // 
-            this.checkBoxTimeInStacks.AutoSize = true;
-            this.checkBoxTimeInStacks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxTimeInStacks.Location = new System.Drawing.Point(24, 594);
-            this.checkBoxTimeInStacks.Name = "checkBoxTimeInStacks";
-            this.checkBoxTimeInStacks.Size = new System.Drawing.Size(115, 17);
-            this.checkBoxTimeInStacks.TabIndex = 79;
-            this.checkBoxTimeInStacks.Text = "Time in stacks?";
-            this.checkBoxTimeInStacks.UseVisualStyleBackColor = true;
-            // 
-            // labelReplay
-            // 
-            this.labelReplay.AutoSize = true;
-            this.labelReplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReplay.Location = new System.Drawing.Point(591, 620);
-            this.labelReplay.Name = "labelReplay";
-            this.labelReplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelReplay.Size = new System.Drawing.Size(90, 16);
-            this.labelReplay.TabIndex = 60;
-            this.labelReplay.Text = "Normal mode";
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonExit.Location = new System.Drawing.Point(1222, 12);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(51, 35);
-            this.buttonExit.TabIndex = 5;
-            this.buttonExit.Text = "Good bye";
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadStimulusImageToolStripMenuItem,
-            this.load10chDataFileToolStripMenuItem,
-            this.editDefaultParamsToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // loadStimulusImageToolStripMenuItem
-            // 
-            this.loadStimulusImageToolStripMenuItem.Name = "loadStimulusImageToolStripMenuItem";
-            this.loadStimulusImageToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.loadStimulusImageToolStripMenuItem.Text = "Load stimulus image";
-            this.loadStimulusImageToolStripMenuItem.Click += new System.EventHandler(this.loadStimulusImageToolStripMenuItem_Click);
-            // 
-            // load10chDataFileToolStripMenuItem
-            // 
-            this.load10chDataFileToolStripMenuItem.Name = "load10chDataFileToolStripMenuItem";
-            this.load10chDataFileToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.load10chDataFileToolStripMenuItem.Text = "Load .10ch data file";
-            this.load10chDataFileToolStripMenuItem.Click += new System.EventHandler(this.load10chDataFileToolStripMenuItem_Click);
-            // 
-            // editDefaultParamsToolStripMenuItem
-            // 
-            this.editDefaultParamsToolStripMenuItem.Name = "editDefaultParamsToolStripMenuItem";
-            this.editDefaultParamsToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.editDefaultParamsToolStripMenuItem.Text = "Edit default params";
-            this.editDefaultParamsToolStripMenuItem.Click += new System.EventHandler(this.editDefaultParamsToolStripMenuItem_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.helpToolStripMenuItem.Text = "Info";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1291, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // textBoxFileStream
-            // 
-            this.textBoxFileStream.Location = new System.Drawing.Point(829, 672);
-            this.textBoxFileStream.Name = "textBoxFileStream";
-            this.textBoxFileStream.Size = new System.Drawing.Size(451, 20);
-            this.textBoxFileStream.TabIndex = 61;
-            this.textBoxFileStream.Text = "Z:\\Data\\FileStream";
-            this.textBoxFileStream.Visible = false;
-            // 
-            // checkBoxSaveFileAfterStack
-            // 
-            this.checkBoxSaveFileAfterStack.AutoSize = true;
-            this.checkBoxSaveFileAfterStack.Location = new System.Drawing.Point(555, 672);
-            this.checkBoxSaveFileAfterStack.Name = "checkBoxSaveFileAfterStack";
-            this.checkBoxSaveFileAfterStack.Size = new System.Drawing.Size(191, 17);
-            this.checkBoxSaveFileAfterStack.TabIndex = 62;
-            this.checkBoxSaveFileAfterStack.Text = "Save file after each stack to folder:";
-            this.checkBoxSaveFileAfterStack.UseVisualStyleBackColor = true;
-            this.checkBoxSaveFileAfterStack.Visible = false;
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Silver;
@@ -829,1292 +2001,6 @@
             this.tabPage3.Size = new System.Drawing.Size(1271, 531);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Misc. test";
-            // 
-            // oscilloscopeChart1
-            // 
-            this.oscilloscopeChart1.BackColor = System.Drawing.Color.Silver;
-            this.oscilloscopeChart1.BackImageTransparentColor = System.Drawing.Color.White;
-            this.oscilloscopeChart1.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea1.AxisX.Interval = 0.2D;
-            chartArea1.AxisX.IsStartedFromZero = false;
-            chartArea1.AxisX.LabelStyle.Format = "######.#";
-            chartArea1.AxisX.LabelStyle.Interval = 0.2D;
-            chartArea1.AxisX.LabelStyle.IsEndLabelVisible = false;
-            chartArea1.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
-            chartArea1.AxisX.Title = "time, s";
-            chartArea1.AxisY.Interval = 0.05D;
-            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisY.LabelStyle.Format = "0.000";
-            chartArea1.AxisY.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisY.Maximum = 0.01D;
-            chartArea1.AxisY.Minimum = -0.01D;
-            chartArea1.AxisY.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisY.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisY.ScaleView.SmallScrollMinSize = 0.001D;
-            chartArea1.AxisY.ScaleView.SmallScrollMinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisY.ScaleView.SmallScrollSize = 0.002D;
-            chartArea1.AxisY.ScaleView.SmallScrollSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisY.ScrollBar.BackColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisY.ScrollBar.ButtonColor = System.Drawing.Color.White;
-            chartArea1.AxisY.ScrollBar.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated270;
-            chartArea1.AxisY.Title = "Voltage, V";
-            chartArea1.BackColor = System.Drawing.Color.Black;
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.CursorY.Interval = 0.002D;
-            chartArea1.CursorY.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.CursorY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.CursorY.IsUserSelectionEnabled = true;
-            chartArea1.CursorY.Position = 0D;
-            chartArea1.InnerPlotPosition.Auto = false;
-            chartArea1.InnerPlotPosition.Height = 80F;
-            chartArea1.InnerPlotPosition.Width = 70F;
-            chartArea1.InnerPlotPosition.X = 5F;
-            chartArea1.InnerPlotPosition.Y = 5F;
-            chartArea1.Name = "ChartArea1";
-            chartArea1.Position.Auto = false;
-            chartArea1.Position.Height = 50F;
-            chartArea1.Position.Width = 90F;
-            chartArea1.Position.X = 5F;
-            chartArea1.Position.Y = 7F;
-            chartArea2.AxisX.LabelStyle.Enabled = false;
-            chartArea2.AxisY.Interval = 0.001D;
-            chartArea2.AxisY.LabelStyle.Format = "#.#####";
-            chartArea2.AxisY.LabelStyle.Interval = 0.001D;
-            chartArea2.AxisY.Maximum = 0.01D;
-            chartArea2.AxisY.Minimum = 0D;
-            chartArea2.BackColor = System.Drawing.Color.Black;
-            chartArea2.BorderColor = System.Drawing.Color.White;
-            chartArea2.CursorY.Interval = 1E-05D;
-            chartArea2.CursorY.Position = 0D;
-            chartArea2.InnerPlotPosition.Auto = false;
-            chartArea2.InnerPlotPosition.Height = 80F;
-            chartArea2.InnerPlotPosition.Width = 70F;
-            chartArea2.InnerPlotPosition.X = 5F;
-            chartArea2.Name = "ChartArea2";
-            chartArea2.Position.Auto = false;
-            chartArea2.Position.Height = 45F;
-            chartArea2.Position.Width = 90F;
-            chartArea2.Position.X = 5F;
-            chartArea2.Position.Y = 55F;
-            this.oscilloscopeChart1.ChartAreas.Add(chartArea1);
-            this.oscilloscopeChart1.ChartAreas.Add(chartArea2);
-            this.oscilloscopeChart1.Cursor = System.Windows.Forms.Cursors.Default;
-            legend1.BackColor = System.Drawing.Color.Silver;
-            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
-            legend1.Name = "Legend1";
-            legend1.Position.Auto = false;
-            legend1.Position.Height = 6F;
-            legend1.Position.Width = 50F;
-            legend1.Position.X = 20F;
-            legend1.Position.Y = 3F;
-            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
-            this.oscilloscopeChart1.Legends.Add(legend1);
-            this.oscilloscopeChart1.Location = new System.Drawing.Point(0, 0);
-            this.oscilloscopeChart1.Margin = new System.Windows.Forms.Padding(2);
-            this.oscilloscopeChart1.Name = "oscilloscopeChart1";
-            this.oscilloscopeChart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.oscilloscopeChart1.Size = new System.Drawing.Size(628, 482);
-            this.oscilloscopeChart1.TabIndex = 0;
-            this.oscilloscopeChart1.Text = "chart1";
-            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title1.Name = "Title1";
-            title1.Text = "Original signal";
-            title2.Alignment = System.Drawing.ContentAlignment.BottomLeft;
-            title2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title2.Name = "Title2";
-            title2.Text = "Filtered signal";
-            this.oscilloscopeChart1.Titles.Add(title1);
-            this.oscilloscopeChart1.Titles.Add(title2);
-            // 
-            // panelProjector
-            // 
-            this.panelProjector.Location = new System.Drawing.Point(632, 43);
-            this.panelProjector.Margin = new System.Windows.Forms.Padding(2);
-            this.panelProjector.Name = "panelProjector";
-            this.panelProjector.Size = new System.Drawing.Size(214, 161);
-            this.panelProjector.TabIndex = 1;
-            this.panelProjector.Tag = "";
-            // 
-            // labelProjector
-            // 
-            this.labelProjector.AutoSize = true;
-            this.labelProjector.Location = new System.Drawing.Point(629, 19);
-            this.labelProjector.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelProjector.Name = "labelProjector";
-            this.labelProjector.Size = new System.Drawing.Size(49, 13);
-            this.labelProjector.TabIndex = 2;
-            this.labelProjector.Text = "Projector";
-            // 
-            // numericUpDownGain1
-            // 
-            this.numericUpDownGain1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.numericUpDownGain1.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownGain1.Location = new System.Drawing.Point(680, 284);
-            this.numericUpDownGain1.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownGain1.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownGain1.Name = "numericUpDownGain1";
-            this.numericUpDownGain1.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownGain1.TabIndex = 3;
-            this.numericUpDownGain1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownGain1.Value = new decimal(new int[] {
-            90,
-            0,
-            0,
-            0});
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(644, 286);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Gain1";
-            // 
-            // numericUpDownVoffset0
-            // 
-            this.numericUpDownVoffset0.DecimalPlaces = 2;
-            this.numericUpDownVoffset0.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.numericUpDownVoffset0.Location = new System.Drawing.Point(507, 45);
-            this.numericUpDownVoffset0.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownVoffset0.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownVoffset0.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownVoffset0.Name = "numericUpDownVoffset0";
-            this.numericUpDownVoffset0.Size = new System.Drawing.Size(45, 20);
-            this.numericUpDownVoffset0.TabIndex = 8;
-            // 
-            // numericUpDownVoffset1
-            // 
-            this.numericUpDownVoffset1.DecimalPlaces = 2;
-            this.numericUpDownVoffset1.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.numericUpDownVoffset1.Location = new System.Drawing.Point(507, 69);
-            this.numericUpDownVoffset1.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownVoffset1.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownVoffset1.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownVoffset1.Name = "numericUpDownVoffset1";
-            this.numericUpDownVoffset1.Size = new System.Drawing.Size(46, 20);
-            this.numericUpDownVoffset1.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(460, 47);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Offset 1";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(463, 112);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Max";
-            // 
-            // numericUpDownVmini
-            // 
-            this.numericUpDownVmini.DecimalPlaces = 2;
-            this.numericUpDownVmini.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDownVmini.Location = new System.Drawing.Point(507, 136);
-            this.numericUpDownVmini.Maximum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.numericUpDownVmini.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownVmini.Name = "numericUpDownVmini";
-            this.numericUpDownVmini.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownVmini.TabIndex = 15;
-            this.numericUpDownVmini.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147418112});
-            // 
-            // numericUpDownVmaxi
-            // 
-            this.numericUpDownVmaxi.DecimalPlaces = 2;
-            this.numericUpDownVmaxi.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDownVmaxi.Location = new System.Drawing.Point(507, 110);
-            this.numericUpDownVmaxi.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownVmaxi.Name = "numericUpDownVmaxi";
-            this.numericUpDownVmaxi.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownVmaxi.TabIndex = 16;
-            this.numericUpDownVmaxi.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            // 
-            // numericUpDownDrift1
-            // 
-            this.numericUpDownDrift1.DecimalPlaces = 1;
-            this.numericUpDownDrift1.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift1.Location = new System.Drawing.Point(910, 47);
-            this.numericUpDownDrift1.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownDrift1.Name = "numericUpDownDrift1";
-            this.numericUpDownDrift1.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift1.TabIndex = 19;
-            this.numericUpDownDrift1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // numericUpDownGain2
-            // 
-            this.numericUpDownGain2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.numericUpDownGain2.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownGain2.Location = new System.Drawing.Point(680, 308);
-            this.numericUpDownGain2.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownGain2.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownGain2.Name = "numericUpDownGain2";
-            this.numericUpDownGain2.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownGain2.TabIndex = 26;
-            this.numericUpDownGain2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownGain2.Value = new decimal(new int[] {
-            270,
-            0,
-            0,
-            0});
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(644, 310);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Gain2";
-            // 
-            // numericUpDownGain1Interval
-            // 
-            this.numericUpDownGain1Interval.Cursor = System.Windows.Forms.Cursors.Default;
-            this.numericUpDownGain1Interval.Location = new System.Drawing.Point(790, 284);
-            this.numericUpDownGain1Interval.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownGain1Interval.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numericUpDownGain1Interval.Name = "numericUpDownGain1Interval";
-            this.numericUpDownGain1Interval.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownGain1Interval.TabIndex = 28;
-            this.numericUpDownGain1Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownGain1Interval.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(754, 289);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(32, 13);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "G1, s";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(618, 463);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 16);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "Current gain";
-            // 
-            // numericUpDownDrift2
-            // 
-            this.numericUpDownDrift2.DecimalPlaces = 1;
-            this.numericUpDownDrift2.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift2.Location = new System.Drawing.Point(910, 71);
-            this.numericUpDownDrift2.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownDrift2.Name = "numericUpDownDrift2";
-            this.numericUpDownDrift2.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift2.TabIndex = 33;
-            this.numericUpDownDrift2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // numericUpDownDrift1Interval
-            // 
-            this.numericUpDownDrift1Interval.Cursor = System.Windows.Forms.Cursors.Default;
-            this.numericUpDownDrift1Interval.DecimalPlaces = 1;
-            this.numericUpDownDrift1Interval.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift1Interval.Location = new System.Drawing.Point(1192, 47);
-            this.numericUpDownDrift1Interval.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownDrift1Interval.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numericUpDownDrift1Interval.Name = "numericUpDownDrift1Interval";
-            this.numericUpDownDrift1Interval.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift1Interval.TabIndex = 34;
-            this.numericUpDownDrift1Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownDrift1Interval.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1189, 25);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 13);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "Duration";
-            // 
-            // numericUpDownDrift2Interval
-            // 
-            this.numericUpDownDrift2Interval.Cursor = System.Windows.Forms.Cursors.Default;
-            this.numericUpDownDrift2Interval.DecimalPlaces = 1;
-            this.numericUpDownDrift2Interval.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift2Interval.Location = new System.Drawing.Point(1192, 71);
-            this.numericUpDownDrift2Interval.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownDrift2Interval.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numericUpDownDrift2Interval.Name = "numericUpDownDrift2Interval";
-            this.numericUpDownDrift2Interval.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift2Interval.TabIndex = 36;
-            this.numericUpDownDrift2Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownDrift2Interval.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(460, 71);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Offset 2";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(463, 138);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(24, 13);
-            this.label16.TabIndex = 39;
-            this.label16.Text = "Min";
-            // 
-            // buttonThreshNumber
-            // 
-            this.buttonThreshNumber.Location = new System.Drawing.Point(473, 416);
-            this.buttonThreshNumber.Name = "buttonThreshNumber";
-            this.buttonThreshNumber.Size = new System.Drawing.Size(116, 21);
-            this.buttonThreshNumber.TabIndex = 40;
-            this.buttonThreshNumber.Text = "Showing Thresh Ch1";
-            this.buttonThreshNumber.UseVisualStyleBackColor = true;
-            this.buttonThreshNumber.Click += new System.EventHandler(this.buttonThreshNumber_Click);
-            // 
-            // numericUpDownFiltMaxY
-            // 
-            this.numericUpDownFiltMaxY.DecimalPlaces = 3;
-            this.numericUpDownFiltMaxY.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.numericUpDownFiltMaxY.Location = new System.Drawing.Point(502, 272);
-            this.numericUpDownFiltMaxY.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownFiltMaxY.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.numericUpDownFiltMaxY.Name = "numericUpDownFiltMaxY";
-            this.numericUpDownFiltMaxY.Size = new System.Drawing.Size(69, 20);
-            this.numericUpDownFiltMaxY.TabIndex = 41;
-            this.numericUpDownFiltMaxY.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            196608});
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(469, 274);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(27, 13);
-            this.label17.TabIndex = 42;
-            this.label17.Text = "Max";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(470, 392);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(68, 13);
-            this.label18.TabIndex = 43;
-            this.label18.Text = "Thresh scale";
-            // 
-            // numericUpDownThreshScale
-            // 
-            this.numericUpDownThreshScale.DecimalPlaces = 2;
-            this.numericUpDownThreshScale.Location = new System.Drawing.Point(537, 390);
-            this.numericUpDownThreshScale.Name = "numericUpDownThreshScale";
-            this.numericUpDownThreshScale.Size = new System.Drawing.Size(52, 20);
-            this.numericUpDownThreshScale.TabIndex = 44;
-            this.numericUpDownThreshScale.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(486, 203);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(67, 13);
-            this.label19.TabIndex = 45;
-            this.label19.Text = "Use for swim";
-            // 
-            // checkBoxUseCh1
-            // 
-            this.checkBoxUseCh1.AutoSize = true;
-            this.checkBoxUseCh1.Checked = true;
-            this.checkBoxUseCh1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxUseCh1.Location = new System.Drawing.Point(489, 219);
-            this.checkBoxUseCh1.Name = "checkBoxUseCh1";
-            this.checkBoxUseCh1.Size = new System.Drawing.Size(45, 17);
-            this.checkBoxUseCh1.TabIndex = 46;
-            this.checkBoxUseCh1.Text = "Ch1";
-            this.checkBoxUseCh1.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxUseCh2
-            // 
-            this.checkBoxUseCh2.AutoSize = true;
-            this.checkBoxUseCh2.Checked = true;
-            this.checkBoxUseCh2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxUseCh2.Location = new System.Drawing.Point(540, 219);
-            this.checkBoxUseCh2.Name = "checkBoxUseCh2";
-            this.checkBoxUseCh2.Size = new System.Drawing.Size(45, 17);
-            this.checkBoxUseCh2.TabIndex = 47;
-            this.checkBoxUseCh2.Text = "Ch2";
-            this.checkBoxUseCh2.UseVisualStyleBackColor = true;
-            // 
-            // labelCurrentGain
-            // 
-            this.labelCurrentGain.AutoSize = true;
-            this.labelCurrentGain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCurrentGain.Location = new System.Drawing.Point(702, 463);
-            this.labelCurrentGain.Name = "labelCurrentGain";
-            this.labelCurrentGain.Size = new System.Drawing.Size(16, 16);
-            this.labelCurrentGain.TabIndex = 49;
-            this.labelCurrentGain.Text = "0";
-            // 
-            // numericUpDownZoom
-            // 
-            this.numericUpDownZoom.DecimalPlaces = 2;
-            this.numericUpDownZoom.Increment = new decimal(new int[] {
-            25,
-            0,
-            0,
-            131072});
-            this.numericUpDownZoom.Location = new System.Drawing.Point(750, 18);
-            this.numericUpDownZoom.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownZoom.Name = "numericUpDownZoom";
-            this.numericUpDownZoom.Size = new System.Drawing.Size(48, 20);
-            this.numericUpDownZoom.TabIndex = 55;
-            this.numericUpDownZoom.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownZoom.ValueChanged += new System.EventHandler(this.numericUpDownZoom_ValueChanged);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(810, 22);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(34, 13);
-            this.label25.TabIndex = 56;
-            this.label25.Text = "Zoom";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(656, 243);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(77, 13);
-            this.label26.TabIndex = 57;
-            this.label26.Text = "Swimming gain";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(655, 344);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(66, 13);
-            this.label27.TabIndex = 58;
-            this.label27.Text = "Turning gain";
-            // 
-            // numericUpDownTurningGain1
-            // 
-            this.numericUpDownTurningGain1.DecimalPlaces = 2;
-            this.numericUpDownTurningGain1.Location = new System.Drawing.Point(679, 364);
-            this.numericUpDownTurningGain1.Name = "numericUpDownTurningGain1";
-            this.numericUpDownTurningGain1.Size = new System.Drawing.Size(52, 20);
-            this.numericUpDownTurningGain1.TabIndex = 59;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(634, 366);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(39, 13);
-            this.label28.TabIndex = 61;
-            this.label28.Text = "t-gain1";
-            // 
-            // numericUpDownTurningGain2
-            // 
-            this.numericUpDownTurningGain2.DecimalPlaces = 2;
-            this.numericUpDownTurningGain2.Location = new System.Drawing.Point(679, 390);
-            this.numericUpDownTurningGain2.Name = "numericUpDownTurningGain2";
-            this.numericUpDownTurningGain2.Size = new System.Drawing.Size(52, 20);
-            this.numericUpDownTurningGain2.TabIndex = 62;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(634, 392);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(39, 13);
-            this.label29.TabIndex = 63;
-            this.label29.Text = "t-gain2";
-            // 
-            // numericUpDownVelMax
-            // 
-            this.numericUpDownVelMax.DecimalPlaces = 1;
-            this.numericUpDownVelMax.Location = new System.Drawing.Point(948, 276);
-            this.numericUpDownVelMax.Name = "numericUpDownVelMax";
-            this.numericUpDownVelMax.Size = new System.Drawing.Size(52, 20);
-            this.numericUpDownVelMax.TabIndex = 64;
-            this.numericUpDownVelMax.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(911, 278);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(27, 13);
-            this.label30.TabIndex = 65;
-            this.label30.Text = "Max";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(907, 24);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(66, 13);
-            this.label31.TabIndex = 66;
-            this.label31.Text = "Stimulus drift";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(891, 256);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(86, 13);
-            this.label32.TabIndex = 67;
-            this.label32.Text = "Swimming speed";
-            // 
-            // numericUpDownDecay
-            // 
-            this.numericUpDownDecay.DecimalPlaces = 2;
-            this.numericUpDownDecay.Location = new System.Drawing.Point(948, 303);
-            this.numericUpDownDecay.Name = "numericUpDownDecay";
-            this.numericUpDownDecay.Size = new System.Drawing.Size(52, 20);
-            this.numericUpDownDecay.TabIndex = 69;
-            this.numericUpDownDecay.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            65536});
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(891, 305);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(56, 13);
-            this.label33.TabIndex = 70;
-            this.label33.Text = "Lin. decay";
-            // 
-            // numericUpDownGain2Interval
-            // 
-            this.numericUpDownGain2Interval.Cursor = System.Windows.Forms.Cursors.Default;
-            this.numericUpDownGain2Interval.Location = new System.Drawing.Point(790, 308);
-            this.numericUpDownGain2Interval.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownGain2Interval.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numericUpDownGain2Interval.Name = "numericUpDownGain2Interval";
-            this.numericUpDownGain2Interval.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownGain2Interval.TabIndex = 75;
-            this.numericUpDownGain2Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownGain2Interval.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(755, 313);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(32, 13);
-            this.label36.TabIndex = 76;
-            this.label36.Text = "G2, s";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(755, 245);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(71, 13);
-            this.label37.TabIndex = 80;
-            this.label37.Text = "Gain intervals";
-            // 
-            // numericUpDownGain0
-            // 
-            this.numericUpDownGain0.Cursor = System.Windows.Forms.Cursors.Default;
-            this.numericUpDownGain0.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownGain0.Location = new System.Drawing.Point(680, 260);
-            this.numericUpDownGain0.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownGain0.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownGain0.Name = "numericUpDownGain0";
-            this.numericUpDownGain0.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownGain0.TabIndex = 84;
-            this.numericUpDownGain0.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownGain0.Value = new decimal(new int[] {
-            180,
-            0,
-            0,
-            0});
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(644, 262);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(35, 13);
-            this.label40.TabIndex = 85;
-            this.label40.Text = "Gain0";
-            // 
-            // numericUpDownGain0Interval
-            // 
-            this.numericUpDownGain0Interval.Cursor = System.Windows.Forms.Cursors.Default;
-            this.numericUpDownGain0Interval.Location = new System.Drawing.Point(790, 260);
-            this.numericUpDownGain0Interval.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownGain0Interval.Maximum = new decimal(new int[] {
-            3600,
-            0,
-            0,
-            0});
-            this.numericUpDownGain0Interval.Name = "numericUpDownGain0Interval";
-            this.numericUpDownGain0Interval.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownGain0Interval.TabIndex = 86;
-            this.numericUpDownGain0Interval.TabStop = false;
-            this.numericUpDownGain0Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(755, 265);
-            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(32, 13);
-            this.label41.TabIndex = 87;
-            this.label41.Text = "G0, s";
-            // 
-            // numericUpDownDrift3
-            // 
-            this.numericUpDownDrift3.DecimalPlaces = 1;
-            this.numericUpDownDrift3.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift3.Location = new System.Drawing.Point(910, 97);
-            this.numericUpDownDrift3.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownDrift3.Name = "numericUpDownDrift3";
-            this.numericUpDownDrift3.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift3.TabIndex = 101;
-            this.numericUpDownDrift3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // numericUpDownDrift3Interval
-            // 
-            this.numericUpDownDrift3Interval.Cursor = System.Windows.Forms.Cursors.Default;
-            this.numericUpDownDrift3Interval.DecimalPlaces = 1;
-            this.numericUpDownDrift3Interval.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift3Interval.Location = new System.Drawing.Point(1192, 97);
-            this.numericUpDownDrift3Interval.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownDrift3Interval.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numericUpDownDrift3Interval.Name = "numericUpDownDrift3Interval";
-            this.numericUpDownDrift3Interval.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift3Interval.TabIndex = 102;
-            this.numericUpDownDrift3Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownDrift3Interval.Value = new decimal(new int[] {
-            28,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDownDrift1_2
-            // 
-            this.numericUpDownDrift1_2.DecimalPlaces = 1;
-            this.numericUpDownDrift1_2.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift1_2.Location = new System.Drawing.Point(980, 47);
-            this.numericUpDownDrift1_2.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownDrift1_2.Name = "numericUpDownDrift1_2";
-            this.numericUpDownDrift1_2.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift1_2.TabIndex = 103;
-            this.numericUpDownDrift1_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownDrift1_2.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            -2147418112});
-            // 
-            // numericUpDownDrift1_3
-            // 
-            this.numericUpDownDrift1_3.DecimalPlaces = 1;
-            this.numericUpDownDrift1_3.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift1_3.Location = new System.Drawing.Point(1049, 47);
-            this.numericUpDownDrift1_3.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownDrift1_3.Name = "numericUpDownDrift1_3";
-            this.numericUpDownDrift1_3.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift1_3.TabIndex = 104;
-            this.numericUpDownDrift1_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownDrift1_3.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            // 
-            // numericUpDownDrift1_4
-            // 
-            this.numericUpDownDrift1_4.DecimalPlaces = 1;
-            this.numericUpDownDrift1_4.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift1_4.Location = new System.Drawing.Point(1121, 47);
-            this.numericUpDownDrift1_4.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownDrift1_4.Name = "numericUpDownDrift1_4";
-            this.numericUpDownDrift1_4.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift1_4.TabIndex = 105;
-            this.numericUpDownDrift1_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownDrift1_4.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            -2147483648});
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(872, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 13);
-            this.label7.TabIndex = 106;
-            this.label7.Text = "Vback";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(867, 73);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 13);
-            this.label13.TabIndex = 107;
-            this.label13.Text = "Vpause";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(872, 101);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(34, 13);
-            this.label15.TabIndex = 108;
-            this.label15.Text = "Vforw";
-            // 
-            // checkBoxShuffle
-            // 
-            this.checkBoxShuffle.AutoSize = true;
-            this.checkBoxShuffle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxShuffle.Location = new System.Drawing.Point(1060, 25);
-            this.checkBoxShuffle.Name = "checkBoxShuffle";
-            this.checkBoxShuffle.Size = new System.Drawing.Size(114, 17);
-            this.checkBoxShuffle.TabIndex = 109;
-            this.checkBoxShuffle.Text = "Shuffle values?";
-            this.checkBoxShuffle.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxOpenLoop
-            // 
-            this.checkBoxOpenLoop.AutoSize = true;
-            this.checkBoxOpenLoop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxOpenLoop.Location = new System.Drawing.Point(695, 219);
-            this.checkBoxOpenLoop.Name = "checkBoxOpenLoop";
-            this.checkBoxOpenLoop.Size = new System.Drawing.Size(91, 17);
-            this.checkBoxOpenLoop.TabIndex = 110;
-            this.checkBoxOpenLoop.Text = "Open loop?";
-            this.checkBoxOpenLoop.UseVisualStyleBackColor = true;
-            this.checkBoxOpenLoop.CheckedChanged += new System.EventHandler(this.checkBoxOpenLoop_CheckedChanged);
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(469, 463);
-            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(74, 16);
-            this.label46.TabIndex = 111;
-            this.label46.Text = "Current drift";
-            // 
-            // labelCurrentDrift
-            // 
-            this.labelCurrentDrift.AutoSize = true;
-            this.labelCurrentDrift.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCurrentDrift.Location = new System.Drawing.Point(548, 463);
-            this.labelCurrentDrift.Name = "labelCurrentDrift";
-            this.labelCurrentDrift.Size = new System.Drawing.Size(16, 16);
-            this.labelCurrentDrift.TabIndex = 112;
-            this.labelCurrentDrift.Text = "0";
-            // 
-            // numericUpDownDrift3_2
-            // 
-            this.numericUpDownDrift3_2.DecimalPlaces = 1;
-            this.numericUpDownDrift3_2.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift3_2.Location = new System.Drawing.Point(980, 97);
-            this.numericUpDownDrift3_2.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownDrift3_2.Name = "numericUpDownDrift3_2";
-            this.numericUpDownDrift3_2.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift3_2.TabIndex = 113;
-            this.numericUpDownDrift3_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownDrift3_2.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            // 
-            // numericUpDownDrift3_3
-            // 
-            this.numericUpDownDrift3_3.DecimalPlaces = 1;
-            this.numericUpDownDrift3_3.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift3_3.Location = new System.Drawing.Point(1049, 97);
-            this.numericUpDownDrift3_3.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownDrift3_3.Name = "numericUpDownDrift3_3";
-            this.numericUpDownDrift3_3.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift3_3.TabIndex = 114;
-            this.numericUpDownDrift3_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownDrift3_3.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDownDrift3_4
-            // 
-            this.numericUpDownDrift3_4.DecimalPlaces = 1;
-            this.numericUpDownDrift3_4.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift3_4.Location = new System.Drawing.Point(1121, 97);
-            this.numericUpDownDrift3_4.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownDrift3_4.Name = "numericUpDownDrift3_4";
-            this.numericUpDownDrift3_4.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift3_4.TabIndex = 115;
-            this.numericUpDownDrift3_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownDrift3_4.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDownDrift4
-            // 
-            this.numericUpDownDrift4.DecimalPlaces = 1;
-            this.numericUpDownDrift4.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift4.Location = new System.Drawing.Point(910, 123);
-            this.numericUpDownDrift4.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownDrift4.Name = "numericUpDownDrift4";
-            this.numericUpDownDrift4.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift4.TabIndex = 116;
-            this.numericUpDownDrift4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // numericUpDownDrift4Interval
-            // 
-            this.numericUpDownDrift4Interval.Cursor = System.Windows.Forms.Cursors.Default;
-            this.numericUpDownDrift4Interval.DecimalPlaces = 1;
-            this.numericUpDownDrift4Interval.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.numericUpDownDrift4Interval.Location = new System.Drawing.Point(1192, 123);
-            this.numericUpDownDrift4Interval.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownDrift4Interval.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numericUpDownDrift4Interval.Name = "numericUpDownDrift4Interval";
-            this.numericUpDownDrift4Interval.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDownDrift4Interval.TabIndex = 117;
-            this.numericUpDownDrift4Interval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownDrift4Interval.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(867, 125);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(43, 13);
-            this.label47.TabIndex = 118;
-            this.label47.Text = "Vpause";
-            // 
-            // buttonSetdOMR
-            // 
-            this.buttonSetdOMR.Location = new System.Drawing.Point(1003, 174);
-            this.buttonSetdOMR.Name = "buttonSetdOMR";
-            this.buttonSetdOMR.Size = new System.Drawing.Size(75, 23);
-            this.buttonSetdOMR.TabIndex = 119;
-            this.buttonSetdOMR.Text = "Set dOMR";
-            this.buttonSetdOMR.UseVisualStyleBackColor = true;
-            this.buttonSetdOMR.Click += new System.EventHandler(this.buttonSetdOMR_Click);
-            // 
-            // buttonSetGA
-            // 
-            this.buttonSetGA.Location = new System.Drawing.Point(1086, 174);
-            this.buttonSetGA.Name = "buttonSetGA";
-            this.buttonSetGA.Size = new System.Drawing.Size(75, 23);
-            this.buttonSetGA.TabIndex = 119;
-            this.buttonSetGA.Text = "Set GA";
-            this.buttonSetGA.UseVisualStyleBackColor = true;
-            this.buttonSetGA.Click += new System.EventHandler(this.buttonSetGA_Click);
-            // 
-            // buttonSetOMR
-            // 
-            this.buttonSetOMR.Location = new System.Drawing.Point(920, 174);
-            this.buttonSetOMR.Name = "buttonSetOMR";
-            this.buttonSetOMR.Size = new System.Drawing.Size(75, 23);
-            this.buttonSetOMR.TabIndex = 119;
-            this.buttonSetOMR.Text = "Set OMR";
-            this.buttonSetOMR.UseVisualStyleBackColor = true;
-            this.buttonSetOMR.Click += new System.EventHandler(this.buttonSetOMR_Click);
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(16, 504);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(50, 13);
-            this.label49.TabIndex = 120;
-            this.label49.Text = "Temp., C";
-            // 
-            // textBoxTemp
-            // 
-            this.textBoxTemp.Location = new System.Drawing.Point(72, 501);
-            this.textBoxTemp.Name = "textBoxTemp";
-            this.textBoxTemp.ReadOnly = true;
-            this.textBoxTemp.Size = new System.Drawing.Size(49, 20);
-            this.textBoxTemp.TabIndex = 121;
-            this.textBoxTemp.Text = "NA";
-            this.textBoxTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // buttonSetCustom
-            // 
-            this.buttonSetCustom.Location = new System.Drawing.Point(1171, 174);
-            this.buttonSetCustom.Name = "buttonSetCustom";
-            this.buttonSetCustom.Size = new System.Drawing.Size(75, 23);
-            this.buttonSetCustom.TabIndex = 122;
-            this.buttonSetCustom.Text = "Custom";
-            this.buttonSetCustom.UseVisualStyleBackColor = true;
-            this.buttonSetCustom.Click += new System.EventHandler(this.buttonSetCustom_Click);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.Silver;
-            this.tabPage1.Controls.Add(this.buttonSetCustom);
-            this.tabPage1.Controls.Add(this.textBoxTemp);
-            this.tabPage1.Controls.Add(this.label49);
-            this.tabPage1.Controls.Add(this.buttonSetOMR);
-            this.tabPage1.Controls.Add(this.buttonSetGA);
-            this.tabPage1.Controls.Add(this.buttonSetdOMR);
-            this.tabPage1.Controls.Add(this.label47);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift4Interval);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift4);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift3_4);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift3_3);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift3_2);
-            this.tabPage1.Controls.Add(this.labelCurrentDrift);
-            this.tabPage1.Controls.Add(this.label46);
-            this.tabPage1.Controls.Add(this.checkBoxOpenLoop);
-            this.tabPage1.Controls.Add(this.checkBoxShuffle);
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift1_4);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift1_3);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift1_2);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift3Interval);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift3);
-            this.tabPage1.Controls.Add(this.label41);
-            this.tabPage1.Controls.Add(this.numericUpDownGain0Interval);
-            this.tabPage1.Controls.Add(this.label40);
-            this.tabPage1.Controls.Add(this.numericUpDownGain0);
-            this.tabPage1.Controls.Add(this.label37);
-            this.tabPage1.Controls.Add(this.label36);
-            this.tabPage1.Controls.Add(this.numericUpDownGain2Interval);
-            this.tabPage1.Controls.Add(this.label33);
-            this.tabPage1.Controls.Add(this.numericUpDownDecay);
-            this.tabPage1.Controls.Add(this.label32);
-            this.tabPage1.Controls.Add(this.label31);
-            this.tabPage1.Controls.Add(this.label30);
-            this.tabPage1.Controls.Add(this.numericUpDownVelMax);
-            this.tabPage1.Controls.Add(this.label29);
-            this.tabPage1.Controls.Add(this.numericUpDownTurningGain2);
-            this.tabPage1.Controls.Add(this.label28);
-            this.tabPage1.Controls.Add(this.numericUpDownTurningGain1);
-            this.tabPage1.Controls.Add(this.label27);
-            this.tabPage1.Controls.Add(this.label26);
-            this.tabPage1.Controls.Add(this.label25);
-            this.tabPage1.Controls.Add(this.numericUpDownZoom);
-            this.tabPage1.Controls.Add(this.labelCurrentGain);
-            this.tabPage1.Controls.Add(this.checkBoxUseCh2);
-            this.tabPage1.Controls.Add(this.checkBoxUseCh1);
-            this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.numericUpDownThreshScale);
-            this.tabPage1.Controls.Add(this.label18);
-            this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.numericUpDownFiltMaxY);
-            this.tabPage1.Controls.Add(this.buttonThreshNumber);
-            this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift2Interval);
-            this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift1Interval);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift2);
-            this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.numericUpDownGain1Interval);
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.numericUpDownGain2);
-            this.tabPage1.Controls.Add(this.numericUpDownDrift1);
-            this.tabPage1.Controls.Add(this.numericUpDownVmaxi);
-            this.tabPage1.Controls.Add(this.numericUpDownVmini);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.numericUpDownVoffset1);
-            this.tabPage1.Controls.Add(this.numericUpDownVoffset0);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.numericUpDownGain1);
-            this.tabPage1.Controls.Add(this.labelProjector);
-            this.tabPage1.Controls.Add(this.panelProjector);
-            this.tabPage1.Controls.Add(this.oscilloscopeChart1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1271, 531);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Oscilloscope and Projector";
             // 
             // label42
             // 
@@ -2412,6 +2298,185 @@
             this.checkBoxRotation.UseVisualStyleBackColor = true;
             this.checkBoxRotation.Visible = false;
             // 
+            // checkBoxSynchStim
+            // 
+            this.checkBoxSynchStim.AutoSize = true;
+            this.checkBoxSynchStim.Checked = true;
+            this.checkBoxSynchStim.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxSynchStim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSynchStim.Location = new System.Drawing.Point(161, 594);
+            this.checkBoxSynchStim.Name = "checkBoxSynchStim";
+            this.checkBoxSynchStim.Size = new System.Drawing.Size(212, 17);
+            this.checkBoxSynchStim.TabIndex = 78;
+            this.checkBoxSynchStim.Text = "Synch stimulus to camera onset?";
+            this.checkBoxSynchStim.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxTimeInStacks
+            // 
+            this.checkBoxTimeInStacks.AutoSize = true;
+            this.checkBoxTimeInStacks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxTimeInStacks.Location = new System.Drawing.Point(24, 594);
+            this.checkBoxTimeInStacks.Name = "checkBoxTimeInStacks";
+            this.checkBoxTimeInStacks.Size = new System.Drawing.Size(115, 17);
+            this.checkBoxTimeInStacks.TabIndex = 79;
+            this.checkBoxTimeInStacks.Text = "Time in stacks?";
+            this.checkBoxTimeInStacks.UseVisualStyleBackColor = true;
+            // 
+            // labelReplay
+            // 
+            this.labelReplay.AutoSize = true;
+            this.labelReplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReplay.Location = new System.Drawing.Point(591, 620);
+            this.labelReplay.Name = "labelReplay";
+            this.labelReplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelReplay.Size = new System.Drawing.Size(90, 16);
+            this.labelReplay.TabIndex = 60;
+            this.labelReplay.Text = "Normal mode";
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonExit.Location = new System.Drawing.Point(1222, 12);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(51, 35);
+            this.buttonExit.TabIndex = 5;
+            this.buttonExit.Text = "Good bye";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadStimulusImageToolStripMenuItem,
+            this.load10chDataFileToolStripMenuItem,
+            this.editDefaultParamsToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // loadStimulusImageToolStripMenuItem
+            // 
+            this.loadStimulusImageToolStripMenuItem.Name = "loadStimulusImageToolStripMenuItem";
+            this.loadStimulusImageToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.loadStimulusImageToolStripMenuItem.Text = "Load stimulus image";
+            this.loadStimulusImageToolStripMenuItem.Click += new System.EventHandler(this.loadStimulusImageToolStripMenuItem_Click);
+            // 
+            // load10chDataFileToolStripMenuItem
+            // 
+            this.load10chDataFileToolStripMenuItem.Name = "load10chDataFileToolStripMenuItem";
+            this.load10chDataFileToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.load10chDataFileToolStripMenuItem.Text = "Load .10ch data file";
+            this.load10chDataFileToolStripMenuItem.Click += new System.EventHandler(this.load10chDataFileToolStripMenuItem_Click);
+            // 
+            // editDefaultParamsToolStripMenuItem
+            // 
+            this.editDefaultParamsToolStripMenuItem.Name = "editDefaultParamsToolStripMenuItem";
+            this.editDefaultParamsToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.editDefaultParamsToolStripMenuItem.Text = "Edit default params";
+            this.editDefaultParamsToolStripMenuItem.Click += new System.EventHandler(this.editDefaultParamsToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.helpToolStripMenuItem.Text = "Info";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1291, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // textBoxFileStream
+            // 
+            this.textBoxFileStream.Location = new System.Drawing.Point(829, 672);
+            this.textBoxFileStream.Name = "textBoxFileStream";
+            this.textBoxFileStream.Size = new System.Drawing.Size(451, 20);
+            this.textBoxFileStream.TabIndex = 61;
+            this.textBoxFileStream.Text = "Z:\\Data\\FileStream";
+            this.textBoxFileStream.Visible = false;
+            // 
+            // checkBoxSaveFileAfterStack
+            // 
+            this.checkBoxSaveFileAfterStack.AutoSize = true;
+            this.checkBoxSaveFileAfterStack.Location = new System.Drawing.Point(555, 672);
+            this.checkBoxSaveFileAfterStack.Name = "checkBoxSaveFileAfterStack";
+            this.checkBoxSaveFileAfterStack.Size = new System.Drawing.Size(191, 17);
+            this.checkBoxSaveFileAfterStack.TabIndex = 62;
+            this.checkBoxSaveFileAfterStack.Text = "Save file after each stack to folder:";
+            this.checkBoxSaveFileAfterStack.UseVisualStyleBackColor = true;
+            this.checkBoxSaveFileAfterStack.Visible = false;
+            // 
+            // buttonAllBlack
+            // 
+            this.buttonAllBlack.BackColor = System.Drawing.Color.DimGray;
+            this.buttonAllBlack.Location = new System.Drawing.Point(581, 105);
+            this.buttonAllBlack.Name = "buttonAllBlack";
+            this.buttonAllBlack.Size = new System.Drawing.Size(47, 23);
+            this.buttonAllBlack.TabIndex = 123;
+            this.buttonAllBlack.Text = "Black";
+            this.buttonAllBlack.UseVisualStyleBackColor = false;
+            this.buttonAllBlack.Click += new System.EventHandler(this.buttonAllBlack_Click);
+            // 
+            // buttonAllWhite
+            // 
+            this.buttonAllWhite.BackColor = System.Drawing.Color.White;
+            this.buttonAllWhite.Location = new System.Drawing.Point(581, 82);
+            this.buttonAllWhite.Name = "buttonAllWhite";
+            this.buttonAllWhite.Size = new System.Drawing.Size(47, 23);
+            this.buttonAllWhite.TabIndex = 123;
+            this.buttonAllWhite.Text = "White";
+            this.buttonAllWhite.UseVisualStyleBackColor = false;
+            this.buttonAllWhite.Click += new System.EventHandler(this.buttonAllWhite_Click);
+            // 
+            // buttonRed
+            // 
+            this.buttonRed.BackColor = System.Drawing.Color.Red;
+            this.buttonRed.Location = new System.Drawing.Point(581, 128);
+            this.buttonRed.Name = "buttonRed";
+            this.buttonRed.Size = new System.Drawing.Size(46, 23);
+            this.buttonRed.TabIndex = 124;
+            this.buttonRed.Text = "Red";
+            this.buttonRed.UseVisualStyleBackColor = false;
+            this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
+            // 
+            // buttonBlue
+            // 
+            this.buttonBlue.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonBlue.Location = new System.Drawing.Point(581, 174);
+            this.buttonBlue.Name = "buttonBlue";
+            this.buttonBlue.Size = new System.Drawing.Size(46, 23);
+            this.buttonBlue.TabIndex = 124;
+            this.buttonBlue.Text = "Blue";
+            this.buttonBlue.UseVisualStyleBackColor = false;
+            this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
+            // 
+            // buttonGreen
+            // 
+            this.buttonGreen.BackColor = System.Drawing.Color.LawnGreen;
+            this.buttonGreen.Location = new System.Drawing.Point(581, 151);
+            this.buttonGreen.Name = "buttonGreen";
+            this.buttonGreen.Size = new System.Drawing.Size(46, 23);
+            this.buttonGreen.TabIndex = 124;
+            this.buttonGreen.Text = "Green";
+            this.buttonGreen.UseVisualStyleBackColor = false;
+            this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2435,6 +2500,40 @@
             this.Text = "ZebraStim";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3Interval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0Interval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain2Interval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDecay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVelMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThreshScale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFiltMaxY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift2Interval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1Interval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1Interval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmaxi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmini)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).EndInit();
@@ -2446,44 +2545,8 @@
             this.groupBox1.ResumeLayout(false);
             this.panelScreens.ResumeLayout(false);
             this.panelScreens.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmini)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmaxi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1Interval)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1Interval)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift2Interval)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFiltMaxY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThreshScale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTurningGain2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVelMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDecay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain2Interval)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain0Interval)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3Interval)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift1_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift3_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGainOutInt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpeed1)).EndInit();
@@ -2491,6 +2554,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSurprizeInterval)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPlayTmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReplayN)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2647,6 +2712,11 @@
         private System.Windows.Forms.NumericUpDown numericUpDownReplayN;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.CheckBox checkBoxRotation;
+        private System.Windows.Forms.Button buttonAllWhite;
+        private System.Windows.Forms.Button buttonAllBlack;
+        private System.Windows.Forms.Button buttonRed;
+        private System.Windows.Forms.Button buttonBlue;
+        private System.Windows.Forms.Button buttonGreen;
     }
 }
 

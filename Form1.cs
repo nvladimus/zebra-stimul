@@ -1771,5 +1771,80 @@ namespace Stimulus
             numericUpDownDrift3Interval.Value = 10M;
             numericUpDownDrift4Interval.Value = 0.5M;
         }
+
+        private void buttonAllWhite_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim(1024x768)White.bmp"));
+                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim(1024x768)White.bmp"));
+                DXdev0.RenderStill();
+                DXdev1.RenderStill();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: Could not read texture file from disk. Original error: " + ex.Message);
+            }
+        }
+
+        private void buttonAllBlack_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim(1024x768)Black.bmp"));
+                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim(1024x768)Black.bmp"));
+                DXdev0.RenderStill();
+                DXdev1.RenderStill();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: Could not read texture file from disk. Original error: " + ex.Message);
+            }
+        }
+
+        private void buttonRed_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim(1024x768)Red8notch.bmp"));
+                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim(1024x768)Red8notch.bmp"));
+                DXdev0.RenderStill();
+                DXdev1.RenderStill();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: Could not read texture file from disk. Original error: " + ex.Message);
+            }
+        }
+
+        private void buttonGreen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim(1024x768)Green8notch.bmp"));
+                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim(1024x768)Green8notch.bmp"));
+                DXdev0.RenderStill();
+                DXdev1.RenderStill();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: Could not read texture file from disk. Original error: " + ex.Message);
+            }
+        }
+
+        private void buttonBlue_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim(1024x768)Blue8notch.bmp"));
+                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim(1024x768)Blue8notch.bmp"));
+                DXdev0.RenderStill();
+                DXdev1.RenderStill();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: Could not read texture file from disk. Original error: " + ex.Message);
+            }
+        }
     }
 }
