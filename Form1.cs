@@ -1749,14 +1749,14 @@ namespace Stimulus
         private void buttonSetCustom_Click(object sender, EventArgs e)
         {
             numericUpDownDrift1.Value = 0M;
-            numericUpDownDrift1_2.Value = -0.5M;
-            numericUpDownDrift1_3.Value = -1M;
-            numericUpDownDrift1_4.Value = -2M;
+            numericUpDownDrift1_2.Value = 0M;
+            numericUpDownDrift1_3.Value = 0M;
+            numericUpDownDrift1_4.Value = 0M;
 
             numericUpDownDrift3.Value = 0M;
-            numericUpDownDrift3_2.Value = 0.5M;
-            numericUpDownDrift3_3.Value = 1M;
-            numericUpDownDrift3_4.Value = 2M;
+            numericUpDownDrift3_2.Value = 0M;
+            numericUpDownDrift3_3.Value = 0M;
+            numericUpDownDrift3_4.Value = 0M;
 
             numericUpDownDrift2.Value = 0M;
             numericUpDownDrift4.Value = 0M;
@@ -1767,9 +1767,9 @@ namespace Stimulus
             numericUpDownGain2.Value = 0M;
 
             numericUpDownDrift1Interval.Value = 5M;
-            numericUpDownDrift2Interval.Value = 0.5M;
-            numericUpDownDrift3Interval.Value = 10M;
-            numericUpDownDrift4Interval.Value = 0.5M;
+            numericUpDownDrift2Interval.Value = 0M;
+            numericUpDownDrift3Interval.Value = 0M;
+            numericUpDownDrift4Interval.Value = 0M;
         }
 
         private void buttonAllWhite_Click(object sender, EventArgs e)

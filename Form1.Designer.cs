@@ -365,7 +365,7 @@
             this.buttonSetCustom.Name = "buttonSetCustom";
             this.buttonSetCustom.Size = new System.Drawing.Size(75, 23);
             this.buttonSetCustom.TabIndex = 122;
-            this.buttonSetCustom.Text = "Custom";
+            this.buttonSetCustom.Text = "Non-moving";
             this.buttonSetCustom.UseVisualStyleBackColor = true;
             this.buttonSetCustom.Click += new System.EventHandler(this.buttonSetCustom_Click);
             // 
