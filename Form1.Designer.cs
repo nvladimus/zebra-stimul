@@ -22,11 +22,21 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonStop = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonGreen = new System.Windows.Forms.Button();
+            this.buttonBlue = new System.Windows.Forms.Button();
+            this.buttonRed = new System.Windows.Forms.Button();
+            this.buttonAllWhite = new System.Windows.Forms.Button();
+            this.buttonAllBlack = new System.Windows.Forms.Button();
             this.buttonSetCustom = new System.Windows.Forms.Button();
             this.textBoxTemp = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
@@ -104,6 +114,8 @@
             this.labelProjector = new System.Windows.Forms.Label();
             this.panelProjector = new System.Windows.Forms.Panel();
             this.oscilloscopeChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPagePatching = new System.Windows.Forms.TabPage();
+            this.chartPatching = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
             this.textBoxVin = new System.Windows.Forms.TextBox();
@@ -114,7 +126,7 @@
             this.numericUpDownTriggerThresh2p = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownSyncTriggerTresh = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
-            this.physicalChannelComboBox2 = new System.Windows.Forms.ComboBox();
+            this.twophotonTriggerChannelComboBox = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
             this.ComboBoxLEDcontrol = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -122,14 +134,21 @@
             this.label8 = new System.Windows.Forms.Label();
             this.numericUpDownPhysCh4Vmin = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.physicalChannelComboBox4 = new System.Windows.Forms.ComboBox();
+            this.camTriggerChannelComboBox = new System.Windows.Forms.ComboBox();
+            this.label53 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDownVmaxPatching = new System.Windows.Forms.NumericUpDown();
+            this.label52 = new System.Windows.Forms.Label();
             this.numericUpDownVmax = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownVminPatching = new System.Windows.Forms.NumericUpDown();
             this.labelVmax = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
             this.numericUpDownVmin = new System.Windows.Forms.NumericUpDown();
+            this.patchingChannelComboBox2 = new System.Windows.Forms.ComboBox();
             this.labelVmin = new System.Windows.Forms.Label();
-            this.physicalChannelComboBox1 = new System.Windows.Forms.ComboBox();
-            this.physicalChannelComboBox0 = new System.Windows.Forms.ComboBox();
+            this.patchingChannelComboBox1 = new System.Windows.Forms.ComboBox();
+            this.behaviorChannelComboBox2 = new System.Windows.Forms.ComboBox();
+            this.behaviorChannelComboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelScreens = new System.Windows.Forms.Panel();
             this.textBoxScreens = new System.Windows.Forms.TextBox();
@@ -172,11 +191,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.textBoxFileStream = new System.Windows.Forms.TextBox();
             this.checkBoxSaveFileAfterStack = new System.Windows.Forms.CheckBox();
-            this.buttonAllBlack = new System.Windows.Forms.Button();
-            this.buttonAllWhite = new System.Windows.Forms.Button();
-            this.buttonRed = new System.Windows.Forms.Button();
-            this.buttonBlue = new System.Windows.Forms.Button();
-            this.buttonGreen = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrift4Interval)).BeginInit();
@@ -211,12 +225,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).BeginInit();
+            this.tabPagePatching.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPatching)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmaxPatching)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVminPatching)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmin)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panelScreens.SuspendLayout();
@@ -257,6 +275,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPagePatching);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(1, 32);
@@ -358,6 +377,61 @@
             this.tabPage1.Size = new System.Drawing.Size(1271, 531);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Oscilloscope and Projector";
+            // 
+            // buttonGreen
+            // 
+            this.buttonGreen.BackColor = System.Drawing.Color.LawnGreen;
+            this.buttonGreen.Location = new System.Drawing.Point(581, 151);
+            this.buttonGreen.Name = "buttonGreen";
+            this.buttonGreen.Size = new System.Drawing.Size(46, 23);
+            this.buttonGreen.TabIndex = 124;
+            this.buttonGreen.Text = "Green";
+            this.buttonGreen.UseVisualStyleBackColor = false;
+            this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
+            // 
+            // buttonBlue
+            // 
+            this.buttonBlue.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonBlue.Location = new System.Drawing.Point(581, 174);
+            this.buttonBlue.Name = "buttonBlue";
+            this.buttonBlue.Size = new System.Drawing.Size(46, 23);
+            this.buttonBlue.TabIndex = 124;
+            this.buttonBlue.Text = "Blue";
+            this.buttonBlue.UseVisualStyleBackColor = false;
+            this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
+            // 
+            // buttonRed
+            // 
+            this.buttonRed.BackColor = System.Drawing.Color.Red;
+            this.buttonRed.Location = new System.Drawing.Point(581, 128);
+            this.buttonRed.Name = "buttonRed";
+            this.buttonRed.Size = new System.Drawing.Size(46, 23);
+            this.buttonRed.TabIndex = 124;
+            this.buttonRed.Text = "Red";
+            this.buttonRed.UseVisualStyleBackColor = false;
+            this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
+            // 
+            // buttonAllWhite
+            // 
+            this.buttonAllWhite.BackColor = System.Drawing.Color.White;
+            this.buttonAllWhite.Location = new System.Drawing.Point(581, 82);
+            this.buttonAllWhite.Name = "buttonAllWhite";
+            this.buttonAllWhite.Size = new System.Drawing.Size(47, 23);
+            this.buttonAllWhite.TabIndex = 123;
+            this.buttonAllWhite.Text = "White";
+            this.buttonAllWhite.UseVisualStyleBackColor = false;
+            this.buttonAllWhite.Click += new System.EventHandler(this.buttonAllWhite_Click);
+            // 
+            // buttonAllBlack
+            // 
+            this.buttonAllBlack.BackColor = System.Drawing.Color.DimGray;
+            this.buttonAllBlack.Location = new System.Drawing.Point(581, 105);
+            this.buttonAllBlack.Name = "buttonAllBlack";
+            this.buttonAllBlack.Size = new System.Drawing.Size(47, 23);
+            this.buttonAllBlack.TabIndex = 123;
+            this.buttonAllBlack.Text = "Black";
+            this.buttonAllBlack.UseVisualStyleBackColor = false;
+            this.buttonAllBlack.Click += new System.EventHandler(this.buttonAllBlack_Click);
             // 
             // buttonSetCustom
             // 
@@ -1476,8 +1550,8 @@
             chartArea1.AxisY.LabelStyle.Format = "0.000";
             chartArea1.AxisY.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
             chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisY.Maximum = 0.01D;
-            chartArea1.AxisY.Minimum = -0.01D;
+            //chartArea1.AxisY.Maximum = 0.01D;
+            //chartArea1.AxisY.Minimum = -0.01D;
             chartArea1.AxisY.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea1.AxisY.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea1.AxisY.ScaleView.SmallScrollMinSize = 0.001D;
@@ -1549,13 +1623,135 @@
             this.oscilloscopeChart1.Text = "chart1";
             title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
             title1.Name = "Title1";
-            title1.Text = "Original signal";
+            title1.Text = "Behavior raw signal";
             title2.Alignment = System.Drawing.ContentAlignment.BottomLeft;
             title2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             title2.Name = "Title2";
-            title2.Text = "Filtered signal";
+            title2.Text = "Behavior filtered";
             this.oscilloscopeChart1.Titles.Add(title1);
             this.oscilloscopeChart1.Titles.Add(title2);
+            // 
+            // tabPagePatching
+            // 
+            this.tabPagePatching.BackColor = System.Drawing.Color.Silver;
+            this.tabPagePatching.Controls.Add(this.chartPatching);
+            this.tabPagePatching.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePatching.Name = "tabPagePatching";
+            this.tabPagePatching.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePatching.Size = new System.Drawing.Size(1271, 531);
+            this.tabPagePatching.TabIndex = 3;
+            this.tabPagePatching.Text = "Patching";
+            // 
+            // chartPatching
+            // 
+            this.chartPatching.BackColor = System.Drawing.Color.Silver;
+            this.chartPatching.BackImageTransparentColor = System.Drawing.Color.White;
+            this.chartPatching.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea3.AxisX.Interval = 0.2D;
+            chartArea3.AxisX.IsStartedFromZero = false;
+            chartArea3.AxisX.LabelStyle.Format = "######.#";
+            chartArea3.AxisX.LabelStyle.Interval = 0.2D;
+            chartArea3.AxisX.LabelStyle.IsEndLabelVisible = false;
+            chartArea3.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea3.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea3.AxisX.Title = "time, s";
+
+            chartArea3.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea3.AxisY.LabelStyle.Format = "0.000";
+            chartArea3.AxisY.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea3.AxisY.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea3.AxisY.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea3.AxisY.ScaleView.SmallScrollMinSize = 0.001D;
+            chartArea3.AxisY.ScaleView.SmallScrollMinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea3.AxisY.ScaleView.SmallScrollSize = 0.002D;
+            chartArea3.AxisY.ScaleView.SmallScrollSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea3.AxisY.ScrollBar.BackColor = System.Drawing.Color.DimGray;
+            chartArea3.AxisY.ScrollBar.ButtonColor = System.Drawing.Color.White;
+            chartArea3.AxisY.ScrollBar.LineColor = System.Drawing.Color.White;
+            chartArea3.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated270;
+            chartArea3.AxisY.Title = "Voltage, V";
+
+            chartArea3.BackColor = System.Drawing.Color.Black;
+            chartArea3.BorderColor = System.Drawing.Color.White;
+            chartArea3.CursorY.Position = 0D;
+            chartArea3.InnerPlotPosition.Auto = false;
+            chartArea3.InnerPlotPosition.Height = 80F;
+            chartArea3.InnerPlotPosition.Width = 70F;
+            chartArea3.InnerPlotPosition.X = 5F;
+            chartArea3.InnerPlotPosition.Y = 5F;
+            chartArea3.Name = "ChartArea1";
+            chartArea3.Position.Auto = false;
+            chartArea3.Position.Height = 50F;
+            chartArea3.Position.Width = 90F;
+            chartArea3.Position.X = 5F;
+            chartArea3.Position.Y = 7F;
+
+            chartArea4.AxisX.LabelStyle.Enabled = false;
+            chartArea4.AxisY.LabelStyle.Format = "#.#####";
+            chartArea4.BackColor = System.Drawing.Color.Black;
+            chartArea4.BorderColor = System.Drawing.Color.White;
+            chartArea4.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+
+            chartArea4.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea4.AxisY.LabelStyle.Format = "0.000";
+            chartArea4.AxisY.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea4.AxisY.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea4.AxisY.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea4.AxisY.ScaleView.SmallScrollMinSize = 0.001D;
+            chartArea4.AxisY.ScaleView.SmallScrollMinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea4.AxisY.ScaleView.SmallScrollSize = 0.002D;
+            chartArea4.AxisY.ScaleView.SmallScrollSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea4.AxisY.ScrollBar.BackColor = System.Drawing.Color.DimGray;
+            chartArea4.AxisY.ScrollBar.ButtonColor = System.Drawing.Color.White;
+            chartArea4.AxisY.ScrollBar.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated270;
+            chartArea4.AxisY.Title = "Voltage, V";
+
+            chartArea4.CursorY.Position = 0D;
+            chartArea4.InnerPlotPosition.Auto = false;
+            chartArea4.InnerPlotPosition.Height = 80F;
+            chartArea4.InnerPlotPosition.Width = 70F;
+            chartArea4.InnerPlotPosition.X = 5F;
+            chartArea4.Name = "ChartArea2";
+            chartArea4.Position.Auto = false;
+            chartArea4.Position.Height = 50F;
+            chartArea4.Position.Width = 90F;
+            chartArea4.Position.X = 5F;
+            chartArea4.Position.Y = 55F;
+
+            this.chartPatching.ChartAreas.Add(chartArea3);
+            this.chartPatching.ChartAreas.Add(chartArea4);
+            this.chartPatching.Cursor = System.Windows.Forms.Cursors.Default;
+            legend2.BackColor = System.Drawing.Color.Silver;
+            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
+            legend2.Name = "Legend1";
+            legend2.Position.Auto = false;
+            legend2.Position.Height = 6F;
+            legend2.Position.Width = 50F;
+            legend2.Position.X = 20F;
+            legend2.Position.Y = 3F;
+            legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            this.chartPatching.Legends.Add(legend2);
+            this.chartPatching.Location = new System.Drawing.Point(60, 18);
+            this.chartPatching.Margin = new System.Windows.Forms.Padding(2);
+            this.chartPatching.Name = "chartPatching";
+            this.chartPatching.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chartPatching.Size = new System.Drawing.Size(746, 482);
+            this.chartPatching.TabIndex = 1;
+            this.chartPatching.Text = "chart1";
+            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title3.Name = "Title1";
+            title3.Text = "Patch Ch1";
+            title4.Alignment = System.Drawing.ContentAlignment.BottomLeft;
+            title4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title4.Name = "Title2";
+            title4.Text = "Patch Ch2";
+            this.chartPatching.Titles.Add(title3);
+            this.chartPatching.Titles.Add(title4);
             // 
             // tabPage2
             // 
@@ -1569,7 +1765,7 @@
             this.tabPage2.Controls.Add(this.numericUpDownTriggerThresh2p);
             this.tabPage2.Controls.Add(this.numericUpDownSyncTriggerTresh);
             this.tabPage2.Controls.Add(this.label48);
-            this.tabPage2.Controls.Add(this.physicalChannelComboBox2);
+            this.tabPage2.Controls.Add(this.twophotonTriggerChannelComboBox);
             this.tabPage2.Controls.Add(this.label38);
             this.tabPage2.Controls.Add(this.ComboBoxLEDcontrol);
             this.tabPage2.Controls.Add(this.label9);
@@ -1577,14 +1773,21 @@
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.numericUpDownPhysCh4Vmin);
             this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.physicalChannelComboBox4);
+            this.tabPage2.Controls.Add(this.camTriggerChannelComboBox);
+            this.tabPage2.Controls.Add(this.label53);
             this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.numericUpDownVmaxPatching);
+            this.tabPage2.Controls.Add(this.label52);
             this.tabPage2.Controls.Add(this.numericUpDownVmax);
+            this.tabPage2.Controls.Add(this.numericUpDownVminPatching);
             this.tabPage2.Controls.Add(this.labelVmax);
+            this.tabPage2.Controls.Add(this.label51);
             this.tabPage2.Controls.Add(this.numericUpDownVmin);
+            this.tabPage2.Controls.Add(this.patchingChannelComboBox2);
             this.tabPage2.Controls.Add(this.labelVmin);
-            this.tabPage2.Controls.Add(this.physicalChannelComboBox1);
-            this.tabPage2.Controls.Add(this.physicalChannelComboBox0);
+            this.tabPage2.Controls.Add(this.patchingChannelComboBox1);
+            this.tabPage2.Controls.Add(this.behaviorChannelComboBox2);
+            this.tabPage2.Controls.Add(this.behaviorChannelComboBox1);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
@@ -1695,15 +1898,15 @@
             this.label48.TabIndex = 35;
             this.label48.Text = "2Photon trigger (AI)";
             // 
-            // physicalChannelComboBox2
+            // twophotonTriggerChannelComboBox
             // 
-            this.physicalChannelComboBox2.FormattingEnabled = true;
-            this.physicalChannelComboBox2.Location = new System.Drawing.Point(14, 310);
-            this.physicalChannelComboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.physicalChannelComboBox2.Name = "physicalChannelComboBox2";
-            this.physicalChannelComboBox2.Size = new System.Drawing.Size(92, 21);
-            this.physicalChannelComboBox2.TabIndex = 34;
-            this.physicalChannelComboBox2.Text = "Dev1/ai1";
+            this.twophotonTriggerChannelComboBox.FormattingEnabled = true;
+            this.twophotonTriggerChannelComboBox.Location = new System.Drawing.Point(14, 310);
+            this.twophotonTriggerChannelComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.twophotonTriggerChannelComboBox.Name = "twophotonTriggerChannelComboBox";
+            this.twophotonTriggerChannelComboBox.Size = new System.Drawing.Size(92, 21);
+            this.twophotonTriggerChannelComboBox.TabIndex = 34;
+            this.twophotonTriggerChannelComboBox.Text = "Dev1/ai1";
             // 
             // label38
             // 
@@ -1807,23 +2010,68 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Camera trigger (AI)";
             // 
-            // physicalChannelComboBox4
+            // camTriggerChannelComboBox
             // 
-            this.physicalChannelComboBox4.FormattingEnabled = true;
-            this.physicalChannelComboBox4.Location = new System.Drawing.Point(18, 174);
-            this.physicalChannelComboBox4.Name = "physicalChannelComboBox4";
-            this.physicalChannelComboBox4.Size = new System.Drawing.Size(88, 21);
-            this.physicalChannelComboBox4.TabIndex = 26;
+            this.camTriggerChannelComboBox.FormattingEnabled = true;
+            this.camTriggerChannelComboBox.Location = new System.Drawing.Point(18, 174);
+            this.camTriggerChannelComboBox.Name = "camTriggerChannelComboBox";
+            this.camTriggerChannelComboBox.Size = new System.Drawing.Size(88, 21);
+            this.camTriggerChannelComboBox.TabIndex = 26;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(323, 17);
+            this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(193, 13);
+            this.label53.TabIndex = 9;
+            this.label53.Text = "Patching ch1                    Patching ch2";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(18, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 13);
+            this.label1.Size = new System.Drawing.Size(211, 13);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Ephys ch0                          Ephys ch1";
+            this.label1.Text = "Behavior ch1                          Behavior ch2";
+            // 
+            // numericUpDownVmaxPatching
+            // 
+            this.numericUpDownVmaxPatching.DecimalPlaces = 1;
+            this.numericUpDownVmaxPatching.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownVmaxPatching.Location = new System.Drawing.Point(405, 95);
+            this.numericUpDownVmaxPatching.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownVmaxPatching.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownVmaxPatching.Name = "numericUpDownVmaxPatching";
+            this.numericUpDownVmaxPatching.Size = new System.Drawing.Size(52, 20);
+            this.numericUpDownVmaxPatching.TabIndex = 8;
+            this.numericUpDownVmaxPatching.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownVmaxPatching.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(323, 97);
+            this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(82, 13);
+            this.label52.TabIndex = 7;
+            this.label52.Text = "Voltage Max., V";
             // 
             // numericUpDownVmax
             // 
@@ -1833,7 +2081,7 @@
             0,
             0,
             65536});
-            this.numericUpDownVmax.Location = new System.Drawing.Point(94, 94);
+            this.numericUpDownVmax.Location = new System.Drawing.Point(100, 95);
             this.numericUpDownVmax.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownVmax.Minimum = new decimal(new int[] {
             10,
@@ -1850,15 +2098,50 @@
             0,
             0});
             // 
+            // numericUpDownVminPatching
+            // 
+            this.numericUpDownVminPatching.DecimalPlaces = 1;
+            this.numericUpDownVminPatching.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownVminPatching.Location = new System.Drawing.Point(405, 64);
+            this.numericUpDownVminPatching.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownVminPatching.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownVminPatching.Name = "numericUpDownVminPatching";
+            this.numericUpDownVminPatching.Size = new System.Drawing.Size(52, 20);
+            this.numericUpDownVminPatching.TabIndex = 6;
+            this.numericUpDownVminPatching.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownVminPatching.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
+            // 
             // labelVmax
             // 
             this.labelVmax.AutoSize = true;
-            this.labelVmax.Location = new System.Drawing.Point(12, 96);
+            this.labelVmax.Location = new System.Drawing.Point(18, 97);
             this.labelVmax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelVmax.Name = "labelVmax";
             this.labelVmax.Size = new System.Drawing.Size(82, 13);
             this.labelVmax.TabIndex = 7;
             this.labelVmax.Text = "Voltage Max., V";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(323, 64);
+            this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(79, 13);
+            this.label51.TabIndex = 5;
+            this.label51.Text = "Voltage Min., V";
             // 
             // numericUpDownVmin
             // 
@@ -1868,7 +2151,7 @@
             0,
             0,
             65536});
-            this.numericUpDownVmin.Location = new System.Drawing.Point(94, 63);
+            this.numericUpDownVmin.Location = new System.Drawing.Point(100, 64);
             this.numericUpDownVmin.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownVmin.Minimum = new decimal(new int[] {
             10,
@@ -1885,35 +2168,55 @@
             0,
             -2147483648});
             // 
+            // patchingChannelComboBox2
+            // 
+            this.patchingChannelComboBox2.FormattingEnabled = true;
+            this.patchingChannelComboBox2.Location = new System.Drawing.Point(450, 33);
+            this.patchingChannelComboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.patchingChannelComboBox2.Name = "patchingChannelComboBox2";
+            this.patchingChannelComboBox2.Size = new System.Drawing.Size(92, 21);
+            this.patchingChannelComboBox2.TabIndex = 3;
+            this.patchingChannelComboBox2.Text = "Dev1/ai3";
+            // 
             // labelVmin
             // 
             this.labelVmin.AutoSize = true;
-            this.labelVmin.Location = new System.Drawing.Point(12, 63);
+            this.labelVmin.Location = new System.Drawing.Point(18, 64);
             this.labelVmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelVmin.Name = "labelVmin";
             this.labelVmin.Size = new System.Drawing.Size(79, 13);
             this.labelVmin.TabIndex = 5;
             this.labelVmin.Text = "Voltage Min., V";
             // 
-            // physicalChannelComboBox1
+            // patchingChannelComboBox1
             // 
-            this.physicalChannelComboBox1.FormattingEnabled = true;
-            this.physicalChannelComboBox1.Location = new System.Drawing.Point(139, 32);
-            this.physicalChannelComboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.physicalChannelComboBox1.Name = "physicalChannelComboBox1";
-            this.physicalChannelComboBox1.Size = new System.Drawing.Size(92, 21);
-            this.physicalChannelComboBox1.TabIndex = 3;
-            this.physicalChannelComboBox1.Text = "Dev1/ai1";
+            this.patchingChannelComboBox1.FormattingEnabled = true;
+            this.patchingChannelComboBox1.Location = new System.Drawing.Point(325, 33);
+            this.patchingChannelComboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.patchingChannelComboBox1.Name = "patchingChannelComboBox1";
+            this.patchingChannelComboBox1.Size = new System.Drawing.Size(92, 21);
+            this.patchingChannelComboBox1.TabIndex = 2;
+            this.patchingChannelComboBox1.Text = "Dev1/ai2";
             // 
-            // physicalChannelComboBox0
+            // behaviorChannelComboBox2
             // 
-            this.physicalChannelComboBox0.FormattingEnabled = true;
-            this.physicalChannelComboBox0.Location = new System.Drawing.Point(14, 32);
-            this.physicalChannelComboBox0.Margin = new System.Windows.Forms.Padding(2);
-            this.physicalChannelComboBox0.Name = "physicalChannelComboBox0";
-            this.physicalChannelComboBox0.Size = new System.Drawing.Size(92, 21);
-            this.physicalChannelComboBox0.TabIndex = 2;
-            this.physicalChannelComboBox0.Text = "Dev1/ai0";
+            this.behaviorChannelComboBox2.FormattingEnabled = true;
+            this.behaviorChannelComboBox2.Location = new System.Drawing.Point(145, 33);
+            this.behaviorChannelComboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.behaviorChannelComboBox2.Name = "behaviorChannelComboBox2";
+            this.behaviorChannelComboBox2.Size = new System.Drawing.Size(92, 21);
+            this.behaviorChannelComboBox2.TabIndex = 3;
+            this.behaviorChannelComboBox2.Text = "Dev1/ai1";
+            // 
+            // behaviorChannelComboBox1
+            // 
+            this.behaviorChannelComboBox1.FormattingEnabled = true;
+            this.behaviorChannelComboBox1.Location = new System.Drawing.Point(20, 33);
+            this.behaviorChannelComboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.behaviorChannelComboBox1.Name = "behaviorChannelComboBox1";
+            this.behaviorChannelComboBox1.Size = new System.Drawing.Size(92, 21);
+            this.behaviorChannelComboBox1.TabIndex = 2;
+            this.behaviorChannelComboBox1.Text = "Dev1/ai0";
             // 
             // groupBox1
             // 
@@ -2422,61 +2725,6 @@
             this.checkBoxSaveFileAfterStack.UseVisualStyleBackColor = true;
             this.checkBoxSaveFileAfterStack.Visible = false;
             // 
-            // buttonAllBlack
-            // 
-            this.buttonAllBlack.BackColor = System.Drawing.Color.DimGray;
-            this.buttonAllBlack.Location = new System.Drawing.Point(581, 105);
-            this.buttonAllBlack.Name = "buttonAllBlack";
-            this.buttonAllBlack.Size = new System.Drawing.Size(47, 23);
-            this.buttonAllBlack.TabIndex = 123;
-            this.buttonAllBlack.Text = "Black";
-            this.buttonAllBlack.UseVisualStyleBackColor = false;
-            this.buttonAllBlack.Click += new System.EventHandler(this.buttonAllBlack_Click);
-            // 
-            // buttonAllWhite
-            // 
-            this.buttonAllWhite.BackColor = System.Drawing.Color.White;
-            this.buttonAllWhite.Location = new System.Drawing.Point(581, 82);
-            this.buttonAllWhite.Name = "buttonAllWhite";
-            this.buttonAllWhite.Size = new System.Drawing.Size(47, 23);
-            this.buttonAllWhite.TabIndex = 123;
-            this.buttonAllWhite.Text = "White";
-            this.buttonAllWhite.UseVisualStyleBackColor = false;
-            this.buttonAllWhite.Click += new System.EventHandler(this.buttonAllWhite_Click);
-            // 
-            // buttonRed
-            // 
-            this.buttonRed.BackColor = System.Drawing.Color.Red;
-            this.buttonRed.Location = new System.Drawing.Point(581, 128);
-            this.buttonRed.Name = "buttonRed";
-            this.buttonRed.Size = new System.Drawing.Size(46, 23);
-            this.buttonRed.TabIndex = 124;
-            this.buttonRed.Text = "Red";
-            this.buttonRed.UseVisualStyleBackColor = false;
-            this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
-            // 
-            // buttonBlue
-            // 
-            this.buttonBlue.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonBlue.Location = new System.Drawing.Point(581, 174);
-            this.buttonBlue.Name = "buttonBlue";
-            this.buttonBlue.Size = new System.Drawing.Size(46, 23);
-            this.buttonBlue.TabIndex = 124;
-            this.buttonBlue.Text = "Blue";
-            this.buttonBlue.UseVisualStyleBackColor = false;
-            this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
-            // 
-            // buttonGreen
-            // 
-            this.buttonGreen.BackColor = System.Drawing.Color.LawnGreen;
-            this.buttonGreen.Location = new System.Drawing.Point(581, 151);
-            this.buttonGreen.Name = "buttonGreen";
-            this.buttonGreen.Size = new System.Drawing.Size(46, 23);
-            this.buttonGreen.TabIndex = 124;
-            this.buttonGreen.Text = "Green";
-            this.buttonGreen.UseVisualStyleBackColor = false;
-            this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2534,13 +2782,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVoffset0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).EndInit();
+            this.tabPagePatching.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartPatching)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSyncTriggerTresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPhysCh4Vmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmaxPatching)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVminPatching)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmin)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panelScreens.ResumeLayout(false);
@@ -2572,8 +2824,8 @@
         private System.Windows.Forms.TextBox textBoxScreens;
         private System.Windows.Forms.Label labelNscreens;
         private System.Windows.Forms.Label label_N_screens;
-        public System.Windows.Forms.ComboBox physicalChannelComboBox0;
-        public System.Windows.Forms.ComboBox physicalChannelComboBox1;
+        public System.Windows.Forms.ComboBox behaviorChannelComboBox1;
+        public System.Windows.Forms.ComboBox behaviorChannelComboBox2;
         private System.Windows.Forms.Label labelVmin;
         public System.Windows.Forms.NumericUpDown numericUpDownVmin;
         public System.Windows.Forms.NumericUpDown numericUpDownVmax;
@@ -2584,7 +2836,7 @@
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.NumericUpDown numericUpDownPhysCh4Vmin;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.ComboBox physicalChannelComboBox4;
+        public System.Windows.Forms.ComboBox camTriggerChannelComboBox;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label labelReplay;
         private System.Windows.Forms.CheckBox checkBoxSynchStim;
@@ -2601,7 +2853,7 @@
         private System.Windows.Forms.TextBox textBoxFileStream;
         private System.Windows.Forms.CheckBox checkBoxSaveFileAfterStack;
         private System.Windows.Forms.Label label48;
-        public System.Windows.Forms.ComboBox physicalChannelComboBox2;
+        public System.Windows.Forms.ComboBox twophotonTriggerChannelComboBox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.NumericUpDown numericUpDownSyncTriggerTresh;
         private System.Windows.Forms.Label label50;
@@ -2717,6 +2969,15 @@
         private System.Windows.Forms.Button buttonRed;
         private System.Windows.Forms.Button buttonBlue;
         private System.Windows.Forms.Button buttonGreen;
+        private System.Windows.Forms.TabPage tabPagePatching;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPatching;
+        private System.Windows.Forms.Label label53;
+        public System.Windows.Forms.NumericUpDown numericUpDownVmaxPatching;
+        private System.Windows.Forms.Label label52;
+        public System.Windows.Forms.NumericUpDown numericUpDownVminPatching;
+        private System.Windows.Forms.Label label51;
+        public System.Windows.Forms.ComboBox patchingChannelComboBox2;
+        public System.Windows.Forms.ComboBox patchingChannelComboBox1;
     }
 }
 

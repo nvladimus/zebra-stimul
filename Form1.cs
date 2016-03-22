@@ -29,6 +29,7 @@ namespace Stimulus
         volatile bool readDataRunnerOscopeStarted, renderStimRunnerStarted, GUIthreadStarted;
         private Random rand = new Random();
         Series oSeries0, oSeries1, filtSeries0, filtSeries1;
+        Series patchSeries0, patchSeries1;
         Screen[] screens;
         private FullScreenForm FSForm1;
         private DirectXdevice DXdev0, DXdev1;
@@ -48,8 +49,10 @@ namespace Stimulus
         volatile float threshScaling;
         bool useCh0, useCh1;
         int buttThreshNumber = 0;
-        volatile List<float> ch0Display;
-        volatile List<float> ch1Display;
+        volatile List<float> ch0Display;//behavior1
+        volatile List<float> ch1Display;//behavior2
+        volatile List<float> ch2Display;//patch1
+        volatile List<float> ch3Display;//patch2
         volatile List<float> filtCh0Display;
         volatile List<float> filtCh1Display;
         volatile List<float> timeDisplay;
@@ -146,9 +149,9 @@ namespace Stimulus
             renderStimRunner.IsBackground = true;
             GUIthread.IsBackground = true;
             // Data arrays.
-            string[] seriesArray = { "Ch1", "Ch2", "Filtered Ch1", "Filtered Ch2" };
+            string[] seriesArray = { "Ch1", "Ch2", "Filtered Ch1", "Filtered Ch2", "Patch Ch1", "Patch Ch2" };
 
-            // Add series.
+            // Add data series to behavior chart
             oSeries0 = this.oscilloscopeChart1.Series.Add(seriesArray[0]);
             oSeries1 = this.oscilloscopeChart1.Series.Add(seriesArray[1]);
             filtSeries0 = this.oscilloscopeChart1.Series.Add(seriesArray[2]);
@@ -165,6 +168,16 @@ namespace Stimulus
             oscilloscopeChart1.Series["Ch2"].ChartArea = "ChartArea1";
             oscilloscopeChart1.Series["Filtered Ch1"].ChartArea = "ChartArea2";
             oscilloscopeChart1.Series["Filtered Ch2"].ChartArea = "ChartArea2";
+
+            // Add data series to patching chart
+            patchSeries0 = this.chartPatching.Series.Add(seriesArray[4]);
+            patchSeries1 = this.chartPatching.Series.Add(seriesArray[5]);
+            patchSeries0.ChartType = SeriesChartType.Line;
+            patchSeries1.ChartType = SeriesChartType.Line;
+            patchSeries0.Color = Color.Yellow;
+            patchSeries1.Color = Color.Red;
+            chartPatching.Series["Patch Ch1"].ChartArea = "ChartArea1";
+            chartPatching.Series["Patch Ch2"].ChartArea = "ChartArea2";
 
             screens = Screen.AllScreens;
             labelNscreens.Text = Screen.AllScreens.Length.ToString();
@@ -185,24 +198,32 @@ namespace Stimulus
             FSForm1.Show();
             DXdev0 = new DirectXdevice(panelProjector);
             DXdev1 = new DirectXdevice(FSForm1);
-            physicalChannelComboBox0.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External));
-            if (physicalChannelComboBox0.Items.Count > 0)
-                physicalChannelComboBox0.SelectedIndex = 0;
-            physicalChannelComboBox1.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External));
-            if (physicalChannelComboBox1.Items.Count > 0)
-                physicalChannelComboBox1.SelectedIndex = 1;
-            physicalChannelComboBox2.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External)); // 2Photon trigger AI
-            if (physicalChannelComboBox2.Items.Count > 0)
-                physicalChannelComboBox2.SelectedIndex = 5;
-            physicalChannelComboBox4.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External)); // Camera trigger AI channel 
-            if (physicalChannelComboBox4.Items.Count > 0)
-                physicalChannelComboBox4.SelectedIndex = 2;
+            behaviorChannelComboBox1.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External));
+            if (behaviorChannelComboBox1.Items.Count > 0)
+                behaviorChannelComboBox1.SelectedIndex = 0;
+            behaviorChannelComboBox2.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External));
+            if (behaviorChannelComboBox2.Items.Count > 0)
+                behaviorChannelComboBox2.SelectedIndex = 1;
+            twophotonTriggerChannelComboBox.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External)); // 2Photon trigger AI
+            if (twophotonTriggerChannelComboBox.Items.Count > 0)
+                twophotonTriggerChannelComboBox.SelectedIndex = 5;
+            camTriggerChannelComboBox.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External)); // Camera trigger AI channel 
+            if (camTriggerChannelComboBox.Items.Count > 0)
+                camTriggerChannelComboBox.SelectedIndex = 2;
             ComboBoxLEDcontrol.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AO, PhysicalChannelAccess.External));
             if (ComboBoxLEDcontrol.Items.Count > 0)
                 ComboBoxLEDcontrol.SelectedIndex = 0;
             comboBoxTempSensor.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External));
             if (comboBoxTempSensor.Items.Count > 0)
                 comboBoxTempSensor.SelectedIndex = 7;
+
+            patchingChannelComboBox1.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External));
+            if (patchingChannelComboBox1.Items.Count > 0)
+                patchingChannelComboBox1.SelectedIndex = 3;
+            patchingChannelComboBox2.Items.AddRange(DaqSystem.Local.GetPhysicalChannels(PhysicalChannelTypes.AI, PhysicalChannelAccess.External));
+            if (patchingChannelComboBox2.Items.Count > 0)
+                patchingChannelComboBox2.SelectedIndex = 4;
+            //
             DAQdev0 = new DAQdevice();
             readParam("param.log");
             //data_arrayCh0Save = new float[6000 * 3600 * 4]; //store the whole recording at 6000 Hz for 4 hrs
@@ -294,7 +315,10 @@ namespace Stimulus
                     // oldTimeGUIupdating = newTimeGUIupdating;
                     // newTimeGUIupdating = stopWatch.ElapsedMilliseconds;
                     // dTimeListGraphUpdating.Add(newTimeGUIupdating - oldTimeGUIupdating);
-                    if (!bStopped) oscilloscopeChart1.Invoke(drawDataDel);
+                    if (!bStopped)
+                    {
+                        oscilloscopeChart1.Invoke(drawDataDel);
+                    }
                     Thread.Sleep(980);
                 }
             }
@@ -315,12 +339,15 @@ namespace Stimulus
             oscilloscopeChart1.ChartAreas[0].AxisY.Maximum = Convert.ToDouble(numericUpDownVmaxi.Value);
             oscilloscopeChart1.ChartAreas[0].AxisY.Minimum = Convert.ToDouble(numericUpDownVmini.Value);
             oscilloscopeChart1.ChartAreas[1].AxisY.Maximum = Convert.ToDouble(numericUpDownFiltMaxY.Value);
+            
             useCh0 = checkBoxUseCh1.Checked;
             useCh1 = checkBoxUseCh2.Checked;
             oSeries0.Points.Clear();
             oSeries1.Points.Clear();
             filtSeries0.Points.Clear();
             filtSeries1.Points.Clear();
+            patchSeries0.Points.Clear();
+            patchSeries1.Points.Clear();
             //                   Object thisLock = new Object();
             //                   lock (thisLock)
             //                 {
@@ -330,6 +357,8 @@ namespace Stimulus
                 {
                     oSeries0.Points.AddXY((double)timeDisplay[i], (double)ch0Display[i] + Voffset0);
                     oSeries1.Points.AddXY((double)timeDisplay[i], (double)ch1Display[i] + Voffset1);
+                    patchSeries0.Points.AddXY((double)timeDisplay[i], (double)ch2Display[i]);
+                    patchSeries1.Points.AddXY((double)timeDisplay[i], (double)ch3Display[i]);
                     //oSeries1.Points.AddXY((double)timeDisplay[i], (double)ch1Display[i] + Voffset1);
                     //logFileStream.Write("{0}\t{1}\t{2}\n", timeDisplay[i], ch0Display[i], ch1Display[i]);
                 }
@@ -353,6 +382,7 @@ namespace Stimulus
                 oscilloscopeChart1.ChartAreas[1].CursorY.LineColor = Color.Red;
             }
             oscilloscopeChart1.Invalidate();
+            chartPatching.Invalidate();
             labelCurrentGain.Text = Convert.ToString(gain);
             labelCurrentDrift.Text = Convert.ToString(drift);
             if (currentTemp > 0) textBoxTemp.Text = string.Format("{0:N1}",currentTemp);
@@ -412,13 +442,17 @@ namespace Stimulus
                 if (readDataL > 0)
                 {
                     int subDataL = readDataL / subSampleWin; // x10 subsampled data length
-                    double[] data_arrayCh0 = new double[readDataL];
-                    double[] data_arrayCh1 = new double[readDataL];
+                    double[] data_arrayCh0 = new double[readDataL];//behavior1
+                    double[] data_arrayCh1 = new double[readDataL];//behavior2
+                    double[] data_arrayCh2 = new double[readDataL];//patching1
+                    double[] data_arrayCh3 = new double[readDataL];//patching2
                     double[] trigger_channel = new double[readDataL];// external trigger (camera)
                     double[] trigger_channel2Photon = new double[readDataL];// external trigger (2Photon)
                     double[] temp_channel = new double[readDataL];// temperature reading
                     double[] subData_arrayCh0 = new double[subDataL];
                     double[] subData_arrayCh1 = new double[subDataL];
+                    double[] subData_arrayCh2 = new double[subDataL];
+                    double[] subData_arrayCh3 = new double[subDataL];
                     double[,] hist_tempCh0 = new double[2, readDataL];
                     double[,] hist_tempCh1 = new double[2, readDataL];
                     Object thisLock = new Object();
@@ -430,11 +464,15 @@ namespace Stimulus
                         trigger_channel2Photon[i] = readData[3, i];
                         temp_channel[i] = (readData[4, i] - 0.805858 * tempVin) / (-0.0056846 * tempVin);
                         currentTemp = mean(temp_channel);
+                        data_arrayCh2[i] = readData[5, i];
+                        data_arrayCh3[i] = readData[6, i];
                     }
                     //                        lock (thisLock)
                     //                        {
                     subData_arrayCh0 = subSample(data_arrayCh0, subSampleWin); //these subsampled data are used only for display.
                     subData_arrayCh1 = subSample(data_arrayCh1, subSampleWin);  //these subsampled data are used only for display.
+                    subData_arrayCh2 = subSample(data_arrayCh2, subSampleWin); //these subsampled data are used only for display.
+                    subData_arrayCh3 = subSample(data_arrayCh3, subSampleWin);  //these subsampled data are used only for display.
                     //                        }
                     int lengthWin = (int)(0.010 * DAQdev0.sampleRate); // 10 ms window at full samplingRate, 6 KHz
                     double[] filtData0, filtData1;
@@ -699,11 +737,15 @@ namespace Stimulus
                             {
                                 ch0Display.Add((float)subData_arrayCh0[i]);
                                 ch1Display.Add((float)subData_arrayCh1[i]);
+                                ch2Display.Add((float)subData_arrayCh2[i]);
+                                ch3Display.Add((float)subData_arrayCh3[i]);
                                 timeDisplay.Add((float)(prevMaxTimepoint) + (float)((i + 1) * dtSubSample));
                                 if (prevMaxTimepoint > 1.0d && ch0Display.Count > 0)
                                 {
                                     ch0Display.RemoveAt(0);
                                     ch1Display.RemoveAt(0);
+                                    ch2Display.RemoveAt(0);
+                                    ch3Display.RemoveAt(0);
                                     timeDisplay.RemoveAt(0);
                                 }
                             }
@@ -727,10 +769,10 @@ namespace Stimulus
                             {
                                 for (int i = 0; i < readDataL; i++)
                                 {
-                                    writeFileStream.Write((float)data_arrayCh0[i]); //1
-                                    writeFileStream.Write((float)data_arrayCh1[i]); //2
-                                    //writeFileStream.Write(LEDpower); //3
-                                    writeFileStream.Write(surprizeSwimVel); //3
+                                    writeFileStream.Write((float)data_arrayCh0[i]); //behavior1
+                                    writeFileStream.Write((float)data_arrayCh1[i]); //behavior2
+                                    writeFileStream.Write((float)data_arrayCh2[i]); //patch1
+                                    writeFileStream.Write((float)data_arrayCh3[i]); //patch2
                                     writeFileStream.Write(deltaAngle); //4
                                     writeFileStream.Write(gain); //5
                                     writeFileStream.Write(drift); //6
@@ -838,6 +880,8 @@ namespace Stimulus
 
             ch0Display = new List<float>();
             ch1Display = new List<float>();
+            ch2Display = new List<float>();
+            ch3Display = new List<float>();
             filtCh0Display = new List<float>();
             filtCh1Display = new List<float>();
             timeDisplay = new List<float>();

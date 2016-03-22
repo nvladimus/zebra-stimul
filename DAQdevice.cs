@@ -21,25 +21,34 @@ namespace Stimulus
             {
                 myTask = new Task();
                 taskStarted = true;
-                //Channel0 (ephys)
-                myTask.AIChannels.CreateVoltageChannel(sender.physicalChannelComboBox0.Text, "",
+                //Channel1 (ephys)
+                myTask.AIChannels.CreateVoltageChannel(sender.behaviorChannelComboBox1.Text, "",
                         (AITerminalConfiguration)(-1), Convert.ToDouble(sender.numericUpDownVmin.Value), Convert.ToDouble(sender.numericUpDownVmax.Value), AIVoltageUnits.Volts);
 
-                //Channel1 (ephys)
-                myTask.AIChannels.CreateVoltageChannel(sender.physicalChannelComboBox1.Text, "",
+                //Channel2 (ephys)
+                myTask.AIChannels.CreateVoltageChannel(sender.behaviorChannelComboBox2.Text, "",
                         (AITerminalConfiguration)(-1), Convert.ToDouble(sender.numericUpDownVmin.Value), Convert.ToDouble(sender.numericUpDownVmax.Value), AIVoltageUnits.Volts);
 
                 // external trigger (camera)
-                myTask.AIChannels.CreateVoltageChannel(sender.physicalChannelComboBox4.Text, "",
+                myTask.AIChannels.CreateVoltageChannel(sender.camTriggerChannelComboBox.Text, "",
                         (AITerminalConfiguration)(-1), Convert.ToDouble(sender.numericUpDownPhysCh4Vmin.Value), Convert.ToDouble(sender.numericUpDownPhysCh4Vmax.Value), AIVoltageUnits.Volts);
                 
                 // external trigger (2Photon)
-                myTask.AIChannels.CreateVoltageChannel(sender.physicalChannelComboBox2.Text, "",
+                myTask.AIChannels.CreateVoltageChannel(sender.twophotonTriggerChannelComboBox.Text, "",
                         (AITerminalConfiguration)(-1), Convert.ToDouble(sender.numericUpDownPhysCh4Vmin.Value), Convert.ToDouble(sender.numericUpDownPhysCh4Vmax.Value), AIVoltageUnits.Volts);
                 
                 // temp. sensor
                 myTask.AIChannels.CreateVoltageChannel(sender.comboBoxTempSensor.Text, "",
                         (AITerminalConfiguration)(-1), 0d, 5.0d, AIVoltageUnits.Volts);
+
+                // patch channel1
+                myTask.AIChannels.CreateVoltageChannel(sender.patchingChannelComboBox1.Text, "",
+                        (AITerminalConfiguration)(-1), Convert.ToDouble(sender.numericUpDownVminPatching.Value), Convert.ToDouble(sender.numericUpDownVmaxPatching.Value), AIVoltageUnits.Volts);
+
+                // patch channel2
+                myTask.AIChannels.CreateVoltageChannel(sender.patchingChannelComboBox2.Text, "",
+                        (AITerminalConfiguration)(-1), Convert.ToDouble(sender.numericUpDownVminPatching.Value), Convert.ToDouble(sender.numericUpDownVmaxPatching.Value), AIVoltageUnits.Volts);
+
 
                 // hardware-timed data acquisition, internal clock. Last arg is the number of samples used for buffer size
                 myTask.Timing.ConfigureSampleClock("", (double)sampleRate, SampleClockActiveEdge.Rising, SampleQuantityMode.ContinuousSamples, 600000);
