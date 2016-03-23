@@ -339,7 +339,12 @@ namespace Stimulus
             oscilloscopeChart1.ChartAreas[0].AxisY.Maximum = Convert.ToDouble(numericUpDownVmaxi.Value);
             oscilloscopeChart1.ChartAreas[0].AxisY.Minimum = Convert.ToDouble(numericUpDownVmini.Value);
             oscilloscopeChart1.ChartAreas[1].AxisY.Maximum = Convert.ToDouble(numericUpDownFiltMaxY.Value);
-            
+
+            chartPatching.ChartAreas[0].AxisY.Maximum = Convert.ToDouble(numericUpDownVmaxPatchDisplay.Value);
+            chartPatching.ChartAreas[0].AxisY.Minimum = Convert.ToDouble(numericUpDownVminPatchDisplay.Value);
+            chartPatching.ChartAreas[1].AxisY.Maximum = Convert.ToDouble(numericUpDownVmaxPatchDisplay.Value);
+            chartPatching.ChartAreas[1].AxisY.Minimum = Convert.ToDouble(numericUpDownVminPatchDisplay.Value);
+
             useCh0 = checkBoxUseCh1.Checked;
             useCh1 = checkBoxUseCh2.Checked;
             oSeries0.Points.Clear();

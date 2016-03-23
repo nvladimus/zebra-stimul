@@ -115,6 +115,10 @@
             this.panelProjector = new System.Windows.Forms.Panel();
             this.oscilloscopeChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPagePatching = new System.Windows.Forms.TabPage();
+            this.label54 = new System.Windows.Forms.Label();
+            this.numericUpDownVmaxPatchDisplay = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownVminPatchDisplay = new System.Windows.Forms.NumericUpDown();
+            this.label55 = new System.Windows.Forms.Label();
             this.chartPatching = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
@@ -226,6 +230,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).BeginInit();
             this.tabPagePatching.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmaxPatchDisplay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVminPatchDisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPatching)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTriggerThresh2p)).BeginInit();
@@ -1545,13 +1551,10 @@
             chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
             chartArea1.AxisX.Title = "time, s";
-            chartArea1.AxisY.Interval = 0.05D;
             chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea1.AxisY.LabelStyle.Format = "0.000";
             chartArea1.AxisY.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
             chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            //chartArea1.AxisY.Maximum = 0.01D;
-            //chartArea1.AxisY.Minimum = -0.01D;
             chartArea1.AxisY.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea1.AxisY.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea1.AxisY.ScaleView.SmallScrollMinSize = 0.001D;
@@ -1582,9 +1585,7 @@
             chartArea1.Position.X = 5F;
             chartArea1.Position.Y = 7F;
             chartArea2.AxisX.LabelStyle.Enabled = false;
-            chartArea2.AxisY.Interval = 0.001D;
-            chartArea2.AxisY.LabelStyle.Format = "#.#####";
-            chartArea2.AxisY.LabelStyle.Interval = 0.001D;
+            chartArea2.AxisY.LabelStyle.Format = "#.####";
             chartArea2.AxisY.Maximum = 0.01D;
             chartArea2.AxisY.Minimum = 0D;
             chartArea2.BackColor = System.Drawing.Color.Black;
@@ -1634,6 +1635,10 @@
             // tabPagePatching
             // 
             this.tabPagePatching.BackColor = System.Drawing.Color.Silver;
+            this.tabPagePatching.Controls.Add(this.label54);
+            this.tabPagePatching.Controls.Add(this.numericUpDownVmaxPatchDisplay);
+            this.tabPagePatching.Controls.Add(this.numericUpDownVminPatchDisplay);
+            this.tabPagePatching.Controls.Add(this.label55);
             this.tabPagePatching.Controls.Add(this.chartPatching);
             this.tabPagePatching.Location = new System.Drawing.Point(4, 22);
             this.tabPagePatching.Name = "tabPagePatching";
@@ -1641,6 +1646,75 @@
             this.tabPagePatching.Size = new System.Drawing.Size(1271, 531);
             this.tabPagePatching.TabIndex = 3;
             this.tabPagePatching.Text = "Patching";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(611, 83);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(36, 13);
+            this.label54.TabIndex = 43;
+            this.label54.Text = "V_min";
+            // 
+            // numericUpDownVmaxPatchDisplay
+            // 
+            this.numericUpDownVmaxPatchDisplay.DecimalPlaces = 2;
+            this.numericUpDownVmaxPatchDisplay.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownVmaxPatchDisplay.Location = new System.Drawing.Point(655, 55);
+            this.numericUpDownVmaxPatchDisplay.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownVmaxPatchDisplay.Name = "numericUpDownVmaxPatchDisplay";
+            this.numericUpDownVmaxPatchDisplay.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownVmaxPatchDisplay.TabIndex = 42;
+            this.numericUpDownVmaxPatchDisplay.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            // 
+            // numericUpDownVminPatchDisplay
+            // 
+            this.numericUpDownVminPatchDisplay.DecimalPlaces = 2;
+            this.numericUpDownVminPatchDisplay.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownVminPatchDisplay.Location = new System.Drawing.Point(655, 81);
+            this.numericUpDownVminPatchDisplay.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.numericUpDownVminPatchDisplay.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownVminPatchDisplay.Name = "numericUpDownVminPatchDisplay";
+            this.numericUpDownVminPatchDisplay.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownVminPatchDisplay.TabIndex = 41;
+            this.numericUpDownVminPatchDisplay.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147418112});
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(611, 57);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(39, 13);
+            this.label55.TabIndex = 40;
+            this.label55.Text = "V_max";
             // 
             // chartPatching
             // 
@@ -1656,25 +1730,13 @@
             chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea3.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
             chartArea3.AxisX.Title = "time, s";
-
-            chartArea3.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea3.AxisY.LabelStyle.Format = "0.000";
-            chartArea3.AxisY.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea3.AxisY.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea3.AxisY.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea3.AxisY.ScaleView.SmallScrollMinSize = 0.001D;
-            chartArea3.AxisY.ScaleView.SmallScrollMinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea3.AxisY.ScaleView.SmallScrollSize = 0.002D;
-            chartArea3.AxisY.ScaleView.SmallScrollSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea3.AxisY.ScrollBar.BackColor = System.Drawing.Color.DimGray;
-            chartArea3.AxisY.ScrollBar.ButtonColor = System.Drawing.Color.White;
-            chartArea3.AxisY.ScrollBar.LineColor = System.Drawing.Color.White;
+            chartArea3.AxisY.MajorGrid.Enabled = false;
             chartArea3.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated270;
             chartArea3.AxisY.Title = "Voltage, V";
-
             chartArea3.BackColor = System.Drawing.Color.Black;
             chartArea3.BorderColor = System.Drawing.Color.White;
+            chartArea3.CursorY.LineColor = System.Drawing.Color.White;
             chartArea3.CursorY.Position = 0D;
             chartArea3.InnerPlotPosition.Auto = false;
             chartArea3.InnerPlotPosition.Height = 80F;
@@ -1687,30 +1749,16 @@
             chartArea3.Position.Width = 90F;
             chartArea3.Position.X = 5F;
             chartArea3.Position.Y = 7F;
-
             chartArea4.AxisX.LabelStyle.Enabled = false;
-            chartArea4.AxisY.LabelStyle.Format = "#.#####";
-            chartArea4.BackColor = System.Drawing.Color.Black;
-            chartArea4.BorderColor = System.Drawing.Color.White;
             chartArea4.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
             chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-
-            chartArea4.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea4.AxisY.LabelStyle.Format = "0.000";
-            chartArea4.AxisY.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea4.AxisY.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea4.AxisY.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea4.AxisY.ScaleView.SmallScrollMinSize = 0.001D;
-            chartArea4.AxisY.ScaleView.SmallScrollMinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea4.AxisY.ScaleView.SmallScrollSize = 0.002D;
-            chartArea4.AxisY.ScaleView.SmallScrollSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea4.AxisY.ScrollBar.BackColor = System.Drawing.Color.DimGray;
-            chartArea4.AxisY.ScrollBar.ButtonColor = System.Drawing.Color.White;
-            chartArea4.AxisY.ScrollBar.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY.MajorGrid.Enabled = false;
             chartArea4.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated270;
             chartArea4.AxisY.Title = "Voltage, V";
-
+            chartArea4.BackColor = System.Drawing.Color.Black;
+            chartArea4.BorderColor = System.Drawing.Color.White;
+            chartArea4.CursorY.LineColor = System.Drawing.Color.White;
             chartArea4.CursorY.Position = 0D;
             chartArea4.InnerPlotPosition.Auto = false;
             chartArea4.InnerPlotPosition.Height = 80F;
@@ -1718,11 +1766,10 @@
             chartArea4.InnerPlotPosition.X = 5F;
             chartArea4.Name = "ChartArea2";
             chartArea4.Position.Auto = false;
-            chartArea4.Position.Height = 50F;
+            chartArea4.Position.Height = 45F;
             chartArea4.Position.Width = 90F;
             chartArea4.Position.X = 5F;
             chartArea4.Position.Y = 55F;
-
             this.chartPatching.ChartAreas.Add(chartArea3);
             this.chartPatching.ChartAreas.Add(chartArea4);
             this.chartPatching.Cursor = System.Windows.Forms.Cursors.Default;
@@ -1736,11 +1783,11 @@
             legend2.Position.Y = 3F;
             legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
             this.chartPatching.Legends.Add(legend2);
-            this.chartPatching.Location = new System.Drawing.Point(60, 18);
+            this.chartPatching.Location = new System.Drawing.Point(19, 5);
             this.chartPatching.Margin = new System.Windows.Forms.Padding(2);
             this.chartPatching.Name = "chartPatching";
             this.chartPatching.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chartPatching.Size = new System.Drawing.Size(746, 482);
+            this.chartPatching.Size = new System.Drawing.Size(800, 520);
             this.chartPatching.TabIndex = 1;
             this.chartPatching.Text = "chart1";
             title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -2783,6 +2830,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGain1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscilloscopeChart1)).EndInit();
             this.tabPagePatching.ResumeLayout(false);
+            this.tabPagePatching.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVmaxPatchDisplay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVminPatchDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPatching)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -2978,6 +3028,10 @@
         private System.Windows.Forms.Label label51;
         public System.Windows.Forms.ComboBox patchingChannelComboBox2;
         public System.Windows.Forms.ComboBox patchingChannelComboBox1;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.NumericUpDown numericUpDownVmaxPatchDisplay;
+        private System.Windows.Forms.NumericUpDown numericUpDownVminPatchDisplay;
+        private System.Windows.Forms.Label label55;
     }
 }
 
