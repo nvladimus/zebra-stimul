@@ -27,11 +27,11 @@ namespace Stimulus
             device = new Microsoft.DirectX.Direct3D.Device(0, Microsoft.DirectX.Direct3D.DeviceType.Hardware, panel, CreateFlags.SoftwareVertexProcessing, presentParams);
             try
             {
-                texture = TextureLoader.FromFile(device, Application.StartupPath + "\\default_stimulus.bmp");
+                texture = TextureLoader.FromFile(device, Application.StartupPath + "\\stim_default.bmp");
             }
             catch
             {
-                MessageBox.Show("File 'default_stimulus.bmp' not found");
+                MessageBox.Show("File 'stim_default.bmp' not found");
             }
             SetupDevice();
             device.DeviceResizing += new System.ComponentModel.CancelEventHandler(this.CancelResize);

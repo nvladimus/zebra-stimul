@@ -1855,8 +1855,8 @@ namespace Stimulus
         {
             try
             {
-                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim(1024x768)Red8notch.bmp"));
-                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim(1024x768)Red8notch.bmp"));
+                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim_RED.bmp"));
+                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim_RED.bmp"));
                 DXdev0.RenderStill();
                 DXdev1.RenderStill();
             }
@@ -1870,8 +1870,8 @@ namespace Stimulus
         {
             try
             {
-                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim(1024x768)Green8notch.bmp"));
-                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim(1024x768)Green8notch.bmp"));
+                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim_GREEN.bmp"));
+                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim_GREEN.bmp"));
                 DXdev0.RenderStill();
                 DXdev1.RenderStill();
             }
@@ -1885,8 +1885,8 @@ namespace Stimulus
         {
             try
             {
-                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim(1024x768)Blue8notch.bmp"));
-                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim(1024x768)Blue8notch.bmp"));
+                DXdev0.SetTexture(TextureLoader.FromFile(DXdev0.device, "stim_BLUE.bmp"));
+                DXdev1.SetTexture(TextureLoader.FromFile(DXdev1.device, "stim_BLUE.bmp"));
                 DXdev0.RenderStill();
                 DXdev1.RenderStill();
             }
