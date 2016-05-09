@@ -2105,7 +2105,7 @@
             this.numericUpDownVmaxPatching.TabIndex = 8;
             this.numericUpDownVmaxPatching.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDownVmaxPatching.Value = new decimal(new int[] {
-            5,
+            10,
             0,
             0,
             0});
@@ -2165,7 +2165,7 @@
             this.numericUpDownVminPatching.TabIndex = 6;
             this.numericUpDownVminPatching.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDownVminPatching.Value = new decimal(new int[] {
-            5,
+            10,
             0,
             0,
             -2147483648});

@@ -778,13 +778,12 @@ namespace Stimulus
                                     writeFileStream.Write((float)data_arrayCh1[i]); //behavior2
                                     writeFileStream.Write((float)data_arrayCh2[i]); //patch1
                                     writeFileStream.Write((float)data_arrayCh3[i]); //patch2
-                                    writeFileStream.Write(deltaAngle); //4
                                     writeFileStream.Write(gain); //5
                                     writeFileStream.Write(drift); //6
                                     writeFileStream.Write(swimVel); //7
                                     writeFileStream.Write((float)trigger_channel[i]); //8, camera trigger
                                     writeFileStream.Write((float)trigger_channel2Photon[i]); //9, 2Photon trigger
-                                    writeFileStream.Write((float)temp_channel[i]); //temperature, in C
+                                    writeFileStream.Write((float)temp_channel[i]); //10, temperature, in C
                                 }
                             }
                         }
